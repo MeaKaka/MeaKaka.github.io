@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="了解前端，爱上前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="简要介绍标签源于HTML5，元素创造了一个固定大小的画布，绘制和处理要展示的东西。与&amp;lt;video&amp;gt;等标签相同，一些老的浏览器可能并不支持该标签，这时需要在标签中提供替换内容。 123&amp;lt;canvas id=&quot;canvas&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt;	&amp;lt;p&amp;gt;该浏览器不支持canvas标签&amp;lt;/p&amp;gt;&amp;lt;/canvas&amp;gt;">
+<meta name="keywords" content="了解前端，爱上前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【了解前端，爱上前端】Canvas的使用">
+<meta property="og:url" content="https://MeaKaka.github.io/2019/08/18/【技术点】canvas/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="简要介绍标签源于HTML5，元素创造了一个固定大小的画布，绘制和处理要展示的东西。与&amp;lt;video&amp;gt;等标签相同，一些老的浏览器可能并不支持该标签，这时需要在标签中提供替换内容。 123&amp;lt;canvas id=&quot;canvas&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt;	&amp;lt;p&amp;gt;该浏览器不支持canvas标签&amp;lt;/p&amp;gt;&amp;lt;/canvas&amp;gt;">
+<meta property="og:locale" content="Hans">
+<meta property="og:updated_time" content="2020-03-09T02:38:12.667Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【了解前端，爱上前端】Canvas的使用">
+<meta name="twitter:description" content="简要介绍标签源于HTML5，元素创造了一个固定大小的画布，绘制和处理要展示的东西。与&amp;lt;video&amp;gt;等标签相同，一些老的浏览器可能并不支持该标签，这时需要在标签中提供替换内容。 123&amp;lt;canvas id=&quot;canvas&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt;	&amp;lt;p&amp;gt;该浏览器不支持canvas标签&amp;lt;/p&amp;gt;&amp;lt;/canvas&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2019/08/18/【技术点】canvas/">
+
+
+
+
+
+  <title>【了解前端，爱上前端】Canvas的使用 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/08/18/【技术点】canvas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【了解前端，爱上前端】Canvas的使用</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T22:33:44+08:00">
+                2019-08-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:38:12+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍"></a>简要介绍</h4><p>标签源于HTML5，元素创造了一个固定大小的画布，绘制和处理要展示的东西。与<code>&lt;video&gt;</code>等标签相同，一些老的浏览器可能并不支持该标签，这时需要在标签中提供替换内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>该浏览器不支持canvas标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>canvas元素有一个叫做 getContext()的方法，用来获得渲染上下文及绘画，在绘画之前都是空白。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>); <span class="comment">//得到DOM对象</span></span><br><span class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);<span class="comment">//绘制2D图像</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><h5 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h5><p>不同于SVG，HTML中的元素canvas只支持一种原生的图形绘制：矩形。所有其他的图形的绘制都至少需要生成一条路径。</p>
+<p>绘制矩形的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fillRect(x, y, width, height) <span class="comment">//绘制一个填充矩形，x,y表示起始坐标</span></span><br><span class="line">strokeRect(x, y, width, height) <span class="comment">//绘制一个矩形边框</span></span><br><span class="line">clearRect(x, y, width, height) <span class="comment">//擦除一个指定的矩形区域</span></span><br><span class="line"><span class="comment">//三种方式按调用顺序叠加在画布上</span></span><br></pre></td></tr></table></figure>
+
+<p>绘制路径的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">beginPath() <span class="comment">//新建路径</span></span><br><span class="line"></span><br><span class="line">moveTo(x, y) <span class="comment">//将绘图笔触移动到指定位置</span></span><br><span class="line">lineTo(x，y) <span class="comment">//画笔从当前位置画一条线到指定位置</span></span><br><span class="line">rect(x, y, width, height) <span class="comment">//画一个矩形路径</span></span><br><span class="line">arc(x, y, radius, startAngle, endAngle, anticlockwise)<span class="comment">//绘制以x,y为圆心，以radius为半径的圆弧，anticlockwise为true表示逆时针方向，false表示顺时针方向</span></span><br><span class="line">arcTo(x1, y1, x2, y2, radius)<span class="comment">//相当于画一个关于两个选定点的正切圆的切点到画笔位置的圆弧，切点平分选定点间的连线</span></span><br><span class="line">quadraticCurveTo(cp1x, cp1y, x, y)<span class="comment">//绘制二次贝塞尔曲线，cp1x,cp1y为一个控制点，x,y为结束点。</span></span><br><span class="line">bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)<span class="comment">//绘制三次贝塞尔曲线，cp1x,cp1y为控制点一，cp2x,cp2y为控制点二，x,y为结束点。</span></span><br><span class="line"></span><br><span class="line">stroke() <span class="comment">//用线段绘制图案</span></span><br><span class="line">fill() <span class="comment">//填充内容区域生成实心图</span></span><br><span class="line">closePath() <span class="comment">//结束路径，将线路闭合。在close之后绘制命令重新回到上下文</span></span><br></pre></td></tr></table></figure>
+
+<p>Path2D对象</p>
+<p>可以将已经绘制好的路线保存到Path2D对象中，后续再修改。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rectangle = <span class="keyword">new</span> Path2D();</span><br><span class="line">rectangle.rect(<span class="number">10</span>, <span class="number">10</span>, <span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line"><span class="keyword">var</span> circle = <span class="keyword">new</span> Path2D();</span><br><span class="line">circle.moveTo(<span class="number">125</span>, <span class="number">35</span>);</span><br><span class="line">circle.arc(<span class="number">100</span>, <span class="number">35</span>, <span class="number">25</span>, <span class="number">0</span>, <span class="number">2</span> * <span class="built_in">Math</span>.PI);</span><br><span class="line">ctx.stroke(rectangle);</span><br><span class="line">ctx.fill(circle);</span><br><span class="line"></span><br><span class="line">Path2D.addPath(path [, transform])<span class="comment">//添加一条路径到当前路径</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Path2D(<span class="string">"M10 10 h 80 v 80 h -80 Z"</span>);<span class="comment">//用SVG数据初始化canvas路径</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于贝塞尔曲线（PS中的钢笔工具），看起来像点带线动，使线重合，起始点、终止点和控制点的连线为上面👆提到的线。根据图片示例更好理解贝塞尔曲线，参见<a href="https://github.com/hujiulong/blog/issues/1" target="_blank" rel="noopener">博客</a></p>
+</blockquote>
+<h5 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//颜色</span></span><br><span class="line">fillStyle = color <span class="comment">//填充颜色,（ orange/#000000/rgb(255,165,0) ）</span></span><br><span class="line">strokeStyle = color <span class="comment">//轮廓颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//透明度</span></span><br><span class="line">globalAlpha = transparencyValue<span class="comment">//这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0；或者利用rgba再设置色彩透明度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//线条形状</span></span><br><span class="line">lineWidth = value <span class="comment">//设置线条宽度</span></span><br><span class="line">lineCap = butt/round/square <span class="comment">//设置线段端点的显示样子， butt为默认样式没有添加其他东西，round添加一个半圆，square是添加半个正方形</span></span><br><span class="line">lineJoin = round/bevel/miter <span class="comment">//设置两线段连接处样式，round圆、bevel平角、miter尖角</span></span><br><span class="line">miterLimit = value <span class="comment">//设置两连接线外延线交点与与连接点最大距离，如果焦点距离大于value，则join效果变为bevel</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//虚线</span></span><br><span class="line">getLineDash() <span class="comment">//返回一个非负偶数数组，描述交替绘制线段和间距（坐标空间单位）长度的数字</span></span><br><span class="line">setLineDash(segments) <span class="comment">//接受数组，表示线段与间隙的交替</span></span><br><span class="line">lineDashOffset = value <span class="comment">//设置偏移值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//渐变</span></span><br><span class="line"><span class="comment">//创建一个canvasGradient对象，利用addColorStop方法给它上色，将对象赋值给图形的fillStyle或strokeStyle等属性</span></span><br><span class="line">createLinearGradient(x1, y1, x2, y2) <span class="comment">//渐变的起点 (x1,y1) 与终点 (x2,y2)</span></span><br><span class="line">createRadialGradient(x1, y1, r1, x2, y2, r2) <span class="comment">//以 (x1,y1) 为原点，半径为 r1 的圆，以 (x2,y2) 为原点，半径为 r2 的圆</span></span><br><span class="line">canvasGradient.addColorStop(position, color) <span class="comment">//position表示相对位置</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//循环图案</span></span><br><span class="line"><span class="comment">//创建图案将图案赋值给图形的fillStyle属性</span></span><br><span class="line">createPattern（image,type）<span class="comment">//image可以是image对象或者另一个canvas对象，type为repeat、repeat-x、repeat-y和no-repeat</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//阴影</span></span><br><span class="line">shadowOffsetX = float <span class="comment">//负值表示向上移动</span></span><br><span class="line">shadowOffsetY = float <span class="comment">//负值表示向左移动</span></span><br><span class="line">shadowBlur = float <span class="comment">//设置阴影的模糊程度</span></span><br><span class="line">shadowColor = color</span><br><span class="line"></span><br><span class="line"><span class="comment">//填充规则</span></span><br><span class="line">fill(<span class="string">"nonzero/evenodd"</span>) <span class="comment">//01规则/交替着色</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fillText(text, x, y [, maxWidth]) <span class="comment">//在指定的(x,y)位置填充指定的文本，绘制的最大宽度是可选的</span></span><br><span class="line">strokeText(text, x, y [, maxWidth]) <span class="comment">//在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的</span></span><br><span class="line">font = value</span><br><span class="line">textAlign = start/end/left/right/center <span class="comment">//文本对齐项</span></span><br><span class="line">textBaseline = top/hanging/middle/bottom/alphabetic/ideographic <span class="comment">//基线对齐项</span></span><br><span class="line">direction = ltr/rtl/inherit <span class="comment">//文本方向</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h5><p>引入图像到canvas里需要以下两步基本操作：</p>
+<ol>
+<li><p>获得一个指向HTMLImageElement的对象或者另一个canvas元素的引用作为源，也可以通过提供一个URL的方式来使用图片</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();   <span class="comment">// 创建一个&lt;img&gt;元素</span></span><br><span class="line"><span class="comment">// 设置图片源地址</span></span><br><span class="line">img.src = <span class="string">'myImage.png'</span>; </span><br><span class="line"><span class="comment">//利用data:url的方式嵌入图像</span></span><br><span class="line">img.src = <span class="string">'data:image/gif;base64.xxxxxxxxxxxxx'</span></span><br><span class="line"><span class="comment">//利用canvas对象、bitmap、&lt;video&gt;元素中的帧</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用drawImage()函数将图片绘制到画布上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">drawImage(image, x, y, width, height) <span class="comment">//其中 image 是 image 或者 canvas 对象，x 和 y 是其在目标 canvas 里的起始坐标  可以利用for实现图案的循环</span></span><br><span class="line">drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) <span class="comment">//切片，对s图案实现剪切生成d图案</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>可以利用load事件来保证在加载完毕之前不会使用该图片。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();   <span class="comment">// 创建img元素</span></span><br><span class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 执行drawImage语句</span></span><br><span class="line">&#125;</span><br><span class="line">img.src = <span class="string">'myImage.png'</span>; <span class="comment">// 设置图片源地址</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h4><h5 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">save() <span class="comment">//变形之前先保存状态</span></span><br><span class="line">restore() <span class="comment">//上一个保存状态从堆栈中弹出</span></span><br><span class="line">translate(x,y) <span class="comment">//canvas对象的移动</span></span><br><span class="line">rotate(angle) <span class="comment">//旋转</span></span><br><span class="line">scale(x,y) <span class="comment">//缩放，负数表示对称轴镜像翻转</span></span><br><span class="line">transform(m11, m12, m21, m22, dx, dy) <span class="comment">//m11：水平方向的缩放、m12：水平方向的倾斜偏移、m21：竖直方向的倾斜偏移、m22：竖直方向的缩放、dx：水平方向的移动、dy：竖直方向的移动</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>对比CSS3中的transform相关参数</p>
+</blockquote>
+<h5 id="剪裁"><a href="#剪裁" class="headerlink" title="剪裁"></a>剪裁</h5><p>意为遮罩，用来隐藏不需要的部分，剪裁路径不受新图形的影响</p>
+<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing" target="_blank" rel="noopener">示例参照MDN文档</a></p>
+</blockquote>
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><p>canvas实现动画的原理</p>
+<ol>
+<li>清空 canvas，以免之前一帧的图案对后续呈现造成影响，最简单的做法就是用 clearRect 方法。</li>
+<li>保存 canvas 状态，如果你要做一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。</li>
+<li>绘制动画图形（animated shapes），重绘动画帧。</li>
+<li>恢复 canvas 状态，如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。</li>
+</ol>
+<p>结合setInternal/setTimeout进行定时重绘，requestAnimationFrame(callback)告诉浏览器你希望执行一个动画，并在重绘之前，请求浏览器执行一个特定的函数来更新动画。</p>
+<blockquote>
+<p>更多动画效果参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations" target="_blank" rel="noopener">MDN高级动画</a></p>
+</blockquote>
+<h4 id="canvas优化"><a href="#canvas优化" class="headerlink" title="canvas优化"></a>canvas优化</h4><p>canvas性能建议</p>
+<ol>
+<li>避免浮点数的坐标点，用整数取而代之。以免浏览器为了达到抗锯齿效果做出额外运算</li>
+<li>在离屏canvas中缓存图片的不同尺寸，而不要用drawImage()去缩放它们。</li>
+<li>用CSS设置大的背景图</li>
+<li>用CSS transforms特性缩放画布</li>
+<li>关闭透明度，将alpha设置为false以帮助浏览器进行内部优化</li>
+<li>尽可能避免shadowBlur特性、尽可能避免text rendering</li>
+<li>将画布的函数调用集合到一起（例如，画一条折线，而不要画多条分开的直线）</li>
+<li>……</li>
+</ol>
+<blockquote>
+<p>参考文献  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API" target="_blank" rel="noopener">MDN canvasAPI</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2019/08/18/【技术点】canvas/" title="【了解前端，爱上前端】Canvas的使用">https://MeaKaka.github.io/2019/08/18/【技术点】canvas/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/了解前端，爱上前端/" rel="tag"># 了解前端，爱上前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/【面经】ByteDance/" rel="next" title="2019 字节跳动 前端面试（基础平台部）(日常实习)">
+                <i class="fa fa-chevron-left"></i> 2019 字节跳动 前端面试（基础平台部）(日常实习)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/21/【技术点】css-choice/" rel="prev" title="【了解前端，爱上前端】CSS选择器">
+                【了解前端，爱上前端】CSS选择器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简要介绍"><span class="nav-number">1.</span> <span class="nav-text">简要介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本操作"><span class="nav-number">2.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#形状"><span class="nav-number">2.1.</span> <span class="nav-text">形状</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#样式"><span class="nav-number">2.2.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文本"><span class="nav-number">2.3.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图像"><span class="nav-number">2.4.</span> <span class="nav-text">图像</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进阶操作"><span class="nav-number">3.</span> <span class="nav-text">进阶操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#变形"><span class="nav-number">3.1.</span> <span class="nav-text">变形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#剪裁"><span class="nav-number">3.2.</span> <span class="nav-text">剪裁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#动画"><span class="nav-number">3.3.</span> <span class="nav-text">动画</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#canvas优化"><span class="nav-number">4.</span> <span class="nav-text">canvas优化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>

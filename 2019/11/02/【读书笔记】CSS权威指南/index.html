@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="读书笔记,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Cascading Style Sheets CSS和文档发展历史：从关注页面结构过渡到开始关注页面样式了。 谷歌在给页面权重时会考虑到页面的结构化程度。 所谓的层叠（cascading指的就是发生冲突时遵循的规则）。 读者样式表，用于帮助色盲之类的用户定制自己的页面。 添加CSS后可以减少下载时间，替代HTML中font元素，删除额外的标记和结构。 每个元素都生成一个盒，并不是没有元素都用同样的">
+<meta name="keywords" content="读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【读书笔记】CSS权威指南">
+<meta property="og:url" content="https://MeaKaka.github.io/2019/11/02/【读书笔记】CSS权威指南/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="Cascading Style Sheets CSS和文档发展历史：从关注页面结构过渡到开始关注页面样式了。 谷歌在给页面权重时会考虑到页面的结构化程度。 所谓的层叠（cascading指的就是发生冲突时遵循的规则）。 读者样式表，用于帮助色盲之类的用户定制自己的页面。 添加CSS后可以减少下载时间，替代HTML中font元素，删除额外的标记和结构。 每个元素都生成一个盒，并不是没有元素都用同样的">
+<meta property="og:locale" content="Hans">
+<meta property="og:updated_time" content="2020-03-09T03:26:26.658Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【读书笔记】CSS权威指南">
+<meta name="twitter:description" content="Cascading Style Sheets CSS和文档发展历史：从关注页面结构过渡到开始关注页面样式了。 谷歌在给页面权重时会考虑到页面的结构化程度。 所谓的层叠（cascading指的就是发生冲突时遵循的规则）。 读者样式表，用于帮助色盲之类的用户定制自己的页面。 添加CSS后可以减少下载时间，替代HTML中font元素，删除额外的标记和结构。 每个元素都生成一个盒，并不是没有元素都用同样的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2019/11/02/【读书笔记】CSS权威指南/">
+
+
+
+
+
+  <title>【读书笔记】CSS权威指南 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/11/02/【读书笔记】CSS权威指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【读书笔记】CSS权威指南</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-02T21:32:44+08:00">
+                2019-11-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T11:26:26+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
+<h4 id="CSS和文档"><a href="#CSS和文档" class="headerlink" title="CSS和文档"></a>CSS和文档</h4><p>发展历史：从关注页面结构过渡到开始关注页面样式了。</p>
+<p>谷歌在给页面权重时会考虑到页面的结构化程度。</p>
+<p>所谓的层叠（cascading指的就是发生冲突时遵循的规则）。</p>
+<p>读者样式表，用于帮助色盲之类的用户定制自己的页面。</p>
+<p>添加CSS后可以减少下载时间，替代HTML中font元素，删除额外的标记和结构。</p>
+<p>每个元素都生成一个盒，并不是没有元素都用同样的方式创建，依据创建形式分为了替换元素和非替换元素。</p>
+<p>替换元素：表示用来替换元素内容的部分并非由文档内容直接表示，如img、input</p>
+<p>非替换元素：大多都是非替换元素，直接由文档内容表示</p>
+<p>块元素和行内元素，行内元素可以继承块元素但是反过来不行</p>
+<p>@import与link的差别在于命令的语法和位置</p>
+<h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><p>CSS的规则为：选择器{声明块}，所以才有各种元素选择器、id选择器、类选择器、选择器分组之类的。</p>
+<p>声明中使用了不正确的属性或值则整个声明都会被忽略，CSS样式没有被应用很有可能是属性或值不正确。</p>
+<p>针对ID选择器的设置来说，浏览器其实并不会检查HTML中ID的唯一性。但是对编写DOM脚本可能又挑战，getElementById()</p>
+<p>伪类（已访问、未访问），伪元素选择器（在文档中插入假想的元素，首字母、首行、之前、之后元素）可以为文档中不一定具体存在的结构指定样式。</p>
+<h4 id="结构和层叠"><a href="#结构和层叠" class="headerlink" title="结构和层叠"></a>结构和层叠</h4><p>结构树是CSS继承的核心。</p>
+<p>元素应用哪些值时要考虑继承、声明的特殊性以及声明的来源，这个过程就叫层叠。</p>
+<p><strong>层叠规则</strong>：“0000”（特殊性）（第一个样式是为内联样式保留的）（特殊性从3个值改变为4个值时CSS2到CSS2.1的改变）</p>
+<p>写在一起的声明是会被解组的，所有可能存在一个针对一个标签的特性，前一半有效而后一半无效。</p>
+<p>！important一定要放在声明的最后，位置错误则整个声明都无效</p>
+<p>注意有些属性不能被继承，如边框。继承的值没有特殊性，没有特殊性比0特殊性的重要性还要低。（0特殊性：通配符）</p>
+<p>（按来源排序）创作人员的样式要胜过读者样式；有！important标志的读者样式要胜于其他所有样式；包括有！important标志的创作人员样式；创作人员和读者样式均比用户代理强</p>
+<p>按来源-&gt;按特殊性-&gt;按顺序（与元素匹配的<strong>最后</strong>一个选择器胜出）</p>
+<h4 id="值和单位"><a href="#值和单位" class="headerlink" title="值和单位"></a>值和单位</h4><p>颜色</p>
+<p>长度</p>
+<ul>
+<li>绝对长度单位（in/cm/mm/pt/pc）（后两个，点和派卡都是印刷单位）</li>
+<li>相对长度单位（em/ex）<ul>
+<li>em表示一种给定字体的font-size（可以随字体大小缩放）</li>
+<li>ex表示的是字体中小写x的高度</li>
+<li>像素长度（因为其他设备的原因被看作相对长度，其实在web显示中更像是绝对长度）</li>
+</ul>
+</li>
+</ul>
+<p>URL</p>
+<p>​    url和开始括号之间不能有空格，存在空格则整个声明都无效</p>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><p>样式表设置一个字体样式，用户代理根据对应的字体在字体库里寻找一个展示出来。如果找不到就只能用默认字体进行显示（与word相同）</p>
+<p>在字体粗度上，只要一个关键字对应的变形不会比前一个关键字对应的变形更细都是允许的（因此，100、200、300都可能映射到同样的粗细变形）</p>
+<p>字体加粗时的关键词设定会考虑父元素的字体大小在父元素的基础上进行加粗。</p>
+<p>字体大小，font-size的作用就是为给定字体的em框提供一个大小，但实际显示的字符不一定占据全部大小</p>
+<ul>
+<li>绝对大小（绝对大小关键字，xx-small、x-small、small、medium、large、x-large、xx-large，两关键字之间的缩放因子一般为1.5）（一般来说medium表示用户代理默认字体大小，在explorer中默认大小时small）</li>
+<li>相对大小（关键字只有smaller和larger，使元素的大小相对于其父元素大小上移或者下移）</li>
+<li>百分数（根据从父元素继承的大小来计算，实际上Web浏览器很有可能将这个值取整为与之相近的整数像素）（在字体继承中继承的是计算值而不是百分数）</li>
+<li>也可以使用长度单位px</li>
+</ul>
+<p>字体的风格（font-style、font-variant字体变形[small-caps小型大写字母、normal、inherit]、font-stretch缩放、font-size-adjust当所用字体不是首选字体时的调整值）</p>
+<p>font：font-style||font-variant||font-weight||font-size||/line-height？||font-family</p>
+<ul>
+<li>前3个属性的位置可以交换</li>
+<li>font-size和font-family的顺序不可变，且必须有，否则规则无效可能被用户代理忽略</li>
+<li>在字体中也可以设置line-height，可选属性，用斜线/分割</li>
+<li>忽略值会重置为默认值</li>
+</ul>
+<h4 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h4><p>text-indent（num/precent）块级元素的首行缩进，可继承</p>
+<p>text-align（left/center/right/justify/inherit）文本水平对齐属性</p>
+<p>line-height</p>
+<ul>
+<li>文本行基线之间的距离，inline-box行内框，行框；</li>
+<li>如果指定为normal，用户代理一般设置为字体大小的1.2倍；百分数等值都是相对于元素的font-size进行设置；</li>
+<li>当一个块级元素从另一个元素继承line-height时要从父元素的font-size上计算而不是子元素的font-size，line-height:1em；</li>
+<li>对比在指定一个数的时候，将其作为缩放因子，块内的子元素将继承缩放因子的值而不是后续的计算值，各个元素根据自己的font-size计算对应的line-height</li>
+</ul>
+<p>vertical-align（baseline/text-top/top/middle/bottom/text-bottom/sub(相对于父元素的基线降低，距离取决于用户代理)/super/百分数(升高/降低基线)/数值(基线位置更改)），只用于行内元素和表单元格，不可继承。</p>
+<p>word-spacing 字间隔，可被text-align的属性更改，会被子元素继承</p>
+<p>letter-spacing 字母间隔（优先级以此为text-align=&gt;word-spacing=&gt;letter-spacing），会被子元素继承</p>
+<p>text-transform（uppercse、lowercase、capitalize[只对每个单词的首字母大写]、none、inherit）</p>
+<p>text-decoration（underline/overline/line-through/blink）</p>
+<p>text-shadow（CSS2.1去掉了）</p>
+<p>white-space（normal[丢掉多余空白符，换行转空格]/nowrap[防止元素中文本换行，除非br]/pre[保留空白符、保留换行符、不允许自动换行]/pre-wrap[保留空白符、保留换行符、允许自动换行]/pre-line[合并空白符、保留换行符、允许自动换行]）</p>
+<h4 id="基本视觉格式化"><a href="#基本视觉格式化" class="headerlink" title="基本视觉格式化"></a>基本视觉格式化</h4><h5 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h5><p>![框模型](/Users/huxiaohui/Library/Application Support/typora-user-images/image-20190926175649998.png)</p>
+<p>如果没有设置颜色，边框(border)将取元素内容的前景色</p>
+<p>行内元素的摆放方式并不直接依赖于包含块</p>
+<p>水平属性中只有width、marginLeft和marginRight可以设置为auto，如果设置为auto，设置为auto的属性会自适应宽度使宽度等于父元素的width。如果长度不符合的话，按语言顺序重置marginRight/marginLeft为auto。</p>
+<p>如果三个属性都设置为0，则两个外边距都会设置为0，width会尽可能的宽。</p>
+<p>水平外边距并不会合并。</p>
+<p>通过指定外边距为负值得到更宽的子元素，因为在计算时要求7个水平参数的和为父元素的width，因此该元素自身的width会计算得到一个偏大值（width设置为auto时），当左外边距为负值时就很有可能出现字体超出文本边框的情况。（只有外边距能为负值）</p>
+<p>对于替换元素而言，如果width为auto，则元素的宽度为<strong>内容的固有宽度</strong>。如果一个替换的元素的width不同于其固有高度，那height也会成比例变换，除非显式设置为一个特定值。</p>
+<p>如果元素内容高度大于元素框的高度，则由overflow来定义用户代理的行为。</p>
+<p>只有height、marginTop和marginBottom可以设置为auto，下边框、边框默认值为0。需要注意的是，<strong>当marginTop和marginBottom都被设置为auto时，他们会被自动计算为0</strong>，因此并不会用设置auto的方式去实现竖直居中。</p>
+<p>如果没有显式的指出包含块的height，那么百分数也会被重置为auto，因为百分数的基数是依据父元素的height，即父元素content区域的height。</p>
+<p>如果将块级正常流的高度设置为auto，其默认高度为子元素最高外边框到最低外边框的距离（与行框行内框的关系比较相近），只考虑外边框而不考虑外边距，可能导致子元素的外边距超过父元素。不过如果块元素有上下内边距或者上下边框的话（padding/border）高度为子元素外边距高度差。感觉还是要考虑父元素content area是否直接和外界相连。</p>
+<p>相连的外边距会沿竖轴合并/重叠，只会发生在只有margin的情况下，如果有内边距/边框就不会合并。（对负外边距同样有效）</p>
+<p>列表项的圆点/数字什么的并不是列表项内容区的一部分，list-style-position将决定是否讲标志项和内容区放到一个块级元素中。</p>
+<h5 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h5><p>匿名文本：未包含在行内元素中的字符串</p>
+<p><strong>非替换元素的内边距、边框、外边距等对行内元素或其生成的框没有垂直效果，不会影响元素行内框的高度</strong>，所以给span设置margin根本没有用。</p>
+<p>会应用上来但不会造成任何影响</p>
+<p>在块级元素上声明line-height将为该块级元素的内容设置一个最小行框高度</p>
+<p>行内框根据vertical-align的属性垂直对齐（可以是数值，表示基线移动的距离）</p>
+<p>增加特别元素的line-height以免出现边框覆盖（可以通过将line-height的值设置为font-size的倍数）</p>
+<p>替换元素的整体（padding、margin）被看作是行内框，由于行内框变化从而影响了行框的高度，但是line-height不会被影响，line-height存在的意义是为了在 垂直对齐时使用，对图像等替换元素的行内框没有任何影响。（对比非替换元素边框不会影响行框）</p>
+<p>默认的行内替换元素位于基线上，替换元素没有自己的基线，因此下外边距边界与基线对齐。</p>
+<p>行内元素可能是块元素的后代，但块元素不可能是行内元素的后代。</p>
+<p>行内块元素会作为替换元素放在行内，即底部再文本行的基线上；如果元素框的width被声明为auto，则元素框会自动收缩以适应内容。</p>
+<p>css2的display有一个属性为run-in，如果一个元素生成run-in框，而框后面是一个块级框，那么该run-in元素将会成为块级框开始位置的行内框，否则run-in框本身就是块级框。</p>
+<h4 id="内边距、边框、外边距"><a href="#内边距、边框、外边距" class="headerlink" title="内边距、边框、外边距"></a>内边距、边框、外边距</h4><p>所有的文档元素都生成一个矩形框，成为元素框element box</p>
+<h5 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h5><p>margin百分数针对父元素的<strong>width</strong>计算，就行内不可替换元素而言，其marginTop、marginBottom是无效的，所以即使行内不可替换元素的width没有被指定也没有关系，本身也是取决于父元素的。</p>
+<p>margin设置值的技巧：</p>
+<p>1值margin-&gt;4值margin</p>
+<h5 id="border"><a href="#border" class="headerlink" title="border"></a>border</h5><p>边框是围绕元素内容和内边距的一条或多条线</p>
+<p>颜色基于元素的color值，有时可以通过设置元素的color实现边框的颜色，更方便的方式是通过border-color定义</p>
+<p>样式是none的边框并不存在，bordor-style的默认值是none，<strong>如果要有边框就一定要声明边框的样式</strong>。如果想创建不可见边框，可以将边框颜色设为transparent。如果只声明style其他的属性就会使用默认值。</p>
+<h5 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h5><p><strong>不为负值</strong></p>
+<p>background-color不能继承，其默认值是transparent</p>
+<h4 id="颜色和背景"><a href="#颜色和背景" class="headerlink" title="颜色和背景"></a>颜色和背景</h4><p>略</p>
+<h4 id="浮动和定位"><a href="#浮动和定位" class="headerlink" title="浮动和定位"></a>浮动和定位</h4><h5 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h5><p>所有元素均可浮动（）</p>
+<p><strong>浮动元素的外边距不会合并</strong></p>
+<p>如果要浮动一个非替换元素必须要为该元素声明一个width</p>
+<p>Float:none用于防止元素浮动，none也是float的默认值</p>
+<p>包含块（containning block）是浮动元素最近的块级祖先元素（所以浮动元素要显式声明width）</p>
+<p>利用负边距向上、向左浮动</p>
+<p>CSS1，2明确指出用户代理不必重新显示已显示的内容来适应文档中后出现的内容</p>
+<p>行内框与浮动元素重叠时，all都在浮动元素之上；块框与浮动元素重叠时，边框和背景在浮动元素之下，内容在浮动元素之上。</p>
+<p>clear的原理是在元素的外边距之上在增加额外的间隔，不允许任何浮动元素进入该区域，元素的外边距并不会改变。</p>
+<h5 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h5><p>基于正常位置，基于父元素，基于浏览器窗口（都是相对包含块定位）</p>
+<p>（position：static/relative/absolute/fixed/inherit）</p>
+<ul>
+<li>static ，正常生成，文档流的一部分</li>
+<li>relative，元素框偏移某一距离，元素仍保持未定位前的形状，原本的空间被仍被保留</li>
+<li>absolute，相对包含块（实际应该是定位上下文）定位，文档流中的位置被删除，重新生成块级框（包含块为最近的position值不是static的祖先元素）</li>
+<li>fixed，包含块是视图本身，其他同absolute</li>
+</ul>
+<p>元素当然可能在包含块之外，设置为负值即可。</p>
+<p>除了长度和百分数，偏移属性还可以设置为auto，默认值。需要注意的是当指定top、bottom、left、right等时同时设置了width和height，此时width和height并没有意义，<strong>但是当两者冲突时width和height的优先级更高一些</strong>。需要注意的是width和height指定的是内容区的范围，如果还设置了padding、border等，定位元素可能超过包含块。</p>
+<p>如果有需要可以针对内容框设置最大最小范围，min-width、min-height、max-width、max-height</p>
+<h5 id="内容的溢出"><a href="#内容的溢出" class="headerlink" title="内容的溢出"></a>内容的溢出</h5><p>overflow：visible（元素框外也可见）、hidden（被剪裁无滚动条）-&gt;clip(设置剪裁区域将剪裁区域延伸到元素框之外，这会扩展看到内容的区域但不会改变内容流，历史悠久浏览器实现方式不一致)、scroll（滚动条显示）、auto、inherit</p>
+<h5 id="元素可见性"><a href="#元素可见性" class="headerlink" title="元素可见性"></a>元素可见性</h5><p>visibility：visible、hidden（对比display:none和transparent）、collapse（如果用于非表元素，与hidden的含义相同）、inherit</p>
+<p>visibility属性可以继承，一个hidden元素的后代可以设置为visible</p>
+<h5 id="绝对定位（absolute）"><a href="#绝对定位（absolute）" class="headerlink" title="绝对定位（absolute）"></a>绝对定位（absolute）</h5><p>元素绝对定位时，会从文档流中完全删除，定位元素不会流入其他元素因此可能会出现覆盖的情况</p>
+<p>绝对定位元素的包含块时最近的position值不为static的祖先元素，一般来说会选择一个元素作为绝对定位元素的包含块，并将其position设置为relative而且没有偏移。</p>
+<p>由于元素依据文档流定位所有定位元素可以随着文档的滚动而滚动。</p>
+<p>对于绝对元素来说他的大小与摆放的位置有关（当height和width都为指定时），当将top和left设置为auto。（top设置为auto会和元素未定位前的本来顶端位置对齐，left和right同理，但是bottom取不到静态位置）</p>
+<p>当height、width的高度和位置设置冲突时会考虑优先忽略right的值以满足left和width，如果同时指定了auto会优先利用auto的属性进行填充满足。</p>
+<p>对于垂直来说与水平相似优先忽略bottom，利用计算值覆盖，但是margin设置为auto可以得到<strong>垂直居中</strong>的效果。</p>
+<p>但是对于替换元素而言，其他相似，如果bottom的值为auto（left、right依据阅读顺序看要不要将auto更改为静态位置），则将margin-top、margin-bottom的auto值设置为0</p>
+<p>Z-轴决定的相同位置的两个元素的叠放顺序，数值越大的离读者越近。但是子元素是依据祖先元素设置自己z-index的。对于auto来说可以将其处理为0，而负值则会在body后如果body不透明就不可见了。</p>
+<h5 id="固定定位（fixed）"><a href="#固定定位（fixed）" class="headerlink" title="固定定位（fixed）"></a>固定定位（fixed）</h5><p>包含块时视窗，元素会完全从文档流中去除，例如导航栏，锚点。</p>
+<h5 id="相对定位（relative）"><a href="#相对定位（relative）" class="headerlink" title="相对定位（relative）"></a>相对定位（relative）</h5><p>原空间位置不会消失，新建的包含块对应元素原本的位置，如果top、bottom、left、right矛盾会优先考虑top、left。</p>
+<h4 id="表布局"><a href="#表布局" class="headerlink" title="表布局"></a>表布局</h4><p>css的内部表元素有内容、边框和内边距但是没有外边距，通过margin定义单元间隔都是会被忽略的。</p>
+<p>为了区分table元素，定义了display的一些属性，table生成块框的矩形块、inline-table生成行内框的矩形块、table-row指定一个元素是单元格的行……</p>
+<p>![image-20191011222143099](/Users/huxiaohui/Library/Application Support/typora-user-images/image-20191011222143099.png)</p>
+<p>css的列和行只能接受border、background、width（定义了最小宽度）、visibility的定义，如果visibility的值不是collapse则会被忽略，collapse表示该列或列祖的所有单元格都不显示。</p>
+<p>可以通过设置display的值将遗漏组件作为匿名对象插入table</p>
+<p>table的层次顺序由近到低：单元格、行、行组、列、列组、表。默认背景都是透明的。</p>
+<p>border-collapse：collapse、separate，决定了两个单元格的边框是否合并，因为每个单元格都会有一个边框。当border-collapse的值为collapse时会出现单元格合并的问题，这时候用哪个边框主要是看border-style，hidden的优先级最高、none的优先级最低，窄边框的优先级不敌宽边框；当宽度也相同则考虑边框样式，double&gt;solid&gt;dashed&gt;dotted&gt;ridge&gt;outset&gt;groove&gt;inset</p>
+<h5 id="表大小"><a href="#表大小" class="headerlink" title="表大小"></a>表大小</h5><p>table-layout：auto、fixed（固定布局、自动布局）显著差别在于速度，使用固定宽度的表布局时，用户代理的计算代理会更快。</p>
+<p>固定布局不依赖于表单元格的内容，所有列的宽度都由表的第一行定义，未指定宽度的列会平均分剩余的width，其他行定义的width会被忽视。</p>
+<p>一般来说width为auto就会触发自动布局，不管table-layout的值。这时候的表布局取决于单元格的内容，用户代理在查看完表的所有内容之前无法确定表的布局。</p>
+<p>如果一个列的width为百分数，则这个百分数要相对于表的宽度计算，因此要先将百分数保存下来，等得到了表格剩余部分的宽度后再进行计算。</p>
+<p>用户代理针对高度可能有不同的做法所有一般来说要避免设置高度</p>
+<h4 id="列表与生成内容"><a href="#列表与生成内容" class="headerlink" title="列表与生成内容"></a>列表与生成内容</h4><h5 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h5><p>列表的项其实是一个块框，多出来的部分不属于文档布局，由用户代理格式化。</p>
+<p>css无法区分有序列表和无序列表，默认是实心圆做标志，但是用户代理可能会进行一定的设置。如果list-style-type设置为none则表示不显示任何样式，属性可继承。</p>
+<p>利用list-style-image将标志设置为自定义的图片；</p>
+<p>list-style-position确定标志出现在列表内容外还是列表内容内；</p>
+<p>如果标志放在列表项内容之外，他们不会影响其他元素的布局也不会影响列表项本身的布局，就是离内容边界有一段距离，只要内容边界移动，标志也会跟着移动。标志总是相对于列表项的内容放置。</p>
+<p>css3中引入了::marker进行相关的设置（实验ing）</p>
+<h5 id="生成内容"><a href="#生成内容" class="headerlink" title="生成内容"></a>生成内容</h5><p>指由浏览器创建的内容，如列表标记。文档中插入生成内容可以利用:before和:after伪元素，利用content属性添加内容。除列表标志外，其他生成内容都在元素框内部。</p>
+<p>css2中如果:before或:after的主体是块级元素，则display只接受none、inline、block、mark，其他值为block；同理，如果是行内元素，则只接受none和inline，其他值为inline。</p>
+<p>除了文字还能设置计数器，利用counter-reset可以设置计数器起点，counter-increment用来设置递增间隔。需要注意的是重置发生在显示前，因此显示的一定是默认值+increment（word中的标题编号）</p>
+<h4 id="用户界面样式"><a href="#用户界面样式" class="headerlink" title="用户界面样式"></a>用户界面样式</h4><p>css2中定义了系统关键字，用来于系统字体(font)风格保持一致</p>
+<p>![image-20191012113919528](/Users/huxiaohui/Library/Application Support/typora-user-images/image-20191012113919528.png)</p>
+<p>以及系统关键字与系统的颜色保持风格相似；</p>
+<p>cursor属性用来指示光标的形状，auto表示用户代理依据当前上下文显示光标图标；</p>
+<p>轮廓不像边框，不会参与到文档流中，因此出现和消失不会导致文档重新显示；可以利用轮廓指示焦点。</p>
+<h4 id="非屏幕媒体"><a href="#非屏幕媒体" class="headerlink" title="非屏幕媒体"></a>非屏幕媒体</h4><p>media属性指定媒体，screen、print、projection</p>
+<p>分页媒体（打印机）和连续媒体（屏幕），最适宜的字体并不相同，是否有颜色，是否是单色打印，</p>
+<p>利用size设置portrait（纵向）、landscape（横向）模式打印，</p>
+<p>还可以设置语速、音量什么的</p>
+<h4 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h4><p>属性参考</p>
+<p>选择器，伪类，伪元素</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2019/11/02/【读书笔记】CSS权威指南/" title="【读书笔记】CSS权威指南">https://MeaKaka.github.io/2019/11/02/【读书笔记】CSS权威指南/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/02/【读书笔记】剑指offer大纲/" rel="next" title="【读书笔记】CSS权威指南">
+                <i class="fa fa-chevron-left"></i> 【读书笔记】CSS权威指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/24/【阶段总结】20191121/" rel="prev" title="【阶段总结】20191121">
+                【阶段总结】20191121 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS和文档"><span class="nav-number">1.</span> <span class="nav-text">CSS和文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择器"><span class="nav-number">2.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结构和层叠"><span class="nav-number">3.</span> <span class="nav-text">结构和层叠</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值和单位"><span class="nav-number">4.</span> <span class="nav-text">值和单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字体"><span class="nav-number">5.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本属性"><span class="nav-number">6.</span> <span class="nav-text">文本属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本视觉格式化"><span class="nav-number">7.</span> <span class="nav-text">基本视觉格式化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#块级元素"><span class="nav-number">7.1.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#行内元素"><span class="nav-number">7.2.</span> <span class="nav-text">行内元素</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内边距、边框、外边距"><span class="nav-number">8.</span> <span class="nav-text">内边距、边框、外边距</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#margin"><span class="nav-number">8.1.</span> <span class="nav-text">margin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#border"><span class="nav-number">8.2.</span> <span class="nav-text">border</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#padding"><span class="nav-number">8.3.</span> <span class="nav-text">padding</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颜色和背景"><span class="nav-number">9.</span> <span class="nav-text">颜色和背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动和定位"><span class="nav-number">10.</span> <span class="nav-text">浮动和定位</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#浮动"><span class="nav-number">10.1.</span> <span class="nav-text">浮动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定位"><span class="nav-number">10.2.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内容的溢出"><span class="nav-number">10.3.</span> <span class="nav-text">内容的溢出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#元素可见性"><span class="nav-number">10.4.</span> <span class="nav-text">元素可见性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#绝对定位（absolute）"><span class="nav-number">10.5.</span> <span class="nav-text">绝对定位（absolute）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#固定定位（fixed）"><span class="nav-number">10.6.</span> <span class="nav-text">固定定位（fixed）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相对定位（relative）"><span class="nav-number">10.7.</span> <span class="nav-text">相对定位（relative）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表布局"><span class="nav-number">11.</span> <span class="nav-text">表布局</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#表大小"><span class="nav-number">11.1.</span> <span class="nav-text">表大小</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表与生成内容"><span class="nav-number">12.</span> <span class="nav-text">列表与生成内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">12.1.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成内容"><span class="nav-number">12.2.</span> <span class="nav-text">生成内容</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户界面样式"><span class="nav-number">13.</span> <span class="nav-text">用户界面样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非屏幕媒体"><span class="nav-number">14.</span> <span class="nav-text">非屏幕媒体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附录"><span class="nav-number">15.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>

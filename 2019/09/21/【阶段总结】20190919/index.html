@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="阶段总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="跨域相关跨域的解决方法（前端+后端）（nginx，jsonp，cors） cors 简单请求 预请求  在跨域请求中，若服务端返回了正确的跨域响应部首， 则跨域请求能正常获取数据，即response中需要有一定的字段：Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers、Access">
+<meta name="keywords" content="阶段总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【阶段总结】20190919">
+<meta property="og:url" content="https://MeaKaka.github.io/2019/09/21/【阶段总结】20190919/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="跨域相关跨域的解决方法（前端+后端）（nginx，jsonp，cors） cors 简单请求 预请求  在跨域请求中，若服务端返回了正确的跨域响应部首， 则跨域请求能正常获取数据，即response中需要有一定的字段：Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers、Access">
+<meta property="og:locale" content="Hans">
+<meta property="og:updated_time" content="2020-03-09T06:56:20.484Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【阶段总结】20190919">
+<meta name="twitter:description" content="跨域相关跨域的解决方法（前端+后端）（nginx，jsonp，cors） cors 简单请求 预请求  在跨域请求中，若服务端返回了正确的跨域响应部首， 则跨域请求能正常获取数据，即response中需要有一定的字段：Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers、Access">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2019/09/21/【阶段总结】20190919/">
+
+
+
+
+
+  <title>【阶段总结】20190919 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/09/21/【阶段总结】20190919/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【阶段总结】20190919</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T21:32:44+08:00">
+                2019-09-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T14:56:20+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="跨域相关"><a href="#跨域相关" class="headerlink" title="跨域相关"></a>跨域相关</h3><p>跨域的解决方法（前端+后端）（nginx，jsonp，cors）</p>
+<h4 id="cors"><a href="#cors" class="headerlink" title="cors"></a>cors</h4><ul>
+<li>简单请求</li>
+<li>预请求</li>
+</ul>
+<p>在跨域请求中，若服务端返回了正确的跨域响应部首， 则跨域请求能正常获取数据，即response中需要有一定的字段：Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers、Access-Control-Allow-Credentials（是否提供证书，携带cookie传递）（omit表示从不发送cookies；same-origin表示只有当URL和响应脚本同源时才发送cookie；include表示不论什么情况总是发布）（以上均为http请求中的字段内容）</p>
+<blockquote>
+<p>对比XHR中的withCredentials属性（XHR对象是一组发送请求解析响应的API）</p>
+</blockquote>
+<p>当https中<strong>不能</strong>将access-control-allow-origin设为通配符<em>，设置为\</em>则默认不需要提供cookie。</p>
+<p>access-control-allow-origin*与Access-control-allow-credentials：true冲突。</p>
+<p>Web项目在本地运行时node会在本地创建一个假服务器，通过将localhost的请求更改为sandbox请求，接收后端的response然后再转发给前端，在浏览器的调试窗口不可见node的转发部分。</p>
+<h3 id="与后端的数据交互"><a href="#与后端的数据交互" class="headerlink" title="与后端的数据交互"></a>与后端的数据交互</h3><p>JS的boolean为false、true；python的boolean为False、True，有时候可以约定用数字传递。</p>
+<p>利用<strong>JSON</strong>传递时可以传递数据的类型，但是当传递的数据格式是<strong>FormData</strong>时，所有的数据都变成了字符串。</p>
+<p>当FormData作为数据格式的时候，post请求会将Data序列化，按照key1=val&amp;key=val2的方式进行编码，key和val都会被进行URl转码。</p>
+<p>后端是如何区分前端传递的数据的格式的呢？通过content-type字段的值进行判断从而进行解码。常见的content-type字段的类型</p>
+<ul>
+<li>application/x-www-form-urlencoded（浏览器原生form表单，按formData样式解码）</li>
+<li>multipart/form-data</li>
+<li>application/json（消息主体是序列化后的 JSON 字符串，时候Restful API接口）</li>
+<li>text/xml（使用 HTTP 作为传输协议，XML 作为编码方式的远程调用规范）</li>
+</ul>
+<h3 id="事件的捕获和冒泡"><a href="#事件的捕获和冒泡" class="headerlink" title="事件的捕获和冒泡"></a>事件的捕获和冒泡</h3><p>有的时候会发生postman模拟请求没有问题，但浏览器的请求一直在请求状态的情况，很有可能是页面自动触发到了其他请求，然后又切回了页面请求，一直处在请求的循环中。</p>
+<p>使用<strong>event.stopPropagation()</strong>起到阻止捕获和冒泡阶段中当前事件的进一步传播。如果当你点击click的时候，<strong>只想触发绑定在click上的监听函数，而不想触发“传播链”上的其他函数</strong>，那么则使用stopPropagation，如触发&lt;a&gt;中的默认链接行为（刷新页面）。</p>
+<p>最常见的情况的是antd的popconfirm组件，在onconfirm(本质是一个click事件)回调时要注意阻止事件的传播。</p>
+<p>此外，在页面的回退时，为了保存当前的页面的状态会用到this.props.history.replace方法，但是后续如果没有对应的页面跳转，如&lt;a&gt;，则会针对当前页面一直渲染。</p>
+<p>对比<strong>event.preventDefault()</strong>表示取消默认事件，它是事件对象(Event)的一个方法，作用是<strong>取消一个目标元素的默认行为</strong>。既然是说默认行为，当然是元素必须有默认行为才能被取消，如果元素本身就没有默认行为，调用当然就无效了，如&lt;a&gt;。</p>
+<p>event代表事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等；event对象只在事件发生的过程中才有效。</p>
+<p>直接return false可以实现preventDefault和stopPropagation的功能</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>git checkout xxx 切换到xxx分支上</p>
+<p>git merge xxxx 将xxxx分支合并到xxx分支上</p>
+<p><strong>git checkout  breach fileName</strong>单纯的将对应的文件Marge到当前分支上而不是整个branch</p>
+<p>本地的代码在commit之前一定要记得<strong>pull</strong>一下，处理一下冲突</p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>react中父子组件的执行顺序：</p>
+<ol>
+<li>father constructor</li>
+<li>father getDerivedStateFromProps</li>
+<li>father render</li>
+<li>children constructor</li>
+<li>children getDerivedStateFromProps</li>
+<li>children render</li>
+<li>children componentDidMount</li>
+<li>father componentDidMount</li>
+</ol>
+<p>React出现 “不要给unmount的组件赋值state” 的情况，可能是由于组件在加载时发送了<strong>异步请求</strong>然后组件切换了，切换后接收到了后端的返回值但是请求/展现返回值的组件已经被卸载了。</p>
+<p>componentWillReceiveProps props更新时component被重新渲染（React v16已废弃）</p>
+<p>export default XXXXX 表示在引用该组件时，不管是什么名字都对应此组件</p>
+<p>state 的更新过程是同步执行的，也就是说，action 更改 state 后，新的 state 可以立即被获取。</p>
+<h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><p><strong>Object.assign()</strong>方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象，如果源对象的属性和目标对象的属性有重复时，因为复制的缘故所有以源对象属性值为准，它将返回目标对象。（x2）</p>
+<p>json.parse()将json字符串转换为对象</p>
+<p>字符串和数字拼接出现多个object的情况，可能是因为用了嵌套的{}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>append</strong>针对DOM节点，被选元素；<strong>pop、push</strong>针对数组</p>
+<p>date.setMonth(date.getMonth() + 1)，不要认为 month + 1 就是月份加 1，它的意思是当前日期加上当月天数 。因此很有可能在+1时出现跨月的情况。想获取上个月最后一天，只需要设置SetDate参数为0即可。</p>
+<p>window.postMessage() 方法可以安全地实现跨源通信。（通信的两个页面可以跨源）</p>
+<p><strong>token</strong>可以通过headers.get的方式获取。后端通过用户id、密码、时间之类的生成的一串序列号，由用户（浏览器）保存在session storage中，当发送的请求需要token字段时，再从浏览器中的sessionStorage里利用getItem获取。sessionStorage.getItem(“token”)</p>
+<h3 id="Antd"><a href="#Antd" class="headerlink" title="Antd"></a>Antd</h3><p>select的allowclear在被点击时也会触发onchange()。</p>
+<p>使用 optionLabelProp 指定回填到选择框的 Option 属性。 因此输入框不一定要显示&lt;option&gt;&lt;/option&gt;标签内的东西。</p>
+<p>Tooltip的样式的更改可以利用overlaystyle，宽度通过设置minwidth来修改。</p>
+<p>getFieldDecorator装饰组件相当于对数据做了渲染，直接以某一个组件的形式呈现处理，是antd组件form里的属性。</p>
+<h3 id="ELSE"><a href="#ELSE" class="headerlink" title="ELSE"></a>ELSE</h3><p>Polyfill可以看作是补丁用来修补不兼容的浏览器</p>
+<p>typescript interface与graphQL很相似</p>
+<p>所谓智能化前端指的就是tensorflow.js</p>
+<p>Node.js实现connect框架，可阅读<a href="https://github.com/alsotang/node-lessons/tree/master/lesson18" target="_blank" rel="noopener">《何为 connect 中间件》</a>。</p>
+<blockquote>
+<p>编辑记录<br>20190919 总结上一个月遇到的问题</p>
+<p>20191029 处理页面中的&lt;a&gt;标签使其能正常显示</p>
+<p>20191129添加credentials参数的属性值</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2019/09/21/【阶段总结】20190919/" title="【阶段总结】20190919">https://MeaKaka.github.io/2019/09/21/【阶段总结】20190919/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/阶段总结/" rel="tag"># 阶段总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/21/【技术点】正则匹配（整理版）/" rel="next" title="【基础学习】正则匹配">
+                <i class="fa fa-chevron-left"></i> 【基础学习】正则匹配
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/14/【技术点】视觉格式化/" rel="prev" title="【了解前端，爱上前端】视觉格式化">
+                【了解前端，爱上前端】视觉格式化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域相关"><span class="nav-number">1.</span> <span class="nav-text">跨域相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cors"><span class="nav-number">1.1.</span> <span class="nav-text">cors</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与后端的数据交互"><span class="nav-number">2.</span> <span class="nav-text">与后端的数据交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件的捕获和冒泡"><span class="nav-number">3.</span> <span class="nav-text">事件的捕获和冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">4.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React"><span class="nav-number">5.</span> <span class="nav-text">React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS"><span class="nav-number">6.</span> <span class="nav-text">JS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Antd"><span class="nav-number">7.</span> <span class="nav-text">Antd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ELSE"><span class="nav-number">8.</span> <span class="nav-text">ELSE</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>

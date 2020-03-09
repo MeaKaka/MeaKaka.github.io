@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="读书笔记,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="文章大纲第一章：面试流程 简要的项目背景 自己完成的任务 如何完成 贡献，多少功能，多少bug（量化）第二章：面试中需要用到的基础知识编程语言 相关语言的基础知识（重点）数据结构     数组（哈希）（数组下标） 题3: 找到数组中重复的数字（不知道几个数字重复不知道重复几次，对比题56） 题4: 二维数组的查找，行列递增（逆序思考，缩小搜索范围，右上角）(注意二维数组输入为[]的情况) 字符串">
+<meta name="keywords" content="读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【读书笔记】CSS权威指南">
+<meta property="og:url" content="https://MeaKaka.github.io/2019/11/02/【读书笔记】剑指offer大纲/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="文章大纲第一章：面试流程 简要的项目背景 自己完成的任务 如何完成 贡献，多少功能，多少bug（量化）第二章：面试中需要用到的基础知识编程语言 相关语言的基础知识（重点）数据结构     数组（哈希）（数组下标） 题3: 找到数组中重复的数字（不知道几个数字重复不知道重复几次，对比题56） 题4: 二维数组的查找，行列递增（逆序思考，缩小搜索范围，右上角）(注意二维数组输入为[]的情况) 字符串">
+<meta property="og:locale" content="Hans">
+<meta property="og:updated_time" content="2020-03-09T06:45:58.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【读书笔记】CSS权威指南">
+<meta name="twitter:description" content="文章大纲第一章：面试流程 简要的项目背景 自己完成的任务 如何完成 贡献，多少功能，多少bug（量化）第二章：面试中需要用到的基础知识编程语言 相关语言的基础知识（重点）数据结构     数组（哈希）（数组下标） 题3: 找到数组中重复的数字（不知道几个数字重复不知道重复几次，对比题56） 题4: 二维数组的查找，行列递增（逆序思考，缩小搜索范围，右上角）(注意二维数组输入为[]的情况) 字符串">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2019/11/02/【读书笔记】剑指offer大纲/">
+
+
+
+
+
+  <title>【读书笔记】CSS权威指南 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/11/02/【读书笔记】剑指offer大纲/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【读书笔记】CSS权威指南</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-02T21:32:44+08:00">
+                2019-11-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T14:45:58+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="文章大纲"><a href="#文章大纲" class="headerlink" title="文章大纲"></a>文章大纲</h3><h4 id="第一章：面试流程"><a href="#第一章：面试流程" class="headerlink" title="第一章：面试流程"></a>第一章：面试流程</h4><ul>
+<li>简要的项目背景</li>
+<li>自己完成的任务</li>
+<li>如何完成</li>
+<li>贡献，多少功能，多少bug（量化）<h4 id="第二章：面试中需要用到的基础知识"><a href="#第二章：面试中需要用到的基础知识" class="headerlink" title="第二章：面试中需要用到的基础知识"></a>第二章：面试中需要用到的基础知识</h4><h5 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h5><ol>
+<li>相关语言的基础知识（重点）<h5 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h5></li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>数组（哈希）（数组下标）<ol>
+<li>题3: 找到数组中重复的数字（不知道几个数字重复不知道重复几次，对比题56）</li>
+<li>题4: 二维数组的查找，行列递增（逆序思考，缩小搜索范围，右上角）(注意二维数组输入为[]的情况)</li>
+<li>字符串<ol>
+<li>题5: 替换空格为”%20”（预设字符串长度以免重新申请）（从后向前复制减少移动次数）</li>
+</ol>
+</li>
+<li>链表（高频）（空指针）<ol>
+<li>题6: 逆序打印链表（明确是否允许修改链表结构）（栈）</li>
+<li>合并两个有序链表</li>
+</ol>
+</li>
+<li>树（高频）（空指针）（前序、中序、后序、广度）<ol>
+<li>题7: 前序中序还原二叉树</li>
+<li>题8: 已知二叉树的下一个节点</li>
+</ol>
+</li>
+<li>栈（递归）（先进后出）<ol>
+<li>题9: 用两个栈实现队列（入栈和出栈）</li>
+</ol>
+</li>
+<li>队列（广度优先遍历）<ol>
+<li>两个队列实现栈<h5 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h5></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>递归（注意调用栈是否会溢出）<ol>
+<li>回溯<ol>
+<li>题12: 矩阵中是否包含某字符串所有字符的路径</li>
+<li>题13: 机器人的运动范围，有条件移动，格数之和（特殊值测试）</li>
+</ol>
+</li>
+<li>动态规划（存储中间过程值）<ol>
+<li>题14: 剪绳子(max(f(n),f(m)))</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>循环（注意边界情况）<ol>
+<li>题10: 斐波那契数列（注意溢出问题）（过程值有没有必要保存）（小青蛙跳台阶问题）（小矩形覆盖大矩形问题）</li>
+</ol>
+</li>
+<li>排序<ol>
+<li>归并、快排、插入、冒泡及其他算法的比较（额外空间、平均时间复杂度、最差时间复杂度）</li>
+<li>第K大的数字（快排）<ol>
+<li>题39: 数组只出现次数超过一半的数字</li>
+<li>题40: 数组中最小的k个数</li>
+</ol>
+</li>
+<li>题11: 旋转数组的最小数字（双指针，折半，考虑0和数值相同的情况）（[10,1,10,10,10]和[10,10,10,1,10]的情况，无法确定，因此要利用顺序查找）</li>
+</ol>
+</li>
+<li>查找<ol>
+<li>顺序、二分、哈希、二叉排序树查找</li>
+<li>题设是否说明针对排序/部分排序的数组（二分）</li>
+</ol>
+</li>
+<li>贪婪（数学证明）<ol>
+<li>题14: 剪绳子</li>
+</ol>
+</li>
+<li>位运算（注意负数和0）<ol>
+<li>左移、右移、异或、与、或（除法比移位运算效率低）</li>
+<li>题15: 二进制中1的个数（按位与、整数减1与原整数相与就会将整数最左边的1变成0）</li>
+<li>一条语句判断一个整数是不是2的整次方</li>
+<li>输入n、m判断二进制变化中要改变多少位<h4 id="第三章：高质量代码（异常输入、边界值、错误输入）"><a href="#第三章：高质量代码（异常输入、边界值、错误输入）" class="headerlink" title="第三章：高质量代码（异常输入、边界值、错误输入）"></a>第三章：高质量代码（异常输入、边界值、错误输入）</h4><h5 id="规范性"><a href="#规范性" class="headerlink" title="规范性"></a>规范性</h5></li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>书写</li>
+<li>布局</li>
+<li>命名<h5 id="完成性"><a href="#完成性" class="headerlink" title="完成性"></a>完成性</h5></li>
+</ul>
+<ol>
+<li>题16: 数值的整数次方（大数问题）</li>
+<li>题17: 打印从1到最大的n位数（大数问题）（字符串）</li>
+<li>题18-1: 0(1)时间删除链表的节点（不删除该节点修改该节点）（空指针）</li>
+<li>题18-2: 删除已排序链表中的重复节点</li>
+<li>题19: 正则表达式的匹配（自动机）（不用自动机用回溯法反而更好）</li>
+<li>题20: 表示数字的字符串（考虑符号、e、小数点等情况）</li>
+<li>题21: 调整数组顺序使奇数在偶数前（是否允许额外空间）（双指针交换）<h5 id="鲁棒性"><a href="#鲁棒性" class="headerlink" title="鲁棒性"></a>鲁棒性</h5></li>
+<li>题22: 链表中倒数第K个节点（两指针）（K值的输入是否合法）</li>
+<li>题23: 链表中环的入口节点（快慢指针）</li>
+<li>题24: 反转链表(两个指针)</li>
+<li>题25: 合并两个已经排序的链表（双指针/递）（空链表）</li>
+<li>题26: 判断二叉树A是否是二叉树B的子树（空指针）（double类型判等）<h4 id="第四章：常用解题思路"><a href="#第四章：常用解题思路" class="headerlink" title="第四章：常用解题思路"></a>第四章：常用解题思路</h4><h5 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h5></li>
+<li>题27: 二叉树的镜像</li>
+<li>题28: 判断二叉树是否对称（遍历算法，转化为序列相等）（考虑所有节点的值都相同的情况）</li>
+<li>题29: 顺时针打印矩阵<h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5></li>
+<li>题30: 包含min函数的栈O(1)（辅助栈）（最小堆）</li>
+<li>题31: 输入两个整数序列，第一个表示栈的压入顺序第二个是否为弹出顺序</li>
+<li>题32: 从上到下打印二叉树（队列）（插入分层符号）</li>
+<li>题32-3: 之字形打印二叉树（两个栈）</li>
+<li>题33: 判断一个整数数组是否是二叉搜索树的后续遍历（定义递归）</li>
+<li>题34: 打印二叉树中和为某一值的所有路径（递归）<h5 id="分解"><a href="#分解" class="headerlink" title="分解"></a>分解</h5></li>
+<li>题35: 复杂链表的复制（基于原链表保存定位关系，避免多次循环）</li>
+<li>题36: 二叉搜索树转化为一个排序的双向链表，不能创建新节点（确定根节点，递归）</li>
+<li>题37: 序列化、反序列化二叉树（特殊字符）</li>
+<li>题38: 输入一个字符串，打印其中字符的所有排列（回溯）（8皇后问题）<h4 id="第五章：优化时间、空间"><a href="#第五章：优化时间、空间" class="headerlink" title="第五章：优化时间、空间"></a>第五章：优化时间、空间</h4></li>
+<li>题39: 数组中出现次数超过一半的数字（中位数）（如果输入数组中出现频率最高的数字都没有达到标准）（它的出现次数比其他所有数字都多 ）（是否允许修改数组）</li>
+<li>题40: 最小的K个数（处理海量数据）（大小为K的最大堆/红黑树）</li>
+<li>题41: 数据流中的中位数（两个堆）（边界值测试）</li>
+<li>题42: 连续子数组的最大和（过程值的记录）（如何区分无效输入和正常情况为0的情况）</li>
+<li>题43: 1～n个整数中1出现的次数（找规律）</li>
+<li>题44: 将数字格式化为字符序列求任意第n位对应的数字（找规律）</li>
+<li>题45: 把数组排成最小的数（mn&lt;\nm, 自定义数组排序规则）（大数问题）</li>
+<li>题46: 把数字翻译成字符串25-&gt;z计算有多少种翻译方式（青蛙跳台阶）</li>
+<li>题47: 棋盘左上角到右下角路线的最大值（从终到起动态规划）</li>
+<li>题48: 计算最长的不含重复字符的子字符串的长度（记录中间值）</li>
+<li>题49: 丑数</li>
+<li>题50: 第一次只出现一次的字符（哈希）</li>
+<li>题51: 数组中的逆序对的总对数（归并算法）</li>
+<li>题52: 两个链表的第一个公共节点（利用长度，早晚指针，第一个相同值）（双指针）（二叉树中两个叶子结点的最低公共祖先）<h4 id="第六章：其他能力"><a href="#第六章：其他能力" class="headerlink" title="第六章：其他能力"></a>第六章：其他能力</h4><h5 id="知识迁移"><a href="#知识迁移" class="headerlink" title="知识迁移"></a>知识迁移</h5></li>
+<li>题53: 在排序数组中查找数字出现的次数（二分确定首尾）</li>
+<li>题53-2: 递增排序数组中缺失的数字（公式法，下标法）</li>
+<li>题53-3: 单调递增数组下标相等（二分）</li>
+<li>题54: 二叉搜索树的第K大的节点（中序遍历）</li>
+<li>题55: 二叉树的深度（遍历/最长路径长度）</li>
+<li>题55-2: 判断一棵树是不是平衡二叉树（后序遍历）</li>
+<li>题56-1: 数组中只出现一次的两个数字，空间复杂度为0(1)(哈希表，异或)</li>
+<li>题56-2: 一个数字出现了一次剩下的出现了三次，找到只出现一次的数字（被3整除）</li>
+<li>题57-1: 递增数组和为S的两个数字（定1找1）</li>
+<li>题57-2: 输入s，打印所有和为S的连续正数序列（公式定和，双指针定首尾）</li>
+<li>题58-1: 反转字符串但不反转单词（是否要求就地）（两个栈/三次翻转）（反转为对位交换）</li>
+<li>题58-2: 定义一个函数实现字符串左旋转的功能</li>
+<li>题59-1: 滑动窗口的最大值（中间值记录） （存下标）</li>
+<li>题59-2: 定义一个队列并实现函数max，时间复杂度为O(1)<h5 id="抽象建模"><a href="#抽象建模" class="headerlink" title="抽象建模"></a>抽象建模</h5></li>
+<li>题60: n个骰子的点数情况（交替数组）（动态规划）</li>
+<li>题61: 五张牌，扑克牌中的顺子，大小王为任意数字（数组的连续性）</li>
+<li>题62: 圆圈中最后剩下的数字，从0开始每次删除第m个数字（约瑟夫环）（环形链表模拟）（公式法f(n,m)=0/ [f(n-1,m)+m]%n）</li>
+<li>题63: 股票的最大利润，价格数组，求最大利润（中间值保存）<h5 id="发散思维"><a href="#发散思维" class="headerlink" title="发散思维"></a>发散思维</h5></li>
+<li>题64: 不用乘除、for循环、条件判断等求1+2+…+n（构造函数）（模版类型）</li>
+<li>题65: 写一个函数求两个整数之和，不得使用加减乘除（位运算）（异或）（移位）</li>
+<li>题66: 构造乘积数组<h4 id="第七章：面试案例（基本功能、边界条件、错误处理）"><a href="#第七章：面试案例（基本功能、边界条件、错误处理）" class="headerlink" title="第七章：面试案例（基本功能、边界条件、错误处理）"></a>第七章：面试案例（基本功能、边界条件、错误处理）</h4></li>
+<li>考虑代码的鲁棒性<ul>
+<li>题67: 字符串转换为整数（空指针、合法字符的范围、溢出）</li>
+</ul>
+</li>
+<li>明确需求，多问需求，隐含信息藏在交流中<ul>
+<li>题68: 树中两个节点的最低公共祖先（二叉树？父节点指针？）</li>
+</ul>
+</li>
+<li>提问题可以围绕当前招聘的项目及团队</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2019/11/02/【读书笔记】剑指offer大纲/" title="【读书笔记】CSS权威指南">https://MeaKaka.github.io/2019/11/02/【读书笔记】剑指offer大纲/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/02/【阶段总结】20191025/" rel="next" title="【阶段总结】20191025">
+                <i class="fa fa-chevron-left"></i> 【阶段总结】20191025
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/02/【读书笔记】CSS权威指南/" rel="prev" title="【读书笔记】CSS权威指南">
+                【读书笔记】CSS权威指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文章大纲"><span class="nav-number">1.</span> <span class="nav-text">文章大纲</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章：面试流程"><span class="nav-number">1.1.</span> <span class="nav-text">第一章：面试流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章：面试中需要用到的基础知识"><span class="nav-number">1.2.</span> <span class="nav-text">第二章：面试中需要用到的基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#编程语言"><span class="nav-number">1.2.1.</span> <span class="nav-text">编程语言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#算法"><span class="nav-number">1.2.3.</span> <span class="nav-text">算法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章：高质量代码（异常输入、边界值、错误输入）"><span class="nav-number">1.3.</span> <span class="nav-text">第三章：高质量代码（异常输入、边界值、错误输入）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#规范性"><span class="nav-number">1.3.1.</span> <span class="nav-text">规范性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#完成性"><span class="nav-number">1.3.2.</span> <span class="nav-text">完成性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#鲁棒性"><span class="nav-number">1.3.3.</span> <span class="nav-text">鲁棒性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四章：常用解题思路"><span class="nav-number">1.4.</span> <span class="nav-text">第四章：常用解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#画图"><span class="nav-number">1.4.1.</span> <span class="nav-text">画图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例"><span class="nav-number">1.4.2.</span> <span class="nav-text">举例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分解"><span class="nav-number">1.4.3.</span> <span class="nav-text">分解</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五章：优化时间、空间"><span class="nav-number">1.5.</span> <span class="nav-text">第五章：优化时间、空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六章：其他能力"><span class="nav-number">1.6.</span> <span class="nav-text">第六章：其他能力</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#知识迁移"><span class="nav-number">1.6.1.</span> <span class="nav-text">知识迁移</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#抽象建模"><span class="nav-number">1.6.2.</span> <span class="nav-text">抽象建模</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#发散思维"><span class="nav-number">1.6.3.</span> <span class="nav-text">发散思维</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七章：面试案例（基本功能、边界条件、错误处理）"><span class="nav-number">1.7.</span> <span class="nav-text">第七章：面试案例（基本功能、边界条件、错误处理）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>

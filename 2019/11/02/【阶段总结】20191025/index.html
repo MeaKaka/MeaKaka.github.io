@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="阶段总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="JSArray Array.find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined，相当于实现了遍历匹配返回。  123var found = array1.find((element)=&amp;gt; &amp;#123;  return element &amp;gt; 10;&amp;#125;);  Array.join()方法，对比string.split()，只有array有j">
+<meta name="keywords" content="阶段总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【阶段总结】20191025">
+<meta property="og:url" content="https://MeaKaka.github.io/2019/11/02/【阶段总结】20191025/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="JSArray Array.find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined，相当于实现了遍历匹配返回。  123var found = array1.find((element)=&amp;gt; &amp;#123;  return element &amp;gt; 10;&amp;#125;);  Array.join()方法，对比string.split()，只有array有j">
+<meta property="og:locale" content="Hans">
+<meta property="og:updated_time" content="2020-03-09T02:55:22.756Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【阶段总结】20191025">
+<meta name="twitter:description" content="JSArray Array.find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined，相当于实现了遍历匹配返回。  123var found = array1.find((element)=&amp;gt; &amp;#123;  return element &amp;gt; 10;&amp;#125;);  Array.join()方法，对比string.split()，只有array有j">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2019/11/02/【阶段总结】20191025/">
+
+
+
+
+
+  <title>【阶段总结】20191025 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/11/02/【阶段总结】20191025/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【阶段总结】20191025</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-02T21:32:44+08:00">
+                2019-11-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:55:22+08:00">
+                2020-03-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h5 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h5><ul>
+<li><p>Array.find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined，相当于实现了遍历匹配返回。</p>
+</li>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> found = array1.find(<span class="function">(<span class="params">element</span>)=&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.join()方法，对比string.split()，只有array有join方法，如果array为空的话返回空字符串。利用join+\n实现换行，返回的仍是字符串，除非对\n换行符有识别，html对\n没有识别。replaceAll可以利用split和join来实现。</p>
+</li>
+<li><p>Array.sort()方法会改变原数组，因为原地排序。对比生成新数组的命令，map 、filter。</p>
+</li>
+<li><p>array.concat（）合并两个数组，返回一个新数组</p>
+</li>
+</ul>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><ul>
+<li>JS截取字符串，substr(start,[len])、slice(start,[end])、substring(start,[end])，都可以只接收一个参数，用来表示起始位置start。</li>
+</ul>
+<h5 id="object"><a href="#object" class="headerlink" title="object"></a>object</h5><ul>
+<li>Object.defineProperty()方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。</li>
+<li>如果某个属性的 configurable 为false, 那么:<ul>
+<li>将不能删除此属性, 即 delete obj.xxx 无效, 在严格模式下直接报错. 不能修改相关配置信息，属性内函数或者变量（delete返回值是false的情况）</li>
+<li>writable的可配置性依据configurable</li>
+<li>虽然 configurable 是 <strong>false</strong>, 但只要 writable 是 <strong>true</strong>, 便可以重新定义 value</li>
+</ul>
+</li>
+</ul>
+<h5 id="JS时间格式化"><a href="#JS时间格式化" class="headerlink" title="JS时间格式化"></a>JS时间格式化</h5><p>New Date（时间戳），将时间戳转化为日期格式，常见的命令有getYear()、getMonth()，这里需要注意的getDate()和getDay()的差别。</p>
+<ul>
+<li>myDate.getDate(); //获取当前日(1-31)</li>
+<li>myDate.getDay(); //获取当前星期X(0-6,0代表星期天)</li>
+<li>.toFixed(n);  //取n位小数</li>
+</ul>
+<p>需要注意的是原生JS中Date里是没有format方法的，所以Date.format(“yyyy-mm-dd”)是会报错的，可以通过getYear()等函数的求值进行拼接后实现format方法。</p>
+<p>Date.toString()返回的是一个字符串，表示该Date对象，与期望的格式化输出还是不一样。</p>
+<blockquote>
+<p>需要注意的是安卓/ios、谷歌/safari在针对时间处理上的差异。ios不支持2019-12-24 11:00这样格式的时间,只能针对2019/12/24 11:00或是2019/12/24T11:00的时间格式进行处理。</p>
+</blockquote>
+<blockquote>
+<p>Date.parse()返回时间戳</p>
+<p>new Date()返回字符串式时间格式，+Date()、Date().valueOf()、Date.now()都可以返回对应的时间戳。</p>
+<p>以上两个方法在参数为null时可以正常处理，当参数为字符串时需要注意传入时间的格式</p>
+</blockquote>
+<p>moment.js中提供了针对Date的加减操作，moment().add(1,”day”)，在不使用该库的情况下我们可以使用get和set实现时间的加减。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> endData = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">endData.setMinutes(startData.getMinutes()+<span class="built_in">parseInt</span>(timeInterval))</span><br></pre></td></tr></table></figure>
+
+<h5 id="forEach-amp-amp-map"><a href="#forEach-amp-amp-map" class="headerlink" title="forEach&amp;&amp;map"></a>forEach&amp;&amp;map</h5><ul>
+<li><p>forEach(): 针对每一个元素执行提供的函数(executes a provided function once for each array element)。</p>
+</li>
+<li><p>map(): 创建一个新的数组，其中每一个元素由调用数组中的每一个元素执行提供的函数得来(creates a new array with the results of calling a provided function on every element in the calling array)。</p>
+</li>
+</ul>
+<p>forEach()方法不会返回执行结果，而是undefined。也就是说，forEach()会修改原来的数组。而map()方法会得到一个新的数组并返回。所以利用forEach进行数据的遍历展示&lt;span&gt;会失败</p>
+<h5 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h5><p>arguments对象是所有（非箭头）函数中都可用的局部变量，维护所有传递到这个函数中的参数列表。</p>
+<h4 id="正则表达"><a href="#正则表达" class="headerlink" title="正则表达"></a>正则表达</h4><h5 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h5><p>要求输入的内容前后不能有空格，中间可以有空格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pattern= <span class="regexp">/^\S.*\S$/</span></span><br><span class="line"><span class="comment">//其中用到的部分有，^用来表示匹配字符串的开始，\S用来表示非空字符，.用来表示任意字符，*用来表示匹配无数次，$表示用来匹配字符串的末尾。</span></span><br></pre></td></tr></table></figure>
+
+<p>比如要求匹配IP</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pattern=<span class="regexp">/^(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])(\.(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5]))&#123;3&#125;$/</span></span><br><span class="line"><span class="comment">//核心是匹配ip的其中一个部分的(\d&#123;1,2&#125;|1\d\d|2[0-4]\d|25[0-5])，考虑到了可能的4种情况，</span></span><br><span class="line"><span class="comment">//1&gt;任意数字一或两次,10.xx;3.xxx</span></span><br><span class="line"><span class="comment">//2&gt;首数字为1，后续任意的</span></span><br><span class="line"><span class="comment">//3&gt;首数字为2，次数字为0-4，后续任意</span></span><br><span class="line"><span class="comment">//4&gt;首数字为2，次数字为5，三数字必须小于5</span></span><br></pre></td></tr></table></figure>
+
+<p>在匹配ip的时候还需要考虑这种情况，对于无效ip是要截取有效的ip字段还是完全不做考虑，这时候可以利用正则里的正(反)向肯(否)定预查,对捕获文本的前后内容进行指定。</p>
+<h5 id="matchAll-amp-amp-match-amp-amp-exec"><a href="#matchAll-amp-amp-match-amp-amp-exec" class="headerlink" title="matchAll&amp;&amp;match&amp;&amp;exec"></a>matchAll&amp;&amp;match&amp;&amp;exec</h5><h6 id="regexp-exec-string"><a href="#regexp-exec-string" class="headerlink" title="regexp.exec(string)"></a>regexp.exec(string)</h6><p>字符串中如果有匹配值就返回该匹配值，否则返回null。其实返回值是一个含匹配值的数组，数组里有index匹配的位置和input输入的值。</p>
+<p>需要注意的是exec永远只返回第一个匹配，即使有g。但是在多次调用的时候如果有g将在上一次匹配返回的地方接着匹配。</p>
+<p>在含分组匹配中除了全局的匹配外还会在返回的数组中包含第一个匹配分组的值。</p>
+<h6 id="String-match-regexp"><a href="#String-match-regexp" class="headerlink" title="String.match (regexp)"></a>String.match (regexp)</h6><p>如果使用了g则会返回与完整表达式匹配的所有结果，但不会返回捕获组；</p>
+<p>如果未使用g则仅返回第一个完整匹配和与其相关的捕获组。（与regexp.exec相同）</p>
+<h6 id="String-matchAll-regexp"><a href="#String-matchAll-regexp" class="headerlink" title="String.matchAll(regexp)"></a>String.matchAll(regexp)</h6><p>适用于分组捕获，返回符合条件的迭代器，利用[…str.matchAll(regexp)]可以得到最终的数组嵌套数组</p>
+<h4 id="网络交互"><a href="#网络交互" class="headerlink" title="网络交互"></a>网络交互</h4><h5 id="Unexpected-token-lt-in-JSON-at-position-0"><a href="#Unexpected-token-lt-in-JSON-at-position-0" class="headerlink" title="Unexpected token &lt; in JSON at position 0"></a>Unexpected token &lt; in JSON at position 0</h5><p>这些错误发生在当你向服务器发送请求，返回值不是JSON而用JSON的方法解析的时候，发生这种情况的代码可能是这样的。（很有可能是请求的的参数出错了，导致后端返回的值是<h>500 service error</h>，从而导致无法解析）</p>
+<h5 id="provisional-headers-are-shown"><a href="#provisional-headers-are-shown" class="headerlink" title="provisional headers are shown"></a>provisional headers are shown</h5><p>请求里面provisional headers are shown(显示临时报头) 出现的情况很多，但原因是多样的。</p>
+<p>大部分的原因是请求被拦截，特别是请求跨域被拦截</p>
+<h5 id="credentials"><a href="#credentials" class="headerlink" title="credentials"></a>credentials</h5><p>credentials 是Request接口的只读属性用于表示用户代理是否应该在跨域请求的情况下从其他域发送cookies。这与XHR的withCredentials 标志相似，不同的是有三个可选值（后者是两个）：</p>
+<ul>
+<li>omit: 从不发送cookies.</li>
+<li>same-origin: 只有当URL与响应脚本同源才发送 cookies、 HTTP Basic authentication 等验证信息.(浏览器默认值,在旧版本浏览器，例如safari 11依旧是omit，safari 12已更改)</li>
+<li>include: 不论是不是跨域的请求,总是发送请求资源域在本地的 cookies、 HTTP Basic authentication 等验证信息.</li>
+</ul>
+<h5 id="HTTP2"><a href="#HTTP2" class="headerlink" title="HTTP2"></a>HTTP2</h5><p>Http2 头部压缩的实质是用较少的字符表示等量的信息，用静态表和动态表来实现字典（映射）的功能。</p>
+<ul>
+<li>静态表，已知键值对如method：get用一个编码去表示，或者是只有key没有value</li>
+<li>动态表是利用已发送的请求进行出现过的键值对的记录，允许重复的记录出现，大小有要求</li>
+</ul>
+<p>总结来说，静态表可以是所有浏览器通用的，但是动态表是于某个主机绑定的。</p>
+<p>——可以直接利用索引值进行后续的匹配，索引空间地址是从1开始的，0的话会被视为错误，因为动态表在不断的更新（但是大小有限制），所以后续的压缩程度会更大。</p>
+<h5 id="fetch-blocked-mixed-content"><a href="#fetch-blocked-mixed-content" class="headerlink" title="fetch blocked mixed content"></a>fetch blocked mixed content</h5><p>如果您的网站提供HTTPS页面，则默认情况下将阻止通过HTTP在该页面上传递的所有内容，同时浏览器提示fetch blocked mixed content。</p>
+<h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><ul>
+<li>装饰器（Decorator）是一种与类（class）相关的语法，通过提供一种方便的手段，增加或修改类的功能。因此@connect类不能应用于函数组件。</li>
+<li>useRef会保存每一次生成的闭包环境，以免在render过程中生成多个函数，起不到防抖的效果。</li>
+<li>当一个组件的 props 或 state 变更，React 会将最新返回的元素与之前渲染的元素进行对比，以此决定是否有必要更新真实的 DOM。React的diff算法会比较key是否一样，如果一样就不会重新render了，因此当一个DOM元素已经生成则二次渲染时会根据key进行DOM的修改。<ul>
+<li>defaultvalue表示默认的初始值，会被新值覆盖掉。</li>
+<li>对于同一个DOM元素来说，如果有value值了修改defaultValue是没有作用的。</li>
+</ul>
+</li>
+<li>其实react在重新渲染组件的时候，当某个父组件发生变化，并不会渲染所有的子组件，<a href="https://zh-hans.reactjs.org/static/should-component-update-5ee1bdf4779af06072a17b7a0654f6db-9a3ff.png" target="_blank" rel="noopener">react渲染流程图</a>。</li>
+<li>可以通过生命周期中shouldComponentUpdate返回的false和true来判断是否要重新渲染</li>
+<li>可以继承React.PureComponent以代替手写shouldComponentUpdate，pureComponent默认使用了浅复制，浅比较可能会有遗漏。当数据来源是一个对象只是里面的值被改变，在渲染时可能会被当作没有变化，所以在处理深层嵌套对象的时候一定要考虑对象的更新方式。</li>
+</ul>
+<h4 id="Antd"><a href="#Antd" class="headerlink" title="Antd"></a>Antd</h4><ul>
+<li>antd的form 的getFieldDecorator里的id是支持嵌入式的，因此才进行拼接的时候要考虑拼接字符串中“.”的存在。</li>
+<li>Upload上传文件时，后端框架只支持名称里含file的请求</li>
+<li>Antd form组件，可以使用 this.props.form.setFieldsValue 来动态改变表单值</li>
+<li>form.getFieldValue(‘变量名’)，得到form对应变量名的值</li>
+<li>table组件中的defaultExpandedRowKeys字段对异步数据无效，需要用 expandedRowKeys 控制，因为首次渲染的时候数据还没有出现</li>
+</ul>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><ul>
+<li>在设置&lt;a&gt;标签时，<strong>如果target设置为_blank即在另一页面打开，则一定要设置rel=noopener noreferrer</strong>，以免新页面能访问旧页面的window对象（在B页面中通过window.reopner即可获取A页面的window对象），同时能设置rederrer，知道页面跳转来源。</li>
+<li>几乎所有的html元素都有onclick属性，除了&lt;base&gt;、&lt;bdo&gt;、&lt;br&gt;、&lt;head&gt;、&lt;html&gt;、&lt;iframe&gt;、&lt;meta&gt;、&lt;param&gt;、&lt;script&gt;、&lt;style&gt; 和 ]&lt;title&gt;。</li>
+<li>&lt;link rel=”preload”&gt;在link标签中可以设置加载方式，使用 preload 可以来加载最重要的资源，比如图像，CSS，JavaScript 和字体文件。<ul>
+<li>这与浏览器预加载不同，浏览器预加载只预先加载在HTML中声明的资源。</li>
+<li>preload 与 prefetch 不同的地方就是它专注于当前的页面，并以高优先级加载资源，</li>
+<li>Prefetch 专注于下一个页面将要加载的资源并以低优先级加载。同时也要注意 preload 并不会阻塞 window 的 onload 事件。</li>
+<li>preconnect 允许浏览器在一个 HTTP请求正式发给服务器前预先执行一些操作，这包括 DNS 解析，TLS 协商，TCP 握手，这消除了往返延迟并为用户节省了时间。</li>
+<li>Window onload事件 在文档加载完成后能立即触发，并且能够为该事件注册事件处理函数</li>
+<li>rel 属性规定当前文档与被链接文档之间的关系</li>
+</ul>
+</li>
+</ul>
+<h4 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h4><p>webpack的setting要重新编译，而不是热加载。</p>
+<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><ul>
+<li>this.props.match.match、this.props.match.location、this.props.match.history如果我们没用react-router中的route组件包裹组件，我们就需要通过上面形式获得url的信息，都是在match里面；而如果我们了react-router的route组件，我们就可以直接通过this.props.match,this.props.location,this.porps.history来获取url信息。<ul>
+<li>location可以通过search字段得到url的query的信息</li>
+<li>Match可以通过params得到路由参数的值</li>
+<li>history：包含了组件可以使用的各种路由系统的方法，常用的有 push 和 replace，两者都是跳转页面，但是 replace 不会引起页面的刷新，仅仅是改变 url。</li>
+</ul>
+</li>
+<li>传递的参数可以放在url里，这样下一个页面就可以通过search/params的值得到了，缺陷就是是信息会直接显示在url上，没有考虑安全问题</li>
+<li>在原生的window对象中只有navigator、location、document、history、screen属性；this.props.match实际上属性react路由中的部分。</li>
+</ul>
+<h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><ul>
+<li>./ 当前目录，../ 父级目录</li>
+<li>History指令可以查看shell中使用的命令<ul>
+<li>！num可以重新执行第num条命令</li>
+<li>！！可以重新执行最后一条命令</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>编辑记录</p>
+<p>20191025总结上个月的问题</p>
+<p>20191126补充路由中和window对象对比的部分</p>
+<p>20191129补充Date格式化操作中原生JS的部分</p>
+<p>20191224补充iOS和安卓关于时间Date处理的差异</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2019/11/02/【阶段总结】20191025/" title="【阶段总结】20191025">https://MeaKaka.github.io/2019/11/02/【阶段总结】20191025/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/阶段总结/" rel="tag"># 阶段总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/02/【读书笔记】JS语言精粹/" rel="next" title="【读书笔记】JS语言精粹">
+                <i class="fa fa-chevron-left"></i> 【读书笔记】JS语言精粹
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/02/【读书笔记】剑指offer大纲/" rel="prev" title="【读书笔记】CSS权威指南">
+                【读书笔记】CSS权威指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JS"><span class="nav-number">1.</span> <span class="nav-text">JS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Array"><span class="nav-number">1.1.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#String"><span class="nav-number">1.2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#object"><span class="nav-number">1.3.</span> <span class="nav-text">object</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JS时间格式化"><span class="nav-number">1.4.</span> <span class="nav-text">JS时间格式化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#forEach-amp-amp-map"><span class="nav-number">1.5.</span> <span class="nav-text">forEach&amp;&amp;map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#arguments"><span class="nav-number">1.6.</span> <span class="nav-text">arguments</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达"><span class="nav-number">2.</span> <span class="nav-text">正则表达</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#匹配"><span class="nav-number">2.1.</span> <span class="nav-text">匹配</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matchAll-amp-amp-match-amp-amp-exec"><span class="nav-number">2.2.</span> <span class="nav-text">matchAll&amp;&amp;match&amp;&amp;exec</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#regexp-exec-string"><span class="nav-number">2.2.1.</span> <span class="nav-text">regexp.exec(string)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#String-match-regexp"><span class="nav-number">2.2.2.</span> <span class="nav-text">String.match (regexp)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#String-matchAll-regexp"><span class="nav-number">2.2.3.</span> <span class="nav-text">String.matchAll(regexp)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络交互"><span class="nav-number">3.</span> <span class="nav-text">网络交互</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Unexpected-token-lt-in-JSON-at-position-0"><span class="nav-number">3.1.</span> <span class="nav-text">Unexpected token &lt; in JSON at position 0</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#provisional-headers-are-shown"><span class="nav-number">3.2.</span> <span class="nav-text">provisional headers are shown</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#credentials"><span class="nav-number">3.3.</span> <span class="nav-text">credentials</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP2"><span class="nav-number">3.4.</span> <span class="nav-text">HTTP2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fetch-blocked-mixed-content"><span class="nav-number">3.5.</span> <span class="nav-text">fetch blocked mixed content</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#React"><span class="nav-number">4.</span> <span class="nav-text">React</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Antd"><span class="nav-number">5.</span> <span class="nav-text">Antd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML"><span class="nav-number">6.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Webpack"><span class="nav-number">7.</span> <span class="nav-text">Webpack</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由"><span class="nav-number">8.</span> <span class="nav-text">路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shell"><span class="nav-number">9.</span> <span class="nav-text">shell</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>
