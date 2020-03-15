@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="基础指令git branch 新建分支 git commit 在当前分支下提交代码 git checkout X 切换分支为X分支，只能切换到指定分支 当发生冲突时，git checkout breach filename能够更新你工作区的文件或者目录从其他的breach，而不用将整个branch merge。 git merge A 将A分支合并到当前分支上 git fetch 将远程主机的最新">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-03-09T02:55:34.313Z">
+<meta property="og:updated_time" content="2020-03-09T08:56:18.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【基础学习】Git指令">
 <meta name="twitter:description" content="基础指令git branch 新建分支 git commit 在当前分支下提交代码 git checkout X 切换分支为X分支，只能切换到指定分支 当发生冲突时，git checkout breach filename能够更新你工作区的文件或者目录从其他的breach，而不用将整个branch merge。 git merge A 将A分支合并到当前分支上 git fetch 将远程主机的最新">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:55:34+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T16:56:18+08:00">
                 2020-03-09
               </time>
             
@@ -487,6 +487,7 @@
 </ul>
 <p>如果想要修改注释可以通过git commit –amend，修改提交commit的附带信息。</p>
 <p>想要撤销已经push的commit可以通过强制覆盖（–force）达到效果，git push origin 分支名 –force。</p>
+<h4 id="git冲突"><a href="#git冲突" class="headerlink" title="git冲突"></a>git冲突</h4><p>Git处理冲突之后还要git add . 一下</p>
 <h4 id="git-commit的规范"><a href="#git-commit的规范" class="headerlink" title="git commit的规范"></a>git commit的规范</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;BLANK LINE&gt;</span><br><span class="line">&lt;footer&gt;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">占位标签解析：</span><br><span class="line">type:代表某次提交的类型，比如是修复一个bug还是增加一个新的feature。</span><br><span class="line">scope:scope说明commit影响的范围。scope依据项目而定，</span><br><span class="line">		例如在业务项目中可以依据菜单或者功能模块划分，</span><br><span class="line">		如果是组件库开发，则可以依据组件划分。</span><br><span class="line">subject:是commit的简短描述</span><br><span class="line">body:提交代码的详细描述</span><br><span class="line">footer:如果代码的提交是不兼容变更或关闭缺陷，则Footer必需，否则可以省略。</span><br><span class="line"></span><br><span class="line">type类型：</span><br><span class="line">feat[特性]:新增feature </span><br><span class="line">fix[修复]: 修复bug     </span><br><span class="line">docs[文档]: 仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等</span><br><span class="line">style[格式]: 仅仅修改了空格、格式缩进、都好等等，不改变代码逻辑</span><br><span class="line">refactor[重构]: 代码重构，没有加新功能或者修复bug</span><br><span class="line">perf[优化]: 优化相关，比如提升性能、体验</span><br><span class="line">test[测试]: 测试用例，包括单元测试、集成测试等</span><br><span class="line">chore[工具]: 改变构建流程、或者增加依赖库、工具等</span><br><span class="line">revert[回滚]: 回滚到上一个版本</span><br></pre></td></tr></table></figure>
@@ -550,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/14/【技术点】npm版本相关/" rel="next" title="【基础学习】NPM版本相关">
-                <i class="fa fa-chevron-left"></i> 【基础学习】NPM版本相关
+              <a href="/2019/10/14/【技术点】视觉格式化/" rel="next" title="【了解前端，爱上前端】视觉格式化">
+                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】视觉格式化
               </a>
             
           </div>
@@ -560,8 +561,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/20/【技术点】原型与函数编程/" rel="prev" title="【了解前端，爱上前端】原型与函数编程">
-                【了解前端，爱上前端】原型与函数编程 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/14/【技术点】npm版本相关/" rel="prev" title="【基础学习】NPM版本相关">
+                【基础学习】NPM版本相关 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -656,7 +657,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -720,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进阶指令"><span class="nav-number">2.</span> <span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改变位置"><span class="nav-number">2.1.</span> <span class="nav-text">改变位置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HEAD"><span class="nav-number">2.1.1.</span> <span class="nav-text">HEAD</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相对引用"><span class="nav-number">2.1.2.</span> <span class="nav-text">相对引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换分支"><span class="nav-number">2.1.3.</span> <span class="nav-text">切换分支</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销变更"><span class="nav-number">2.2.</span> <span class="nav-text">撤销变更</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建关联"><span class="nav-number">2.3.</span> <span class="nav-text">创建关联</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他指令"><span class="nav-number">3.</span> <span class="nav-text">其他指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-tag"><span class="nav-number">3.1.</span> <span class="nav-text">git tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-describe"><span class="nav-number">3.2.</span> <span class="nav-text">git describe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-bisect"><span class="nav-number">3.3.</span> <span class="nav-text">git bisect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-cherry-pick"><span class="nav-number">3.4.</span> <span class="nav-text">git cherry-pick</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际场景应用"><span class="nav-number">4.</span> <span class="nav-text">实际场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分支开发时，master代码有更改怎么办？"><span class="nav-number">4.1.</span> <span class="nav-text">分支开发时，master代码有更改怎么办？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销还未push的commit"><span class="nav-number">4.2.</span> <span class="nav-text">撤销还未push的commit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-commit的规范"><span class="nav-number">4.3.</span> <span class="nav-text">git commit的规范</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础指令"><span class="nav-number">1.</span> <span class="nav-text">基础指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进阶指令"><span class="nav-number">2.</span> <span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改变位置"><span class="nav-number">2.1.</span> <span class="nav-text">改变位置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HEAD"><span class="nav-number">2.1.1.</span> <span class="nav-text">HEAD</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相对引用"><span class="nav-number">2.1.2.</span> <span class="nav-text">相对引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换分支"><span class="nav-number">2.1.3.</span> <span class="nav-text">切换分支</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销变更"><span class="nav-number">2.2.</span> <span class="nav-text">撤销变更</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建关联"><span class="nav-number">2.3.</span> <span class="nav-text">创建关联</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他指令"><span class="nav-number">3.</span> <span class="nav-text">其他指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-tag"><span class="nav-number">3.1.</span> <span class="nav-text">git tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-describe"><span class="nav-number">3.2.</span> <span class="nav-text">git describe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-bisect"><span class="nav-number">3.3.</span> <span class="nav-text">git bisect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-cherry-pick"><span class="nav-number">3.4.</span> <span class="nav-text">git cherry-pick</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际场景应用"><span class="nav-number">4.</span> <span class="nav-text">实际场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分支开发时，master代码有更改怎么办？"><span class="nav-number">4.1.</span> <span class="nav-text">分支开发时，master代码有更改怎么办？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销还未push的commit"><span class="nav-number">4.2.</span> <span class="nav-text">撤销还未push的commit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git冲突"><span class="nav-number">4.3.</span> <span class="nav-text">git冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-commit的规范"><span class="nav-number">4.4.</span> <span class="nav-text">git commit的规范</span></a></li></ol></li></ol></div>
             
 
           </div>
