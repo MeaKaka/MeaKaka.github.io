@@ -134,18 +134,20 @@
 
 
 
-<meta name="description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta name="description" content="场景概述在做数据加载的时候进行需要考虑到「无限加载」的情况，特别是移动端，由于屏幕尺寸不适合利用pagination做分页控制。这时候常见的解决办法是监听用户的页面滚动。 当滚动到屏幕底部时触发下一页的请求，同时将请求得到的数据拼接到原有数据上。这也是长列表性能优化的一种方式。  针对select组件上的optionList的加载也可以利用这种方式，缺点在于搜索需要交给后端去实现  上述问题的关键">
 <meta name="keywords" content="了解前端，爱上前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【了解前端，爱上前端】CSS选择器">
-<meta property="og:url" content="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/index.html">
+<meta property="og:title" content="【技术点】从浏览器高度说开去">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/03/30/【技术点】浏览器高度/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta property="og:description" content="场景概述在做数据加载的时候进行需要考虑到「无限加载」的情况，特别是移动端，由于屏幕尺寸不适合利用pagination做分页控制。这时候常见的解决办法是监听用户的页面滚动。 当滚动到屏幕底部时触发下一页的请求，同时将请求得到的数据拼接到原有数据上。这也是长列表性能优化的一种方式。  针对select组件上的optionList的加载也可以利用这种方式，缺点在于搜索需要交给后端去实现  上述问题的关键">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-03-09T02:38:22.303Z">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/15087/rect.png">
+<meta property="og:updated_time" content="2020-03-31T02:31:22.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【了解前端，爱上前端】CSS选择器">
-<meta name="twitter:description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta name="twitter:title" content="【技术点】从浏览器高度说开去">
+<meta name="twitter:description" content="场景概述在做数据加载的时候进行需要考虑到「无限加载」的情况，特别是移动端，由于屏幕尺寸不适合利用pagination做分页控制。这时候常见的解决办法是监听用户的页面滚动。 当滚动到屏幕底部时触发下一页的请求，同时将请求得到的数据拼接到原有数据上。这也是长列表性能优化的一种方式。  针对select组件上的optionList的加载也可以利用这种方式，缺点在于搜索需要交给后端去实现  上述问题的关键">
+<meta name="twitter:image" content="https://mdn.mozillademos.org/files/15087/rect.png">
 
 
 
@@ -175,13 +177,13 @@
 
 
 
-  <link rel="canonical" href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/">
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/03/30/【技术点】浏览器高度/">
 
 
 
 
 
-  <title>【了解前端，爱上前端】CSS选择器 | Ricky's Blog</title>
+  <title>【技术点】从浏览器高度说开去 | Ricky's Blog</title>
   
 
 
@@ -317,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/03/30/【技术点】浏览器高度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="里卡卡多">
@@ -334,7 +336,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【了解前端，爱上前端】CSS选择器</h2>
+          <h2 class="post-title" itemprop="name headline">【技术点】从浏览器高度说开去</h2>
         
 
         <div class="post-meta">
@@ -346,8 +348,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-21T21:32:44+08:00">
-                2019-08-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-30T23:09:24+08:00">
+                2020-03-30
               </time>
             
 
@@ -362,8 +364,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:38:22+08:00">
-                2020-03-09
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-31T10:31:22+08:00">
+                2020-03-31
               </time>
             
           </span>
@@ -427,91 +429,70 @@
       
 
       
-        <h3 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h3><p>css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。</p>
-<p>由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，组合性css选择器的比较依赖层叠规则。</p>
-<p>下面按照选择器分类、优先级比较的顺序对css选择器进行浅显的介绍。</p>
-<h4 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h4><ul>
-<li>*通配，默认样式</li>
-<li>元素选择器（element，标签名，如div、p）</li>
-<li>class选择器（.className）</li>
-<li>id选择器（#idName）（全局唯一优先于class）</li>
-</ul>
-<h4 id="组合选择器（关系选择器）"><a href="#组合选择器（关系选择器）" class="headerlink" title="组合选择器（关系选择器）"></a>组合选择器（关系选择器）</h4><ul>
-<li>并列关系<ul>
-<li>div, p{xxxx}表示div或p元素；</li>
-</ul>
+        <h3 id="场景概述"><a href="#场景概述" class="headerlink" title="场景概述"></a>场景概述</h3><p>在做数据加载的时候进行需要考虑到「无限加载」的情况，特别是移动端，由于屏幕尺寸不适合利用pagination做分页控制。这时候常见的解决办法是监听用户的页面滚动。</p>
+<p>当滚动到屏幕底部时触发下一页的请求，同时将请求得到的数据拼接到原有数据上。这也是长列表性能优化的一种方式。</p>
+<blockquote>
+<p>针对select组件上的optionList的加载也可以利用这种方式，缺点在于搜索需要交给后端去实现</p>
+</blockquote>
+<p>上述问题的关键就转变为了「如何获取屏幕高度」，判断列表滚动到屏幕底部。</p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a>document对象</h4><p>document对象获取的是<strong>文档</strong>信息</p>
+<h5 id="网页视图"><a href="#网页视图" class="headerlink" title="网页视图"></a>网页视图</h5><ul>
+<li>document.documentElement.clientHeight：元素可见区域的高度（包括内边距，但不包括垂直滚动条、边框和外边距）（height + padding）</li>
+<li>document.documentElement.offsetHeight：元素的像素高度（包括内边距、滚动条、边框和外边距）（height + padding + border）</li>
+<li>document.documentElement.offsetTop：返回当前元素相对于其 offsetParent 元素的顶部内边距的距离。</li>
+<li>document.documentElement.scrollHeight：<strong>元素总内容的高度</strong>（包含元素的内边距，但不包括边框，外边距或垂直滚动条）</li>
+<li>document.documentElement.scrollTop：<strong>元素内容的滚动高度</strong><blockquote>
+<p>documentElement可以是任意的合法document对象，可以通过事件触发的e.target获取，如果直接写作documentElement则获取到的结果与body相同</p>
+</blockquote>
+<h5 id="body对象"><a href="#body对象" class="headerlink" title="body对象"></a>body对象</h5></li>
+<li>document.body.clientHeight/clientWidth：网页可见区域(body区域)高/宽</li>
+<li>document.body.offsetHeight/offsetWidth：网页可见区域高/宽(包括边线的宽)</li>
+<li>document.body.scrollHeight/scrollWidth：网页正文全文高/宽</li>
+<li>document.body.scrollTop/scrollLeft：网页被卷去的高/宽<blockquote>
+<p>需要注意在chrome上使用document.body.scrollTop会一直等于0，从而得不到滚动的高度。可以通过Math.max(document.body.scrollTop, document.documentElement.scrollTop)实现<strong>浏览器的兼容</strong></p>
+</blockquote>
 </li>
-<li>父子关系 <ul>
-<li>直接父子 div&gt;p{},仅对儿子产生作用，即仅对div下的一级p产生作用；</li>
-<li>所有子元素div p{},对儿子孙子等都起作用，即对div内的p都起作用；</li>
 </ul>
-</li>
-<li>兄弟关系<ul>
-<li>相邻兄弟div+p{}，对其后相邻的第一个兄弟元素产生影响；</li>
-<li>普通兄弟div～p{}，对其后所有同级元素产生影响；</li>
-</ul>
-</li>
-</ul>
-<h4 id="辅助选择"><a href="#辅助选择" class="headerlink" title="辅助选择"></a>辅助选择</h4><h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><p>​    当确定元素后还可以通过属性名、属性值对元素进行进一步的筛选。</p>
+<h4 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h4><p>window对象是整个<strong>浏览器</strong>的相关信息</p>
+<h5 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h5><p>screen对象代表屏幕信息</p>
 <ul>
-<li><p><code>[attr]</code></p>
-<p>表示存在attr属性的元素。如当想将存在title属性的<code>&lt;a&gt;</code>元素, 颜色设置为紫色时，可以设置如下css选择器：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[title]</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: purple;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>[attr=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值为”value”的元素。与上述css选择器相似，在此不加以赘述。</p>
-</li>
-<li><p><code>[attr~=value]</code></p>
-<p>表示带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中[至少]一个值匹配”value”。</p>
-</li>
-<li><p><code>[attr|=value]</code></p>
-<p>表示带有以 attr 命名的属性的元素，属性值为“value”或是以“value-”为前缀（”-“为连字符，Unicode编码为U+002D）开头。典型的应用场景是用来来匹配语言简写代码（如zh-CN，zh-TW可以用zh作为value）。</p>
-</li>
-<li><p><code>[attr^=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值是以”value”开头的元素。</p>
-</li>
-<li><p><code>[attr$=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值是以”value”结尾的元素。</p>
-</li>
-<li><p><code>[attr*=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值包含有”value”的元素。</p>
-</li>
-<li><p><code>[*attr* *operator* *value* i]</code></p>
-<p>表示带有以 attr 命名的属性, 且属性值匹配”value” 的元素。在带有属性值的属性选型选择器表达式的右方括号, 前添加<strong>用空格间隔开</strong>的字母i（或I）可以忽略属性值的大小写（ASCII字符范围内的字母）</p>
-</li>
+<li>window.screenTop/screenLeft： 浏览器上边界/左边界到屏幕的距离（可以判断浏览器是否最大化了）</li>
+<li>window.screen.height/width：屏幕的高度/宽度，含书签栏</li>
+<li>window.screen.availHeight/availWidth：屏幕的最大可用高度/宽度，除去导航栏之后的可用高度<h5 id="浏览器相关"><a href="#浏览器相关" class="headerlink" title="浏览器相关"></a>浏览器相关</h5></li>
+<li>window.innerHeight：获取浏览器视觉视口高度（包括滚动条，对比document.documentElement.clientHeight）。</li>
+<li>window.outerHeight：获取浏览器窗口外部的高度。表示整个浏览器窗口的高度，包括侧边栏、窗口镶边和调正窗口大小的边框。</li>
+<li>window.scrollY/scrollX: 文档垂直/水平滚动的像素值</li>
+<li>window.pageYOffset/pageXOffset: scrollY/scrollX的别名(对比document.documentElement.scrollTop)</li>
 </ul>
 <blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors" target="_blank" rel="noopener">参考文档</a></p>
+<p>如果想获得文档内容的滚动高度可以通过window.scrollY / window.pageYOffset / document.documentElement.scrollTop / document.body.scrollTop 差别在于<strong>浏览器的兼容</strong>.</p>
+<p>为了跨浏览器兼容，用window.pageYOffset 代替 window.scrollY （旧版本的IE（&lt;9）两个属性都不支持）</p>
+<p>判断Doctype的类型，如果是标准模式用document.documentElement.scrollTop;如果是混杂模式，用document.body.scrollTop.</p>
 </blockquote>
-<h5 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h5><p>伪类指的是某个元素的一种虚拟状态，不是元素而是元素的某一部分，如:link、:hover…….</p>
-<ul>
-<li>:link</li>
-<li>:first-child</li>
-<li>:visited</li>
-<li>……</li>
-</ul>
-<h5 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h5><p>伪元素是一种虚拟的元素，在dom元素中实际上并不存在，可以想象成逻辑位置而不是物理位置</p>
-<ul>
-<li>::after 某元素后面</li>
-<li>::before 某元素前面</li>
-<li>::first-line 某元素第一行</li>
-<li>::first-letter 某元素第一个单词</li>
-<li>……</li>
-</ul>
-<blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements" target="_blank" rel="noopener">更多伪类伪元素可参见MDN文档</a></p>
-</blockquote>
-<h4 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h4><h5 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h5><p>对于整体页面而言，优先级从低到高依次为：</p>
-<p>浏览器缺省设置-&gt;外部样式表-&gt;内部样式表（位于 head 标签内部）-&gt;内联样式（在 HTML 元素内部）</p>
-<p>针对内部、外部样式表的选择器其优先级从低到高依次为：</p>
-<p>通用选择器</p>
-<p>important &gt; ID选择器 &gt; 类(class)选择器 / 伪类 / 属性选择 &gt; 标签 / 伪元素 &gt; 继承 &gt; 通配符</p>
-<h5 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h5><p>不同的选择器有不同的优先级，在组合过程中他们也不是靠加法对选择器的优先级进行计算，而是应用层叠规则。层叠规则对不同类型的css选择器进行赋值，如下：</p>
-<p><strong>1.</strong>Id：100<br><strong>2.</strong>Class（类 | 伪类 | 属性选择）：010<br><strong>3.</strong>Element（标签 | 伪元素）：001<br><strong>4.</strong>通用选择器：000</p>
-<p>选择器进行组合时按位计算，然后比较两个组合选择器的值，以确定优先级，相同值的比较位置，就近原则。<br>css选择器的就近原则最常见于<code>&lt;a&gt;</code>标签的伪类中，link、visited、hover、active的声明顺序。</p>
-<h4 id="css选择器与页面渲染"><a href="#css选择器与页面渲染" class="headerlink" title="css选择器与页面渲染"></a>css选择器与页面渲染</h4><p>页面渲染分为两个部分，分别是DOM树的构建和CSSOM树的构建。</p>
-<p>通过DOM树和CSSOM树的匹配进行样式的呈现，在CSSOM树的构建过程中就已经依据相应的优先级规则对CSS选择器进行排序和确定了。不存在在页面的加载过程中，针对一个元素而言，一种样式被渲染后又被另一种样式覆盖的情况。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>通过了解确定高度的不同方法，可以选用「卷曲高度」+「视图高度」= 「总页面高度」的表达方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.scrollTop+<span class="built_in">document</span>.documentElement.clientHeight=<span class="built_in">document</span>.documentElement.scrollHeight + x</span><br><span class="line"><span class="comment">// 多数情况会在总高度上加上一个数值，减少请求导致的时延实现平滑移动</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>与高度相关的场景还有图片的<strong>懒加载</strong>，需要判断待加载的图片是否滚动到了可视区域，可以通过getBoundingClientRect()获取到物体的位置。</p>
+<h4 id="getBoundingClientRect"><a href="#getBoundingClientRect" class="headerlink" title="getBoundingClientRect"></a>getBoundingClientRect</h4><p>element.getBoundingClientRect()返回元素的大小及其相对于视图的位置。</p>
+<blockquote>
+<p><img src="https://mdn.mozillademos.org/files/15087/rect.png" alt="getBoundingClient图片"><br>图片来源MDN web doc</p>
+<ol>
+<li>top: 元素上边距可见窗口顶部的长度</li>
+<li>left: 元素右边距可见窗口左边的长度</li>
+<li>right: 元素右边距可见窗口左边的距离</li>
+<li>bottom: 元素下边距可见窗口上边的距离</li>
+<li>width: 元素宽度（right-left）</li>
+<li>height: 元素高度（bottom-top）</li>
+</ol>
+</blockquote>
+<p>可以通过比较top的值和可视窗口本身的高度大小来判断是否元素是否到达可视窗口。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top+ X &lt;=<span class="built_in">document</span>.body.clientHeight  <span class="comment">//添加常量X以便在快到达可是窗口时就加载图片</span></span><br></pre></td></tr></table></figure>
+
+<p>图片的懒加载</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> img = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'img'</span>).length;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> num = img.length;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> loc = <span class="number">0</span>; <span class="comment">//存储加载到的图片位置</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    lazyLoad(); <span class="comment">//页面载入完毕加载可视区域内的图片</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onscroll = lazyLoad; <span class="comment">// 页面滚动触发lazyLoad</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">lazyLoad</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> seeHeight = <span class="built_in">document</span>.documentElement.clientHeight; </span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">var</span> i = n; i &lt; num; i++) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (img[i].getBoundingClientRect &lt; seeHeight) &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (img[i].getAttribute(<span class="string">"src"</span>) == <span class="string">"default.jpg"</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    img[i].src = img[i].getAttribute(<span class="string">"data-src"</span>);</span></span><br><span class="line">                &#125;</span><br><span class="line">                n = i + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>优化，可以在页面滚动触发刷新的部分加上节流操作避免频繁调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">fun,delay</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> canRun = <span class="literal">true</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!canRun)<span class="keyword">return</span>; </span><br><span class="line">    canRun = <span class="literal">false</span>;</span><br><span class="line">    setTimeOut(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      fun.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</span><br><span class="line">      canRun = <span class="literal">true</span></span><br><span class="line">    &#125;,delay)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>,throttle(lazyload,<span class="number">1000</span>));</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -531,7 +512,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/" title="【了解前端，爱上前端】CSS选择器">https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/</a>
+    <a href="https://MeaKaka.github.io/2020/03/30/【技术点】浏览器高度/" title="【技术点】从浏览器高度说开去">https://MeaKaka.github.io/2020/03/30/【技术点】浏览器高度/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -559,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/18/【技术点】canvas/" rel="next" title="【了解前端，爱上前端】Canvas的使用">
-                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】Canvas的使用
+              <a href="/2020/03/15/【技术点】JS与时间处理/" rel="next" title="【技术点】JS与时间处理">
+                <i class="fa fa-chevron-left"></i> 【技术点】JS与时间处理
               </a>
             
           </div>
@@ -568,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/21/【技术点】正则匹配（整理版）/" rel="prev" title="【基础学习】正则匹配">
-                【基础学习】正则匹配 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -729,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css选择器"><span class="nav-number">1.</span> <span class="nav-text">css选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本选择器"><span class="nav-number">1.1.</span> <span class="nav-text">基本选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合选择器（关系选择器）"><span class="nav-number">1.2.</span> <span class="nav-text">组合选择器（关系选择器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#辅助选择"><span class="nav-number">1.3.</span> <span class="nav-text">辅助选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#属性选择器"><span class="nav-number">1.3.1.</span> <span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪类选择器"><span class="nav-number">1.3.2.</span> <span class="nav-text">伪类选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪元素选择器"><span class="nav-number">1.3.3.</span> <span class="nav-text">伪元素选择器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优先级"><span class="nav-number">1.4.</span> <span class="nav-text">优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基础选择器"><span class="nav-number">1.4.1.</span> <span class="nav-text">基础选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组合选择器"><span class="nav-number">1.4.2.</span> <span class="nav-text">组合选择器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css选择器与页面渲染"><span class="nav-number">1.5.</span> <span class="nav-text">css选择器与页面渲染</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#场景概述"><span class="nav-number">1.</span> <span class="nav-text">场景概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document对象"><span class="nav-number">2.1.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#网页视图"><span class="nav-number">2.1.1.</span> <span class="nav-text">网页视图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#body对象"><span class="nav-number">2.1.2.</span> <span class="nav-text">body对象</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window对象"><span class="nav-number">2.2.</span> <span class="nav-text">window对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#screen对象"><span class="nav-number">2.2.1.</span> <span class="nav-text">screen对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浏览器相关"><span class="nav-number">2.2.2.</span> <span class="nav-text">浏览器相关</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">3.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">4.</span> <span class="nav-text">拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#getBoundingClientRect"><span class="nav-number">4.1.</span> <span class="nav-text">getBoundingClientRect</span></a></li></ol></li></ol></div>
             
 
           </div>

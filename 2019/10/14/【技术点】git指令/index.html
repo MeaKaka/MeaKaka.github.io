@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="基础指令git branch 新建分支 git commit 在当前分支下提交代码 git checkout X 切换分支为X分支，只能切换到指定分支 当发生冲突时，git checkout breach filename能够更新你工作区的文件或者目录从其他的breach，而不用将整个branch merge。 git merge A 将A分支合并到当前分支上 git fetch 将远程主机的最新">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-03-09T08:56:18.289Z">
+<meta property="og:updated_time" content="2020-03-17T09:16:11.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【基础学习】Git指令">
 <meta name="twitter:description" content="基础指令git branch 新建分支 git commit 在当前分支下提交代码 git checkout X 切换分支为X分支，只能切换到指定分支 当发生冲突时，git checkout breach filename能够更新你工作区的文件或者目录从其他的breach，而不用将整个branch merge。 git merge A 将A分支合并到当前分支上 git fetch 将远程主机的最新">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T16:56:18+08:00">
-                2020-03-09
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-17T17:16:11+08:00">
+                2020-03-17
               </time>
             
           </span>
@@ -435,7 +435,9 @@
 <p><strong>git fetch</strong> 将远程主机的最新内容拉到本地</p>
 <p><strong>git branch –delete name</strong> 删除分支（git branch -d）</p>
 <p><strong>git push origin –delete branchName</strong></p>
-<p><strong>git rebase X</strong> 线性合并X分支和当前分支，将当前分支上提交的commit看作一个补丁，在X分支的后续位置提交所谓的补丁形成一个完成合并；rebase和merge的差别在于分支轨迹是否是线性的</p>
+<p><strong>git rebase X</strong> 线性合并X分支和当前分支，将当前分支上提交的commit看作一个补丁，在X分支的后续位置提交所谓的补丁形成一个完成合并；rebase和merge的差别在于分支轨迹是否是线性的<br><strong>git pull</strong> 取回远程主机某个分支的更新，再与本地的指定分支合并，完整格式为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt;  &lt;远程分支名&gt;(git pull origin master=&gt; git fetch origin + git merge origin/master)</span><br></pre></td></tr></table></figure>
+
 <h3 id="进阶指令"><a href="#进阶指令" class="headerlink" title="进阶指令"></a>进阶指令</h3><h4 id="改变位置"><a href="#改变位置" class="headerlink" title="改变位置"></a>改变位置</h4><h5 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h5><p>HEAD 总是指向当前分支上最近一次提交记录。</p>
 <p>大多数修改提交树的 Git 命令都是从改变 HEAD 的指向开始的。</p>
 <p>如果想看 HEAD 指向，可以通过 cat .git/HEAD查看， 如果 HEAD 指向的是一个引用，还可以用 git symbolic-ref HEAD 查看它的指向。</p>
@@ -502,6 +504,7 @@
 <p>20191217 添加撤销commit的方式</p>
 <p>20200106 添加commit提交规范</p>
 <p>20200108 添加创建关联的指令</p>
+<p>20200317 添加git pull语句</p>
 </blockquote>
 
       
@@ -551,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/14/【技术点】视觉格式化/" rel="next" title="【了解前端，爱上前端】视觉格式化">
-                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】视觉格式化
+              <a href="/2019/10/14/【技术点】npm版本相关/" rel="next" title="【基础学习】NPM版本相关">
+                <i class="fa fa-chevron-left"></i> 【基础学习】NPM版本相关
               </a>
             
           </div>
@@ -561,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/14/【技术点】npm版本相关/" rel="prev" title="【基础学习】NPM版本相关">
-                【基础学习】NPM版本相关 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/20/【技术点】原型与函数编程/" rel="prev" title="【了解前端，爱上前端】原型与函数编程">
+                【了解前端，爱上前端】原型与函数编程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -657,7 +660,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
