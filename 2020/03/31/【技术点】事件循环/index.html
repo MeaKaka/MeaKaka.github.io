@@ -134,18 +134,18 @@
 
 
 
-<meta name="description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta name="description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
 <meta name="keywords" content="了解前端，爱上前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【了解前端，爱上前端】CSS选择器">
-<meta property="og:url" content="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/index.html">
+<meta property="og:title" content="【技术点】事件循环">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta property="og:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-03-09T02:38:22.303Z">
+<meta property="og:updated_time" content="2020-04-01T02:31:17.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【了解前端，爱上前端】CSS选择器">
-<meta name="twitter:description" content="css选择器css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。 由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，">
+<meta name="twitter:title" content="【技术点】事件循环">
+<meta name="twitter:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
 
 
 
@@ -175,13 +175,13 @@
 
 
 
-  <link rel="canonical" href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/">
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/">
 
 
 
 
 
-  <title>【了解前端，爱上前端】CSS选择器 | Ricky's Blog</title>
+  <title>【技术点】事件循环 | Ricky's Blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="里卡卡多">
@@ -334,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【了解前端，爱上前端】CSS选择器</h2>
+          <h2 class="post-title" itemprop="name headline">【技术点】事件循环</h2>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-21T21:32:44+08:00">
-                2019-08-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-31T23:00:24+08:00">
+                2020-03-31
               </time>
             
 
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:38:22+08:00">
-                2020-03-09
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-01T10:31:17+08:00">
+                2020-04-01
               </time>
             
           </span>
@@ -427,90 +427,56 @@
       
 
       
-        <h3 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h3><p>css选择器用于选择满足条件的元素并对他们进行批量的样式更改。css选择器主要分为基础选择器、组合选择器三类。确定元素后还可以通过属性选择器、伪类选择器、伪元素选择器进行更详细的选择，如链接的visited表示链接访问之后，hover有鼠标移动到链接上等。</p>
-<p>由于每一个元素都有可能存在多个css选择器，那样式的呈现以哪一个选择器为主呢？单一的css选择器需要靠css选择器的优先级去判断，组合性css选择器的比较依赖层叠规则。</p>
-<p>下面按照选择器分类、优先级比较的顺序对css选择器进行浅显的介绍。</p>
-<h4 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h4><ul>
-<li>*通配，默认样式</li>
-<li>元素选择器（element，标签名，如div、p）</li>
-<li>class选择器（.className）</li>
-<li>id选择器（#idName）（全局唯一优先于class）</li>
-</ul>
-<h4 id="组合选择器（关系选择器）"><a href="#组合选择器（关系选择器）" class="headerlink" title="组合选择器（关系选择器）"></a>组合选择器（关系选择器）</h4><ul>
-<li>并列关系<ul>
-<li>div, p{xxxx}表示div或p元素；</li>
-</ul>
-</li>
-<li>父子关系 <ul>
-<li>直接父子 div&gt;p{},仅对儿子产生作用，即仅对div下的一级p产生作用；</li>
-<li>所有子元素div p{},对儿子孙子等都起作用，即对div内的p都起作用；</li>
-</ul>
-</li>
-<li>兄弟关系<ul>
-<li>相邻兄弟div+p{}，对其后相邻的第一个兄弟元素产生影响；</li>
-<li>普通兄弟div～p{}，对其后所有同级元素产生影响；</li>
-</ul>
-</li>
-</ul>
-<h4 id="辅助选择"><a href="#辅助选择" class="headerlink" title="辅助选择"></a>辅助选择</h4><h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><p>​    当确定元素后还可以通过属性名、属性值对元素进行进一步的筛选。</p>
+        <h3 id="浏览器中的事件循环"><a href="#浏览器中的事件循环" class="headerlink" title="浏览器中的事件循环"></a>浏览器中的事件循环</h3><p>浏览器事件执行过程中主要涉及两个队列，分别是「<strong>宏任务队列</strong>」和「<strong>微任务队列</strong>」。</p>
+<ol>
+<li>每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，）</li>
+<li>然后将此宏任务产生的微任务push到微任务队列中</li>
+<li>依次执行此微任务队列</li>
+<li>再从宏任务队列中取出事件执行，返回第一步</li>
+</ol>
 <ul>
-<li><p><code>[attr]</code></p>
-<p>表示存在attr属性的元素。如当想将存在title属性的<code>&lt;a&gt;</code>元素, 颜色设置为紫色时，可以设置如下css选择器：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[title]</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: purple;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>[attr=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值为”value”的元素。与上述css选择器相似，在此不加以赘述。</p>
-</li>
-<li><p><code>[attr~=value]</code></p>
-<p>表示带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中[至少]一个值匹配”value”。</p>
-</li>
-<li><p><code>[attr|=value]</code></p>
-<p>表示带有以 attr 命名的属性的元素，属性值为“value”或是以“value-”为前缀（”-“为连字符，Unicode编码为U+002D）开头。典型的应用场景是用来来匹配语言简写代码（如zh-CN，zh-TW可以用zh作为value）。</p>
-</li>
-<li><p><code>[attr^=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值是以”value”开头的元素。</p>
-</li>
-<li><p><code>[attr$=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值是以”value”结尾的元素。</p>
-</li>
-<li><p><code>[attr*=value]</code></p>
-<p>表示带有以 attr 命名的属性，且属性值包含有”value”的元素。</p>
-</li>
-<li><p><code>[*attr* *operator* *value* i]</code></p>
-<p>表示带有以 attr 命名的属性, 且属性值匹配”value” 的元素。在带有属性值的属性选型选择器表达式的右方括号, 前添加<strong>用空格间隔开</strong>的字母i（或I）可以忽略属性值的大小写（ASCII字符范围内的字母）</p>
-</li>
+<li>常见的宏任务有setTimeOut、setTimeInterval、setImmediate。</li>
+<li>常见的微任务有Object.observe(已经被废弃)、promise.then、async。</li>
 </ul>
+<p>其中需要注意的是async在事件循环中的表现。</p>
+<h4 id="async"><a href="#async" class="headerlink" title="async"></a>async</h4><p>async始终返回一个promise对象，因此await语句执行之后的代码可以看作是在then里的操作。但是await本身是一个让出线程的标志，因此理论上：</p>
+<ol>
+<li>紧跟在await后的表达式会先执行，</li>
+<li>然后就会让出线程来执行脚本后面的代码。</li>
+<li>等本轮事件循环结束后就会跳回到async函数中等待await后面表达式的返回值，</li>
+<li>如果返回值不是promise则继续让出线程</li>
+<li>否则将返回的promise放入微任务队列</li>
+</ol>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'script start'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">async1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">await</span> async2()</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'async1 end'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">async2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'async2 end'</span>)</span><br><span class="line">&#125;</span><br><span class="line">async1()</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Promise'</span>)</span><br><span class="line">resolve()</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'promise1'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'promise2'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'script end'</span>)</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors" target="_blank" rel="noopener">参考文档</a></p>
+<p>代码示例来自<a href="https://juejin.im/post/5e5c7f6c518825491b11ce93" target="_blank" rel="noopener">掘金文章，作者winty</a></p>
 </blockquote>
-<h5 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h5><p>伪类指的是某个元素的一种虚拟状态，不是元素而是元素的某一部分，如:link、:hover…….</p>
+<h5 id="参照流程，代码运行逻辑为："><a href="#参照流程，代码运行逻辑为：" class="headerlink" title="参照流程，代码运行逻辑为："></a>参照流程，代码运行逻辑为：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1. ~~[1.script start]~~</span><br><span class="line">2. 执行函数async1，执行async2</span><br><span class="line">3. ~~[2.async2 end]~~</span><br><span class="line">4. async1 的 await 让出线程</span><br><span class="line">5. setTimeout注册到宏任务队列中</span><br><span class="line">6. 执行promise</span><br><span class="line">7. ~~[3.promise]~~</span><br><span class="line">8. 将promise.then注册到微任务队列中</span><br><span class="line">9. ~~[4.script end] ~~</span><br><span class="line">-------第一个宏任务执行完成，接下来执行这个宏任务产生的微任务-------</span><br><span class="line">10. ~~[5.promise1]~~</span><br><span class="line">11. 将promise1产生的.then注册到微任务队列</span><br><span class="line">12. 微任务队列不为空继续执行微任务</span><br><span class="line">13. ~~[6.promise2]~~</span><br><span class="line">-------微任务清空，一轮事件循环结束---------</span><br><span class="line">14. 线程交到await, async2返回了继续，执行async1后的代码</span><br><span class="line">15. ~~[7.async1 end]~~</span><br><span class="line">-------重新开始事件循环--------</span><br><span class="line">16. 调用宏任务队列，执行setTimeout函数</span><br><span class="line">17. ~~[8.setTimeout]~~</span><br><span class="line">-------微任务队列为空，一轮事件循环结束-------</span><br></pre></td></tr></table></figure>
+
+<h5 id="但是实际在chrome中输出的结果却是"><a href="#但是实际在chrome中输出的结果却是" class="headerlink" title="但是实际在chrome中输出的结果却是"></a>但是实际在chrome中输出的结果却是</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. script start</span><br><span class="line">2. async2 end</span><br><span class="line">3. Promise</span><br><span class="line">4. script end </span><br><span class="line">5. async1 end</span><br><span class="line">6. promise1</span><br><span class="line">7. promise2</span><br><span class="line">8. setTimeout</span><br></pre></td></tr></table></figure>
+
+<p>需要格外注意的是「async1 end」的输入顺序，理论上应该第7个输出但是实际上第5个就输出了。这是因为谷歌浏览器(V8)针对async进行了优化处理，避免await等待事件过长的情况。</p>
 <ul>
-<li>:link</li>
-<li>:first-child</li>
-<li>:visited</li>
-<li>……</li>
+<li>当await后面跟着一个变量的时候就直接将后续代码注册为微任务而不是让出线程；</li>
+<li>当await后面跟着的是异步调用时则延续规范。(当async return一个promise时，则依据规范顺序)</li>
 </ul>
-<h5 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h5><p>伪元素是一种虚拟的元素，在dom元素中实际上并不存在，可以想象成逻辑位置而不是物理位置</p>
-<ul>
-<li>::after 某元素后面</li>
-<li>::before 某元素前面</li>
-<li>::first-line 某元素第一行</li>
-<li>::first-letter 某元素第一个单词</li>
-<li>……</li>
-</ul>
+<h5 id="但是在safari中的输出又不一样了"><a href="#但是在safari中的输出又不一样了" class="headerlink" title="但是在safari中的输出又不一样了"></a>但是在safari中的输出又不一样了</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. script start</span><br><span class="line">2. async2 end</span><br><span class="line">3. Promise</span><br><span class="line">4. script end </span><br><span class="line">5. promise1</span><br><span class="line">6. async1 end</span><br><span class="line">7. promise2</span><br><span class="line">8. setTimeout</span><br></pre></td></tr></table></figure>
+
+<p>先执行promise1在执行async1 end，所以其实已经进入了微任务的调度，还不是很清楚为什么会出现执行完一个微任务后又开始执行async1，不确定这个await后代码的注册时间。（todo）</p>
 <blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements" target="_blank" rel="noopener">更多伪类伪元素可参见MDN文档</a></p>
+<p>将async的返回更改为promise后chrome(V8)和safari(Nitro基于javaScriptCore)的表现与规范一致</p>
 </blockquote>
-<h4 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h4><h5 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h5><p>对于整体页面而言，优先级从低到高依次为：</p>
-<p>浏览器缺省设置-&gt;外部样式表-&gt;内部样式表（位于 head 标签内部）-&gt;内联样式（在 HTML 元素内部）</p>
-<p>针对内部、外部样式表的选择器其优先级从低到高依次为：</p>
-<p>通用选择器</p>
-<p>important &gt; ID选择器 &gt; 类(class)选择器 / 伪类 / 属性选择 &gt; 标签 / 伪元素 &gt; 继承 &gt; 通配符</p>
-<h5 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h5><p>不同的选择器有不同的优先级，在组合过程中他们也不是靠加法对选择器的优先级进行计算，而是应用层叠规则。层叠规则对不同类型的css选择器进行赋值，如下：</p>
-<p><strong>1.</strong>Id：100<br><strong>2.</strong>Class（类 | 伪类 | 属性选择）：010<br><strong>3.</strong>Element（标签 | 伪元素）：001<br><strong>4.</strong>通用选择器：000</p>
-<p>选择器进行组合时按位计算，然后比较两个组合选择器的值，以确定优先级，相同值的比较位置，就近原则。<br>css选择器的就近原则最常见于<code>&lt;a&gt;</code>标签的伪类中，link、visited、hover、active的声明顺序。</p>
-<h4 id="css选择器与页面渲染"><a href="#css选择器与页面渲染" class="headerlink" title="css选择器与页面渲染"></a>css选择器与页面渲染</h4><p>页面渲染分为两个部分，分别是DOM树的构建和CSSOM树的构建。</p>
-<p>通过DOM树和CSSOM树的匹配进行样式的呈现，在CSSOM树的构建过程中就已经依据相应的优先级规则对CSS选择器进行排序和确定了。不存在在页面的加载过程中，针对一个元素而言，一种样式被渲染后又被另一种样式覆盖的情况。</p>
+<h3 id="Node中的事件循环"><a href="#Node中的事件循环" class="headerlink" title="Node中的事件循环"></a>Node中的事件循环</h3><p>V8 会把I/O操作等耗时较多操作及相关回调一并交给libuv去处理。而V8继续执行后面的代码。等到I/O操作完成后，libuv会将回调方法放到事件队列中。<br>node中的事件循环是依赖于libuv引擎的。</p>
+<p>事件循环有6个阶段，每个阶段负责处理特定的宏任务事件，每个宏任务执行完成后都会去处理该任务的回调及产生的微任务。</p>
+<ul>
+<li>常见的宏任务有setTimeOut、setTimeInterval、setImmediate、I/O操作</li>
+<li>常见的微任务有promise.then、process.nextTick(先于注册的微任务)</li>
+</ul>
+<h4 id="阶段与事件对应表"><a href="#阶段与事件对应表" class="headerlink" title="阶段与事件对应表"></a>阶段与事件对应表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">timers               --setTimeout、setTimeInterval的回调</span><br><span class="line">I/O callback         --文件</span><br><span class="line">idle，prepare</span><br><span class="line">poll</span><br><span class="line">check                --setImmediate的回调</span><br><span class="line">close callback       --TCP断开链接</span><br></pre></td></tr></table></figure>
+
+<p>从poll阶段开始依次循环，每次回调会有最大回调次数的限制。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>浏览器事件循环中，主要要明确宏任务和微任务，处理完每一个宏任务后进行收尾工作，即处理该宏任务遗留的微任务。特别注意await让出线程的操作，以及在谷歌浏览器中的优化处理。<br>Node事件循环中，主要将事件的处理过程分成了不同的阶段，各司其职。</p>
 
       
     </div>
@@ -531,7 +497,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/" title="【了解前端，爱上前端】CSS选择器">https://MeaKaka.github.io/2019/08/21/【技术点】css-choice/</a>
+    <a href="https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/" title="【技术点】事件循环">https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -559,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/18/【技术点】canvas/" rel="next" title="【了解前端，爱上前端】Canvas的使用">
-                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】Canvas的使用
+              <a href="/2020/03/30/【技术点】浏览器高度/" rel="next" title="【技术点】从浏览器高度说开去">
+                <i class="fa fa-chevron-left"></i> 【技术点】从浏览器高度说开去
               </a>
             
           </div>
@@ -568,10 +534,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/21/【技术点】正则匹配（整理版）/" rel="prev" title="【基础学习】正则匹配">
-                【基础学习】正则匹配 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -729,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css选择器"><span class="nav-number">1.</span> <span class="nav-text">css选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本选择器"><span class="nav-number">1.1.</span> <span class="nav-text">基本选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合选择器（关系选择器）"><span class="nav-number">1.2.</span> <span class="nav-text">组合选择器（关系选择器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#辅助选择"><span class="nav-number">1.3.</span> <span class="nav-text">辅助选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#属性选择器"><span class="nav-number">1.3.1.</span> <span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪类选择器"><span class="nav-number">1.3.2.</span> <span class="nav-text">伪类选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪元素选择器"><span class="nav-number">1.3.3.</span> <span class="nav-text">伪元素选择器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优先级"><span class="nav-number">1.4.</span> <span class="nav-text">优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基础选择器"><span class="nav-number">1.4.1.</span> <span class="nav-text">基础选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组合选择器"><span class="nav-number">1.4.2.</span> <span class="nav-text">组合选择器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css选择器与页面渲染"><span class="nav-number">1.5.</span> <span class="nav-text">css选择器与页面渲染</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器中的事件循环"><span class="nav-number">1.</span> <span class="nav-text">浏览器中的事件循环</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#async"><span class="nav-number">1.1.</span> <span class="nav-text">async</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参照流程，代码运行逻辑为："><span class="nav-number">1.2.1.</span> <span class="nav-text">参照流程，代码运行逻辑为：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#但是实际在chrome中输出的结果却是"><span class="nav-number">1.2.2.</span> <span class="nav-text">但是实际在chrome中输出的结果却是</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#但是在safari中的输出又不一样了"><span class="nav-number">1.2.3.</span> <span class="nav-text">但是在safari中的输出又不一样了</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node中的事件循环"><span class="nav-number">2.</span> <span class="nav-text">Node中的事件循环</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阶段与事件对应表"><span class="nav-number">2.1.</span> <span class="nav-text">阶段与事件对应表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
