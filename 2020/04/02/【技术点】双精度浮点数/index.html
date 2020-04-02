@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去底层实现由于JS在存储数据的时候采取的是IEEE754标准。所以数据是在底层是用64为01串表示的，其中1位为符号位S、11位为指数位E、52位为尾数位M(全部表示小数，默认整数部分为1)。数据与01串的转化关系如下图：$$(-1)^S2^{(E-1023)}(M+1)$$其中，最多有53位都表示1则底数最大为1.11..1(共5">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-02T10:45:50.189Z">
+<meta property="og:updated_time" content="2020-04-02T10:46:38.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【技术点】JS双精度浮点数">
 <meta name="twitter:description" content="从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去底层实现由于JS在存储数据的时候采取的是IEEE754标准。所以数据是在底层是用64为01串表示的，其中1位为符号位S、11位为指数位E、52位为尾数位M(全部表示小数，默认整数部分为1)。数据与01串的转化关系如下图：$$(-1)^S2^{(E-1023)}(M+1)$$其中，最多有53位都表示1则底数最大为1.11..1(共5">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-02T18:45:50+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-02T18:46:38+08:00">
                 2020-04-02
               </time>
             
@@ -427,23 +427,23 @@
       
 
       
-        <h3 id="从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去"><a href="#从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去" class="headerlink" title="从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去"></a>从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去</h3><h4 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h4><p>由于JS在存储数据的时候采取的是IEEE754标准。所以数据是在底层是用64为01串表示的，其中1位为符号位S、11位为指数位E、52位为尾数位M(全部表示小数，默认整数部分为1)。数据与01串的转化关系如下图：<br>$$<br>(-1)^S<em>2^{(E-1023)}</em>(M+1)<br>$$<br>其中，最多有53位都表示1则底数最大为1.11..1(共53个),指数最大为E=2^11,因此上述公式表示的数值最大的情况是：<br>$$<br>(-1)^{(-1)}<em>2^{(2^{11}-1023)}*1.11…11<br>= 2^{1024}</em> 1.11….11<br>$$</p>
-<h4 id="0-1-0-2"><a href="#0-1-0-2" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h4><h5 id="0-1"><a href="#0-1" class="headerlink" title="0.1"></a>0.1</h5><p>0.1转化为2进制的数为<br>$$<br>0.1 = 0 * 2^{-1} + 0 * 2^{-2} + 0 * 2^{-3} + 1 * 2^{-4} + …<br>$$<br>$$<br>0.00011001100110011…<br>$$<br>则其表示成指数的形式为<br>$$<br>2^{(-4)}*(1+0.1001100110011…)<br>$$<br>在存储0.1的过程中因为尾数最多只有52位因此造成了精度的损失</p>
-<h5 id="0-2"><a href="#0-2" class="headerlink" title="0.2"></a>0.2</h5><p>0.2转化为2进制的数为<br>$$<br>0.2 = 0 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{-3} + 1 * 2^{-4} + …<br>$$<br>$$<br>0.0011001100110011…<br>$$<br>则其表示成指数的形式为<br>$$<br>2^{(-3)}*(1+0.1001100110011…)<br>$$<br>与0.1相同，在存储0.2的过程中也因为尾数的位数限制造成了精度的损失</p>
-<h5 id="0-1-0-2-1"><a href="#0-1-0-2-1" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h5><p>按位相加<br>$$<br>0.11001100110011…+1.1001100110011… = 0.0100110011001…<br>$$<br>(注：相加时有进位,但是只能存52位+1，因此四舍五入了)<br>$$<br>2^{(-2)}*(1+0.00110011001…)<br>$$<br>转化为十进制为<br>$$<br>2^{-2} + 2^{-5} + 2^{-6} + 2^{-9} + 2^{-10} + …=0.25+0.03125+0.015625+0.001953125… = 0.298828125+…=0.30000000000000004440892098500626<br>$$<br>由于存储和计算过程中的精度损失导致了0.1+0.2!==0.3</p>
-<h4 id="安全数"><a href="#安全数" class="headerlink" title="安全数"></a>安全数</h4><p>52位(+1)的尾数位数的限制除了会导致某些小数的运算精度不准确还会导致大数问题。</p>
-<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><p>在JS编码过程中，表格里有一个加入用户群的功能。前端通过后端返回的Json串读取相应的字段，展现表格的数据，当点击对应的按钮时，将该行对应的用户群id返回给后端做加群的请求。<br>在很长一段时间都没有出问题，直到有一天，用户点击新的行数据时后端再也不返回200了。</p>
+        <h2 id="从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去"><a href="#从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去" class="headerlink" title="从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去"></a>从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去</h2><h3 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h3><p>由于JS在存储数据的时候采取的是IEEE754标准。所以数据是在底层是用64为01串表示的，其中1位为符号位S、11位为指数位E、52位为尾数位M(全部表示小数，默认整数部分为1)。数据与01串的转化关系如下图：<br>$$<br>(-1)^S<em>2^{(E-1023)}</em>(M+1)<br>$$<br>其中，最多有53位都表示1则底数最大为1.11..1(共53个),指数最大为E=2^11,因此上述公式表示的数值最大的情况是：<br>$$<br>(-1)^{(-1)}<em>2^{(2^{11}-1023)}*1.11…11<br>= 2^{1024}</em> 1.11….11<br>$$</p>
+<h3 id="0-1-0-2"><a href="#0-1-0-2" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h3><h4 id="0-1"><a href="#0-1" class="headerlink" title="0.1"></a>0.1</h4><p>0.1转化为2进制的数为<br>$$<br>0.1 = 0 * 2^{-1} + 0 * 2^{-2} + 0 * 2^{-3} + 1 * 2^{-4} + …<br>$$<br>$$<br>0.00011001100110011…<br>$$<br>则其表示成指数的形式为<br>$$<br>2^{(-4)}*(1+0.1001100110011…)<br>$$<br>在存储0.1的过程中因为尾数最多只有52位因此造成了精度的损失</p>
+<h4 id="0-2"><a href="#0-2" class="headerlink" title="0.2"></a>0.2</h4><p>0.2转化为2进制的数为<br>$$<br>0.2 = 0 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{-3} + 1 * 2^{-4} + …<br>$$<br>$$<br>0.0011001100110011…<br>$$<br>则其表示成指数的形式为<br>$$<br>2^{(-3)}*(1+0.1001100110011…)<br>$$<br>与0.1相同，在存储0.2的过程中也因为尾数的位数限制造成了精度的损失</p>
+<h4 id="0-1-0-2-1"><a href="#0-1-0-2-1" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h4><p>按位相加<br>$$<br>0.11001100110011…+1.1001100110011… = 0.0100110011001…<br>$$<br>(注：相加时有进位,但是只能存52位+1，因此四舍五入了)<br>$$<br>2^{(-2)}*(1+0.00110011001…)<br>$$<br>转化为十进制为<br>$$<br>2^{-2} + 2^{-5} + 2^{-6} + 2^{-9} + 2^{-10} + …=0.25+0.03125+0.015625+0.001953125… = 0.298828125+…=0.30000000000000004440892098500626<br>$$<br>由于存储和计算过程中的精度损失导致了0.1+0.2!==0.3</p>
+<h3 id="安全数"><a href="#安全数" class="headerlink" title="安全数"></a>安全数</h3><p>52位(+1)的尾数位数的限制除了会导致某些小数的运算精度不准确还会导致大数问题。</p>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>在JS编码过程中，表格里有一个加入用户群的功能。前端通过后端返回的Json串读取相应的字段，展现表格的数据，当点击对应的按钮时，将该行对应的用户群id返回给后端做加群的请求。<br>在很长一段时间都没有出问题，直到有一天，用户点击新的行数据时后端再也不返回200了。</p>
 <p>通过模拟整个操作流程确定了问题的所在。随着用户群的增多，表示用户群的数值的位数渐渐变大。而当后端返回的用户群id为「7893645297283646558」在浏览器输出变成了「7893645297283646000」,后端理所当然找不到对应的ID。</p>
-<h5 id="JS读取规则"><a href="#JS读取规则" class="headerlink" title="JS读取规则"></a>JS读取规则</h5><p>出现这样的转化过程是因为JS在从内存中读取一个数的时候，正数最多只保存16位有效数字，小数最多保留17位，多余位数置0.</p>
+<h4 id="JS读取规则"><a href="#JS读取规则" class="headerlink" title="JS读取规则"></a>JS读取规则</h4><p>出现这样的转化过程是因为JS在从内存中读取一个数的时候，正数最多只保存16位有效数字，小数最多保留17位，多余位数置0.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7893645297283646558</span></span><br><span class="line">=&gt;<span class="number">7893645297283646000</span>  <span class="comment">//16位</span></span><br><span class="line"></span><br><span class="line"><span class="number">48367426743268.31281123</span></span><br><span class="line">=&gt;<span class="number">48367426743268.31</span>   <span class="comment">//16位</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">0.0000123210000231031031231031200</span></span><br><span class="line">=&gt;<span class="number">0.000012321000023103103</span>   <span class="comment">// 17位</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.0000000345354353534534</span></span><br><span class="line">=&gt;<span class="number">1.0000000345354354</span>       <span class="comment">//17 位</span></span><br></pre></td></tr></table></figure>
 
 <p>实际上这种位数过大的数，在JS中并不安全，因为这个数可能并不能在内存中表示出来。</p>
-<h5 id="安全数-1"><a href="#安全数-1" class="headerlink" title="安全数"></a>安全数</h5><p>安全数，指的是在内存中可以准确表达的数，此范围内的数可以正确的进行加减等运算。</p>
+<h4 id="安全数-1"><a href="#安全数-1" class="headerlink" title="安全数"></a>安全数</h4><p>安全数，指的是在内存中可以准确表达的数，此范围内的数可以正确的进行加减等运算。</p>
 <p>回到IEEE标准：<br>$$<br>(-1)^S<em>2^{(E-1023)}</em>(M+1)<br>$$<br>指数决定最大最小值，尾数决定数据的精度。尾数的最大值为1.1…1因此，最大值为1.1…11<em>2^x,即<br>$$<br>(2^{52}+2^{51}+2^{50}…2^{2}+2^{1}+2^{0})</em>2^{x-52}<br>$$<br>$$<br>(2^{53}-1)<em>2^{x-52}<br>$$<br>因此最大安全数是：（因为 任意数</em>2 都存在2的间隔，并不能+1）<br>$$<br>2^{53}-1<br>$$</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9007199254740992</span></span><br><span class="line">=&gt;<span class="number">9007199254740992</span></span><br><span class="line"></span><br><span class="line"><span class="number">9007199254740993</span></span><br><span class="line">=&gt;<span class="number">9007199254740992</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h5><p>都是双精度浮点型，为什么python就可以正常传递数据而JS就会出现问题呢？因为python用的是长整型，不存在溢出问题，即可以存放任意大小的整数。而长整型在python内部是用一个 int 数组保存值的。</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ol>
+<h4 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h4><p>都是双精度浮点型，为什么python就可以正常传递数据而JS就会出现问题呢？因为python用的是长整型，不存在溢出问题，即可以存放任意大小的整数。而长整型在python内部是用一个 int 数组保存值的。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol>
 <li><p>最常见的方法就是将小数转化为整数</p>
 </li>
 <li><p>将大数存储成字符串/数组，再进行相应的运算</p>
@@ -507,8 +507,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/01/【React】从setState到页面渲染/" rel="next" title="【React】从setState到页面渲染">
-                <i class="fa fa-chevron-left"></i> 【React】从setState到页面渲染
+              <a href="/2020/03/31/【技术点】事件循环/" rel="next" title="【技术点】事件循环">
+                <i class="fa fa-chevron-left"></i> 【技术点】事件循环
               </a>
             
           </div>
@@ -609,7 +609,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -673,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去"><span class="nav-number">1.</span> <span class="nav-text">从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层实现"><span class="nav-number">1.1.</span> <span class="nav-text">底层实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0-1-0-2"><span class="nav-number">1.2.</span> <span class="nav-text">0.1+0.2</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#0-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#0-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">0.2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#0-1-0-2-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">0.1+0.2</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全数"><span class="nav-number">1.3.</span> <span class="nav-text">安全数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#案例"><span class="nav-number">1.3.1.</span> <span class="nav-text">案例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JS读取规则"><span class="nav-number">1.3.2.</span> <span class="nav-text">JS读取规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安全数-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">安全数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#疑惑"><span class="nav-number">1.3.4.</span> <span class="nav-text">疑惑</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">1.4.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#从「面试题：如何判断-0-1-0-2-与-0-3-相等？」说开去"><span class="nav-number">1.</span> <span class="nav-text">从「面试题：如何判断 0.1 + 0.2 与 0.3 相等？」说开去</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#底层实现"><span class="nav-number">1.1.</span> <span class="nav-text">底层实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-1-0-2"><span class="nav-number">1.2.</span> <span class="nav-text">0.1+0.2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">0.1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">0.2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0-1-0-2-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">0.1+0.2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全数"><span class="nav-number">1.3.</span> <span class="nav-text">安全数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例"><span class="nav-number">1.3.1.</span> <span class="nav-text">案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS读取规则"><span class="nav-number">1.3.2.</span> <span class="nav-text">JS读取规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全数-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">安全数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#疑惑"><span class="nav-number">1.3.4.</span> <span class="nav-text">疑惑</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.4.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
             
 
           </div>
