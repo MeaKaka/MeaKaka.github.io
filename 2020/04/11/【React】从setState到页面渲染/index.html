@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="面经,">
+  <meta name="keywords" content="React相关知识,">
 
 
 
@@ -134,20 +134,18 @@
 
 
 
-<meta name="description" content="2019 字节跳动 前端面试（基础平台部）第一部分 复习过程中知识总结 第二部分 面试过程一面（14：00-14：30）一面主要是先闲聊了一下然后考察了一些基础知识,考了几道算法题 闲聊： 自我介绍 为什么选择前端啊 基础知识： CSS的垂直居中布局（两种） new一个对象的过程 call、apply、bind的差别，应用场景 box-sizing的取值有哪些 数组的常用方法，哪些改变了原数组 跨">
-<meta name="keywords" content="面经">
+<meta name="description" content="setStateReact本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？ setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。 1set">
+<meta name="keywords" content="React相关知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019 字节跳动 前端面试（基础平台部）(日常实习)">
-<meta property="og:url" content="https://MeaKaka.github.io/2019/07/24/【面经】ByteDance/index.html">
+<meta property="og:title" content="【React】从setState到页面渲染">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/04/11/【React】从setState到页面渲染/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="2019 字节跳动 前端面试（基础平台部）第一部分 复习过程中知识总结 第二部分 面试过程一面（14：00-14：30）一面主要是先闲聊了一下然后考察了一些基础知识,考了几道算法题 闲聊： 自我介绍 为什么选择前端啊 基础知识： CSS的垂直居中布局（两种） new一个对象的过程 call、apply、bind的差别，应用场景 box-sizing的取值有哪些 数组的常用方法，哪些改变了原数组 跨">
+<meta property="og:description" content="setStateReact本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？ setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。 1set">
 <meta property="og:locale" content="Hans">
-<meta property="og:image" content="https://meakaka.github.io/images/Front_knowledge_system.png">
-<meta property="og:updated_time" content="2020-03-09T02:37:48.388Z">
+<meta property="og:updated_time" content="2020-04-12T02:59:02.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019 字节跳动 前端面试（基础平台部）(日常实习)">
-<meta name="twitter:description" content="2019 字节跳动 前端面试（基础平台部）第一部分 复习过程中知识总结 第二部分 面试过程一面（14：00-14：30）一面主要是先闲聊了一下然后考察了一些基础知识,考了几道算法题 闲聊： 自我介绍 为什么选择前端啊 基础知识： CSS的垂直居中布局（两种） new一个对象的过程 call、apply、bind的差别，应用场景 box-sizing的取值有哪些 数组的常用方法，哪些改变了原数组 跨">
-<meta name="twitter:image" content="https://meakaka.github.io/images/Front_knowledge_system.png">
+<meta name="twitter:title" content="【React】从setState到页面渲染">
+<meta name="twitter:description" content="setStateReact本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？ setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。 1set">
 
 
 
@@ -177,13 +175,13 @@
 
 
 
-  <link rel="canonical" href="https://MeaKaka.github.io/2019/07/24/【面经】ByteDance/">
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/04/11/【React】从setState到页面渲染/">
 
 
 
 
 
-  <title>2019 字节跳动 前端面试（基础平台部）(日常实习) | Ricky's Blog</title>
+  <title>【React】从setState到页面渲染 | Ricky's Blog</title>
   
 
 
@@ -319,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/07/24/【面经】ByteDance/">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/04/11/【React】从setState到页面渲染/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="里卡卡多">
@@ -336,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">2019 字节跳动 前端面试（基础平台部）(日常实习)</h2>
+          <h2 class="post-title" itemprop="name headline">【React】从setState到页面渲染</h2>
         
 
         <div class="post-meta">
@@ -348,8 +346,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T15:54:59+08:00">
-                2019-07-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-11T21:09:24+08:00">
+                2020-04-11
               </time>
             
 
@@ -364,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-09T10:37:48+08:00">
-                2020-03-09
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-12T10:59:02+08:00">
+                2020-04-12
               </time>
             
           </span>
@@ -429,52 +427,66 @@
       
 
       
-        <h1 id="2019-字节跳动-前端面试（基础平台部）"><a href="#2019-字节跳动-前端面试（基础平台部）" class="headerlink" title="2019 字节跳动 前端面试（基础平台部）"></a>2019 字节跳动 前端面试（基础平台部）</h1><h3 id="第一部分-复习过程中知识总结"><a href="#第一部分-复习过程中知识总结" class="headerlink" title="第一部分 复习过程中知识总结"></a>第一部分 复习过程中知识总结</h3><p><img src="/images/Front_knowledge_system.png" alt="前端知识体系"></p>
-<h3 id="第二部分-面试过程"><a href="#第二部分-面试过程" class="headerlink" title="第二部分 面试过程"></a>第二部分 面试过程</h3><h4 id="一面（14：00-14：30）"><a href="#一面（14：00-14：30）" class="headerlink" title="一面（14：00-14：30）"></a>一面（14：00-14：30）</h4><p><em>一面主要是先闲聊了一下然后考察了一些基础知识,考了几道算法题</em></p>
-<p>闲聊：</p>
-<p>自我介绍</p>
-<p>为什么选择前端啊</p>
-<p>基础知识：</p>
-<p>CSS的垂直居中布局（两种）</p>
-<p>new一个对象的过程</p>
-<p>call、apply、bind的差别，应用场景</p>
-<p>box-sizing的取值有哪些</p>
-<p>数组的常用方法，哪些改变了原数组</p>
-<p>跨域的方式(JSONP、CORS、Nginx)</p>
-<p>算法题：</p>
-<p>实现对象的克隆（考虑对象的prototype）</p>
-<p>写一个函数，实现柯里化（add(1，2)与add(1)(2)都能实现加法）</p>
-<p>从一个数组中找到所有和为指定值的数据对，输出数组下标（indexOf/ map映射）</p>
-<p>写一个模板引擎（正则/eval()函数）</p>
-<h4 id="二面-14：40-15：30"><a href="#二面-14：40-15：30" class="headerlink" title="二面 14：40-15：30"></a>二面 14：40-15：30</h4><p>主要是问项目,在项目中穿插着一些基础知识,还聊到了对计算机的理解, 进程、线程的区别</p>
-<p>聊现在正在做的项目，负责的部分</p>
-<p>前端的学习历程是什么样的</p>
-<p>以往的项目中，扮演的是什么角色，如何和后端进行沟通</p>
-<p>pm沟通时期望拿到的需求是什么样的，有哪些你觉得的必须信息</p>
-<p>对于函数式编程有什么理解</p>
-<p>http2有什么了解（多路复用）</p>
-<p>说一下BFC（怎么实现，后果是什么）</p>
-<p>进程和线程</p>
-<p>JS是单线程，能否实现多线程呢（WebWorkers）</p>
-<p>JS的事件机制（事件循环）</p>
-<p>http协议的了解，能基于UDP吗（http3）</p>
-<p>缓存（强缓存、协商缓存）</p>
-<p>课程学习过程中你觉得你哪门学科学的最好</p>
-<p>说说你对“计算机”的理解</p>
-<p>寄存器的理解</p>
-<p>有用过antd的表单组件吗（没有）</p>
-<p>设计？实现？一个组件，反正回答的是设计</p>
-<h4 id="三面-16：00-17：15"><a href="#三面-16：00-17：15" class="headerlink" title="三面 16：00-17：15"></a>三面 16：00-17：15</h4><p>三面问的都是场景中的题，由场景进行内容的发散和知识的考核，以项目出发。</p>
-<p>项目中遇到的问题</p>
-<p>如何解决强刷的问题（hash/http协议的字段）</p>
-<p>介绍项目相关的技术栈，为什么要这么选</p>
-<p>项目的需求是怎么确定的呢，有哪些你觉得的亮点</p>
-<p>对自己当前水平的评价，将来要从哪些方面提升</p>
-<p>如何进行线上调试</p>
-<h4 id="HR面-17：15-17：30"><a href="#HR面-17：15-17：30" class="headerlink" title="HR面 17：15-17：30"></a>HR面 17：15-17：30</h4><p>除了字节跳动还投了哪些公司</p>
-<p>为什么要做前端而不是算法？</p>
-<p>生活节奏可能很不一样能否适应</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3>
+        <h3 id="setState"><a href="#setState" class="headerlink" title="setState"></a>setState</h3><p>React本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？</p>
+<p>setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setState(updater, [callback])</span><br></pre></td></tr></table></figure>
+
+<p>setState被调用之后会执行enqueueSetState，state进入_pendingStateQueue队列将待更新的state放到队列里，执行enqueueUpdate函数；回调函数进入enqueueCallback队列。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ReactComponent.prototype.setState = <span class="function"><span class="keyword">function</span>(<span class="params">partialState, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.updater.enqueueSetState(<span class="keyword">this</span>, partialState);</span><br><span class="line">  <span class="keyword">if</span> (callback) &#123;</span><br><span class="line">    <span class="keyword">this</span>.updater.enqueueCallback(<span class="keyword">this</span>, callback, <span class="string">'setState'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>enqueueUpdate函数通过isBatchUpdate判断是否处于批量更新阶段，如果不在批量处理阶段则会同步更新，如果在批量处理阶段则把state放到dirty components里执行异步更新。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enqueueUpdate</span>(<span class="params">component</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">if</span> (!batchingStrategy.isBatchingUpdates) &#123;</span><br><span class="line">    batchingStrategy.batchedUpdates(enqueueUpdate, component);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  dirtyComponents.push(component);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是这有一个事务的概念，当事务结束后会调用flushBatchUpdate函数，循环dirty components进行更新。所以会更新几次取决于调用了多少次flushBatchUpdate，flushBatchUpdate函数只有在事务结束close之后才会调用。当一个setState触发流程，如果此时事务正在更新，则直接执行enqueueUpdate，否则就触发事务的更新。</p>
+<p>首次渲染、合成事件的setState中的isBatchUpdate都是true；原生事件中的isBatchUpdate是false，会同步更新。</p>
+<p>setState中的异步更新，本身并不是异步的，而是由于isBatchUpdate的判断使其执行了一个等待逻辑体现成异步而已。</p>
+<p>当state对象更改后会通过componentShouldUpdate判断是否需要更新，如果确定需要更新就通过fiber和diff确定需要更新的组件执行更新。</p>
+<h3 id="Virtual-Dom、diff与fiber"><a href="#Virtual-Dom、diff与fiber" class="headerlink" title="Virtual Dom、diff与fiber"></a>Virtual Dom、diff与fiber</h3><h4 id="Virtual-Dom"><a href="#Virtual-Dom" class="headerlink" title="Virtual Dom"></a>Virtual Dom</h4><p>DOM引擎和JS引擎相互独立但是又作用在用于线程，所以操作DOM的时候就需要挂起JS引擎，而针对DOM的操作又很费时间，所以衍生出Virtual DOM的方法，避免多次操作DOM，减少重绘。</p>
+<p>通过JS对象表示DOM结构，在需要更新的时候首先更新利用JS表示的虚拟DOM，比对两次虚拟DOM的差别，确定实际DOM中需要更新的部分，实现有针对性的更新。</p>
+<h4 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h4><p>Diff算法就是用来对比两次虚拟DOM的不同的，主要分为三个层次</p>
+<ul>
+<li>tree</li>
+<li>component</li>
+<li>element</li>
+</ul>
+<p>具体来说，</p>
+<ol>
+<li>如果父节点不同就直接替换了</li>
+<li>节点类型不同直接替换</li>
+<li>类型相同但是属性不同，则对属性进行重设</li>
+</ol>
+<blockquote>
+<p>key对应的唯一标识可以方便遍历，key不同就可以直接删除。在需要翻页的table组件里设置key=index，由于index没有更改，所以组件不会被卸载只会被更新。</p>
+</blockquote>
+<h4 id="fiber"><a href="#fiber" class="headerlink" title="fiber"></a>fiber</h4><p>DOM的更新分为两个阶段，一个是新旧虚拟DOM的差异对比，确定待更新的组件，也称为调和阶段；二是将确定的更新DOM应用在实际DOM中，也称为commit阶段。</p>
+<p>为了避免对比过程占据主线程过久，使得页面对点击等事件无响应影响用户体验，因此在fiber架构中「调和阶段」允许被打断。同时设立优先级的概念，允许高优先级的事件率先被执行。</p>
+<p>每一次执行只会分配一个时间片，时间片的时间被执行完了就要回归到主线程等待主线程继续分配时间片。</p>
+<p>而「commit」阶段不允许被打断，一旦开始更新真实DOM便一鼓作气。</p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><h4 id="类组件与Hook"><a href="#类组件与Hook" class="headerlink" title="类组件与Hook"></a>类组件与Hook</h4><p>Hook的出现是为了使开发者在不编写class的情况下使用state等属性。不直接用Class呢，因为class是按照生命周期的方式去组织组件的，不同的生命周期可能在处理同一件事，增加了代码的冗余度。此外，开发者还会在生命周期处理一些不相关的事，不但会导致逻辑难懂、复用困难还会导致一些意想不到的bug。</p>
+<p>之前也存在函数型组件，用于控制UI视图，不进行逻辑的处理。后续就设计希望能在函数组件里使用状态属性，达到不处理生命周期的方式。于是就出现了Hook。</p>
+<h4 id="组件的通信"><a href="#组件的通信" class="headerlink" title="组件的通信"></a>组件的通信</h4><p>组件间的通信主要分为以下4种情况</p>
+<ol>
+<li>父子组件通信<ol>
+<li>props</li>
+</ol>
+</li>
+<li>子父组件通信<ol>
+<li>回调函数</li>
+</ol>
+</li>
+<li>跨级组件通信<ol>
+<li>props层层传递</li>
+<li>context对象</li>
+<li>redux的connect构建高阶组件</li>
+</ol>
+</li>
+<li>兄弟组件通信<ol>
+<li>context对象</li>
+<li>redux的connect构建高阶组件</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
     
@@ -494,7 +506,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://MeaKaka.github.io/2019/07/24/【面经】ByteDance/" title="2019 字节跳动 前端面试（基础平台部）(日常实习)">https://MeaKaka.github.io/2019/07/24/【面经】ByteDance/</a>
+    <a href="https://MeaKaka.github.io/2020/04/11/【React】从setState到页面渲染/" title="【React】从setState到页面渲染">https://MeaKaka.github.io/2020/04/11/【React】从setState到页面渲染/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -509,7 +521,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/面经/" rel="tag"># 面经</a>
+            <a href="/tags/React相关知识/" rel="tag"># React相关知识</a>
           
         </div>
       
@@ -522,15 +534,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/04/02/【技术点】从地址栏输入URL说起/" rel="next" title="【技术点】从地址栏输入URL说起">
+                <i class="fa fa-chevron-left"></i> 【技术点】从地址栏输入URL说起
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/18/【技术点】canvas/" rel="prev" title="【了解前端，爱上前端】Canvas的使用">
-                【了解前端，爱上前端】Canvas的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-字节跳动-前端面试（基础平台部）"><span class="nav-number">1.</span> <span class="nav-text">2019 字节跳动 前端面试（基础平台部）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分-复习过程中知识总结"><span class="nav-number">1.0.1.</span> <span class="nav-text">第一部分 复习过程中知识总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二部分-面试过程"><span class="nav-number">1.0.2.</span> <span class="nav-text">第二部分 面试过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一面（14：00-14：30）"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">一面（14：00-14：30）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二面-14：40-15：30"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">二面 14：40-15：30</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三面-16：00-17：15"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">三面 16：00-17：15</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HR面-17：15-17：30"><span class="nav-number">1.0.2.4.</span> <span class="nav-text">HR面 17：15-17：30</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.0.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#setState"><span class="nav-number">1.</span> <span class="nav-text">setState</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Virtual-Dom、diff与fiber"><span class="nav-number">2.</span> <span class="nav-text">Virtual Dom、diff与fiber</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Virtual-Dom"><span class="nav-number">2.1.</span> <span class="nav-text">Virtual Dom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Diff"><span class="nav-number">2.2.</span> <span class="nav-text">Diff</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fiber"><span class="nav-number">2.3.</span> <span class="nav-text">fiber</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他问题"><span class="nav-number">3.</span> <span class="nav-text">其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类组件与Hook"><span class="nav-number">3.1.</span> <span class="nav-text">类组件与Hook</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件的通信"><span class="nav-number">3.2.</span> <span class="nav-text">组件的通信</span></a></li></ol></li></ol></div>
             
 
           </div>

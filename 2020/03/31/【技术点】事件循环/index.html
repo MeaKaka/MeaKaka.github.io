@@ -134,18 +134,18 @@
 
 
 
-<meta name="description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
+<meta name="description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。（当遇见s">
 <meta name="keywords" content="了解前端，爱上前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【技术点】事件循环">
 <meta property="og:url" content="https://MeaKaka.github.io/2020/03/31/【技术点】事件循环/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
+<meta property="og:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。（当遇见s">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-01T02:31:17.921Z">
+<meta property="og:updated_time" content="2020-04-12T02:58:58.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【技术点】事件循环">
-<meta name="twitter:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。 常见的微">
+<meta name="twitter:description" content="浏览器中的事件循环浏览器事件执行过程中主要涉及两个队列，分别是「宏任务队列」和「微任务队列」。  每次都会先从宏任务队列中取出一个宏任务执行（执行的脚本可以看作是一个宏任务，） 然后将此宏任务产生的微任务push到微任务队列中 依次执行此微任务队列 再从宏任务队列中取出事件执行，返回第一步   常见的宏任务有setTimeOut、setTimeInterval、setImmediate。（当遇见s">
 
 
 
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-01T10:31:17+08:00">
-                2020-04-01
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-12T10:58:58+08:00">
+                2020-04-12
               </time>
             
           </span>
@@ -435,7 +435,7 @@
 <li>再从宏任务队列中取出事件执行，返回第一步</li>
 </ol>
 <ul>
-<li>常见的宏任务有setTimeOut、setTimeInterval、setImmediate。</li>
+<li>常见的宏任务有setTimeOut、setTimeInterval、setImmediate。（当遇见setTimeOut的代码，浏览器内核相应模块将开始延时方法的处理，当延时方法到达触发条件时，其中的回调函数被添加到宏任务队列）</li>
 <li>常见的微任务有Object.observe(已经被废弃)、promise.then、async。</li>
 </ul>
 <p>其中需要注意的是async在事件循环中的表现。</p>
@@ -631,7 +631,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
