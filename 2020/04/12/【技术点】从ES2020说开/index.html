@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="UqlC4pwKIm">
+  <meta name="baidu-site-verification" content="d3U0dGeqGw">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="了解前端，爱上前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="4月上旬我的技术分享的文稿，现在整理一下。 ES是什么ECMAScriptES指的是ECMAScript标准。ES标准全文可见 一开始叫做JavaScript，后来为了推动JavaScript的发展，网景公司将JavaScript提交给欧洲计算机制造商协会(ECMA)进行标准化。 ECMA存在的意义就在于统一不同JS引擎执行的结果。 除了「ECMA」这个制造商协会的概念之外，还有一个「TC39」的">
+<meta name="keywords" content="了解前端，爱上前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【技术点】从ES2020说开去">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/04/12/【技术点】从ES2020说开/index.html">
+<meta property="og:site_name" content="Ricky&#39;s Blog">
+<meta property="og:description" content="4月上旬我的技术分享的文稿，现在整理一下。 ES是什么ECMAScriptES指的是ECMAScript标准。ES标准全文可见 一开始叫做JavaScript，后来为了推动JavaScript的发展，网景公司将JavaScript提交给欧洲计算机制造商协会(ECMA)进行标准化。 ECMA存在的意义就在于统一不同JS引擎执行的结果。 除了「ECMA」这个制造商协会的概念之外，还有一个「TC39」的">
+<meta property="og:locale" content="Hans">
+<meta property="og:image" content="https://meakaka.github.io/images/ES_history.PNG">
+<meta property="og:updated_time" content="2020-04-14T13:35:20.350Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【技术点】从ES2020说开去">
+<meta name="twitter:description" content="4月上旬我的技术分享的文稿，现在整理一下。 ES是什么ECMAScriptES指的是ECMAScript标准。ES标准全文可见 一开始叫做JavaScript，后来为了推动JavaScript的发展，网景公司将JavaScript提交给欧洲计算机制造商协会(ECMA)进行标准化。 ECMA存在的意义就在于统一不同JS引擎执行的结果。 除了「ECMA」这个制造商协会的概念之外，还有一个「TC39」的">
+<meta name="twitter:image" content="https://meakaka.github.io/images/ES_history.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/04/12/【技术点】从ES2020说开/">
+
+
+
+
+
+  <title>【技术点】从ES2020说开去 | Ricky's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ricky's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/04/12/【技术点】从ES2020说开/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="里卡卡多">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【技术点】从ES2020说开去</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-12T11:02:24+08:00">
+                2020-04-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-14T21:35:20+08:00">
+                2020-04-14
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>4月上旬我的技术分享的文稿，现在整理一下。</p>
+<h3 id="ES是什么"><a href="#ES是什么" class="headerlink" title="ES是什么"></a>ES是什么</h3><h4 id="ECMAScript"><a href="#ECMAScript" class="headerlink" title="ECMAScript"></a>ECMAScript</h4><p>ES指的是ECMAScript标准。<a href="https://tc39.es/ecma262" target="_blank" rel="noopener">ES标准</a>全文可见</p>
+<p>一开始叫做JavaScript，后来为了推动JavaScript的发展，网景公司将JavaScript提交给欧洲计算机制造商协会(ECMA)进行标准化。</p>
+<p>ECMA存在的意义就在于统一不同JS引擎执行的结果。</p>
+<p>除了「ECMA」这个制造商协会的概念之外，还有一个「TC39」的掌权协会。</p>
+<h4 id="TC39"><a href="#TC39" class="headerlink" title="TC39"></a>TC39</h4><p>TC39是ECMA的第39号技术专家委员会（Technical Committee 39）的简称，是ECMAScript标准的实际制定者。</p>
+<p>这个委员会并不是一个人，而是负责制定ECMAScript标准的一群人，其成员主要由各个JS引擎（浏览器）厂商工作人员组成。</p>
+<p>事实上，任何人或开发者都可以注册成为一个TC39贡献者，并通过其Github提交proposal或编写测试用例。</p>
+<blockquote>
+<p>提交网址如下：<a href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md" target="_blank" rel="noopener">https://github.com/tc39/proposals/blob/master/stage-0-proposals.md</a></p>
+</blockquote>
+<h4 id="提案"><a href="#提案" class="headerlink" title="提案"></a>提案</h4><p>一个提案要历经四次磨难才能最终成为标准。</p>
+<ul>
+<li>Stage 0（Strawman阶段）<ul>
+<li>该阶段是一个开放提交阶段，任何在TC39注册过的贡献都或TC39成员都可以进行提交。提交内容可以是一个提议、想法、初步描述。</li>
+</ul>
+</li>
+<li>Stage 1（Proposal阶段）<ul>
+<li>该阶段是对所提交新特性的正式建议。在这个阶段需具备以下条件：<ul>
+<li>TC39指定一名成员作为Champion</li>
+<li>TC39审阅通过</li>
+<li>有实现的 Demo 或者 Polyfill</li>
+</ul>
+</li>
+<li>初步编写标准，包括：问题描述、解决方案示例、语法语义API、关键的算法及抽象、实现的复杂度等</li>
+</ul>
+</li>
+<li>Stage 2（Draft阶段）<ul>
+<li>该阶段是会出现标准中的第一个版本。在这个阶段必须要具备以下条件：<ul>
+<li>更规范化语法特性和语意的说明，并使用ECMAScript标准的正式语言描述该特性的语法、语义、API</li>
+<li>该特性应该有两个实验性的实现，其中一个可以基于Babel等转译器实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Stage 3（Canidate阶段）<ul>
+<li>该阶段的提议已接近完成，只需要得到提议实现方的反馈，并由用户来进一步推动。在这个阶段应具备以下条件：<ul>
+<li>编写Test 262测试例，且至少2个用例通过测试</li>
+<li>TC39指定的审稿人审核通过</li>
+<li>开发者的足够认可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Stage 4（Finished阶段）<ul>
+<li>该阶段的会被包括到标准之中。在这个阶段应具备以下条件：<ul>
+<li>Test 262验收测试通过</li>
+<li>两个符合规范的实现通过</li>
+<li>TC39审核通过</li>
+<li>开发者的支持和认可</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>接下来，经过ECMA的审核后，该提议将正式被添加到标准中。一般来说只有到了Stage 4，该特性才会被确定加入到标准中，然后会在下一次的ECMAScript标准中出现该提议， 当然也并非是百分百的，也可能需要更长的时间。</p>
+<p>所以我们使用了很多方法在一段时间后才正式纳入了标准</p>
+<h3 id="ES发展史"><a href="#ES发展史" class="headerlink" title="ES发展史"></a>ES发展史</h3><p>ES标准早在1996年就出现了第一版，然后保持一年一版的更新速度更新到ES3，后来停滞了一段时间，提出了一个激进版的更新ES4，被一部分人反对就不了了之了。其中有些被接受的小修改被命名为ES3.1后来改名叫ES5。ES4里的一些步子比较大的更新就放到了ES6里，ES6之后又恢复了一年一版本的节奏。<br><img src="/images/ES_history.PNG" alt="ES发展史"><br>ES6是一个分界线，因为一些利益的冲突，话语权公司的争执不下，ES4流产只进行了小范围的改良, 从ES3升级到ES5，ES4的一些激进的优化都放到了ES6及以后的版本。<br>ES6的更新主要包括：</p>
+<ul>
+<li>类</li>
+<li>模块化</li>
+<li>箭头函数</li>
+<li>函数参数默认值</li>
+<li>模板字符串</li>
+<li>解构赋值</li>
+<li>延展操作符</li>
+<li>对象属性简写</li>
+<li>Promise</li>
+<li>Let与Const</li>
+</ul>
+<p>像promise、let、箭头函数、解构等已经变成了现在使用最普遍的特性了。                       </p>
+<h3 id="ES2020的新特性"><a href="#ES2020的新特性" class="headerlink" title="ES2020的新特性"></a>ES2020的新特性</h3><blockquote>
+<p>ECMAScript 2020, the 11th edition, introduces the <strong>matchAll</strong> method for Strings, to produce an iterator for all match objects generated by a global regular expression; <strong>import()</strong>, a syntax to asynchronously import Modules with a dynamic specifier; <strong>BigInt</strong>, a new number primitive for working with arbitrary precision integers; <strong>Promise.allSettled</strong>, a new Promise combinator that does not short-circuit; <strong>globalThis</strong>, a universal way to access the global this value; dedicated <strong>export * as ns from ‘module’</strong> syntax for use within modules; increased standardization of <strong>for-in</strong> enumeration order; <strong>import.meta</strong>, a host-populated object available in Modules that may contain contextual information about the Module; as well as adding two new syntax features to improve working with “<strong>nullish</strong>” values (null or undefined): nullish coalescing, a value selection operator; and <strong>optional chaining</strong>, a property access and function invocation operator that short-circuits if the value to access/invoke is nullish.</p>
+</blockquote>
+<h4 id="BigInt"><a href="#BigInt" class="headerlink" title="BigInt"></a>BigInt</h4><p>由于在JS中数据都是以<a href="https://zhuanlan.zhihu.com/p/123341692" target="_blank" rel="noopener">双精度浮点数</a>的形式存在.因此小数计算可能出现精度的误差，大数的计算和表达中有安全数是2^53-1的概念。</p>
+<p>为了避免这种情况，可以使用math.js等第三方库进行运算，但是他们大多是将数值看作是字符串从而进行溢出风险的规避。字符串的运算操作，性能自然没有原生数据好。</p>
+<p>在2018年就已经有了BigInt的提案，chrome在67版本的时候就提供了支持。但是今年才正式进入了标准。</p>
+<p>在标准中，BigInt和Number一样都是基本类型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">123</span>n</span><br><span class="line"><span class="string">'bigint'</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>BigInt可以与Number/String进行显式转换但不会被隐式转换，因此像于BigInt与Int的等于/小于之类的操作并没有隐式转换的过程。</p>
+</blockquote>
+<blockquote>
+<p>由Number(BigInt)进行转换还是会造成精度的损失；String(BigInt)不含n。</p>
+</blockquote>
+<blockquote>
+<p>BigInt只是个函数，没有构造器，因此不能使用new来创建 BigInt的实例</p>
+</blockquote>
+<h5 id="当调用BigInt函数后发生了什么？"><a href="#当调用BigInt函数后发生了什么？" class="headerlink" title="当调用BigInt函数后发生了什么？"></a>当调用BigInt函数后发生了什么？</h5><p>规范是这样说的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">When BigInt is called <span class="keyword">with</span> argument value, the following steps are taken:</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> If NewTarget is not <span class="literal">undefined</span>, <span class="keyword">throw</span> a <span class="built_in">TypeError</span> exception.</span><br><span class="line"><span class="number">2.</span> Let prim be ? ToPrimitive(value, hint <span class="built_in">Number</span>).</span><br><span class="line"><span class="number">3.</span> If Type(prim) is <span class="built_in">Number</span>, <span class="keyword">return</span> ? NumberToBigInt(prim).</span><br><span class="line"><span class="number">4.</span> Otherwise, <span class="keyword">return</span> ? ToBigInt(value).</span><br><span class="line"><span class="string">``</span><span class="string">`          </span></span><br><span class="line"><span class="string">当输入值不为undefined的时候，首先要进行一次原始类型转换，首先判断输入值是否能转化为Number类型，如果不能就调用ToBigInt的方法，如果可以就走NumberToBigInt。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- ToBigInt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">![toBigInt](/images/toBigInt.png)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">可以看出只有boolean、string和bigInt类型可以通过该函数toBigInt()进行转换，其他类型一律返回「TypeError」</span></span><br><span class="line"><span class="string">- NumberToBigInt</span></span><br><span class="line"><span class="string">Number转化为BigInt则要走NumberToBigInt函数</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="number">1.</span> Assert: Type(number) is <span class="built_in">Number</span>.</span><br><span class="line"><span class="number">2.</span> If IsInteger(number) is <span class="literal">false</span>, <span class="keyword">throw</span> a <span class="built_in">RangeError</span> exception.</span><br><span class="line"><span class="number">3.</span> Return the BigInt value that represents the mathematical value <span class="keyword">of</span> number.</span><br><span class="line"><span class="string">``</span><span class="string">`              </span></span><br><span class="line"><span class="string">大前提条件是数据的类型为Number，如果数据不是整数则抛出错误「RangeError」，如BigInt(1.5);如果是整数，则将number的mathematical值赋给BigInt的值</span></span><br><span class="line"><span class="string">##### BigInt和Number的比较</span></span><br><span class="line"><span class="string">**==**</span></span><br><span class="line"><span class="string">「==」和「===」的不同就在于前者是弱相等会进行类型的转换；后者是强相等，在判断数值相等的同时还要求类型相同。</span></span><br><span class="line"><span class="string">1. If Type(x) is the same as Type(y), then Return the result of performing Strict Equality Comparison x === y.</span></span><br><span class="line"><span class="string">2. If x is null and y is undefined, return true.</span></span><br><span class="line"><span class="string">3. If x is undefined and y is null, return true.</span></span><br><span class="line"><span class="string">5.If Type(x) is Number and Type(y) is String, return the result of the comparison x == ! ToNumber(y).</span></span><br><span class="line"><span class="string">6. If Type(x) is String and Type(y) is Number, return the result of the comparison ! ToNumber(x) == y.</span></span><br><span class="line"><span class="string">7. **If Type(x) is BigInt and Type(y) is String, then Let n be ! StringToBigInt(y).** If n is NaN, return false.Return the result of the comparison x == n.</span></span><br><span class="line"><span class="string">1.  If Type(x) is String and Type(y) is BigInt, return the result of the comparison y == x.</span></span><br><span class="line"><span class="string">2.  If Type(x) is Boolean, return the result of the comparison ! ToNumber(x) == y.</span></span><br><span class="line"><span class="string">3.  If Type(y) is Boolean, return the result of the comparison x == ! ToNumber(y).</span></span><br><span class="line"><span class="string">4.  If Type(x) is either String, Number, BigInt, or Symbol and Type(y) is Object, return the  result of the comparison x == ToPrimitive(y).</span></span><br><span class="line"><span class="string">5.  If Type(x) is Object and Type(y) is either String, Number, BigInt, or Symbol, return the result of the comparison ToPrimitive(x) == y.</span></span><br><span class="line"><span class="string">6.   If Type(x) is BigInt and Type(y) is Number, or if Type(x) is Number and Type(y) is BigInt, then</span></span><br><span class="line"><span class="string">7.  If x or y are any of NaN, +∞, or -∞, return false.</span></span><br><span class="line"><span class="string">8.  **If the mathematical value of x is equal to the mathematical value of y, return true ; otherwise return false.**</span></span><br><span class="line"><span class="string">9.  Return false.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">其中需要特别注意的是第5和第13条是关于bigInt的部分。</span></span><br><span class="line"><span class="string">- 当bigInt类型和string类型的数据比较时，string类型的数据要转化为BigInt类型</span></span><br><span class="line"><span class="string">- 当BigInt类型和int类型的数据比较时，不进行类型转换直接比较他们的数学值</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 有关「==」的其他需要注意的地方</span></span><br><span class="line"><span class="string">&gt; - null和undefined相比较返回true</span></span><br><span class="line"><span class="string">&gt; - 只要比较对象里有Boolean型都要将Boolean转换为Number</span></span><br><span class="line"><span class="string">&gt; - String和Number比较，String都要转化为Number</span></span><br><span class="line"><span class="string">&gt; - 复杂类型与简单类型进行比较，会通过toPrimitive先将复杂类型转变为普通类型。（除了Date类型的会先调用toString其他都会先调用valueOf方法）</span></span><br><span class="line"><span class="string">           </span></span><br><span class="line"><span class="string">**&gt;/&lt;**</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">![&gt;/&lt;的比较标准](/images/ES2020「&gt;」.png)         </span></span><br><span class="line"><span class="string">从标准中可以看出比较是都是基于mathmatical value进行比较的，其他类型都是要先转化为原始类型再进行比较。</span></span><br><span class="line"><span class="string">##### V8引擎是如何存储BigInt呢</span></span><br><span class="line"><span class="string">对于这种不能用标准浮点型表示的数，到底是怎么存储的？我们从V8的官网能看到一点相关的描述</span></span><br><span class="line"><span class="string">&gt;**Representing BigInts in memory**</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 通常，计算机将整数存储在其CPU的寄存器（如今通常为32或64位宽）中，或者存储在寄存器大小的内存中. 这将导致您可能熟悉的最小值和最大值. 例如，一个32位带符号整数可以保存从-2,147,483,648到2,147,483,647的值. 但是，BigInts的想法不受此类限制的限制.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt;那么，一个BigInt如何存储一百，一千或一百万个比特呢？ 它不能容纳在寄存器中，因此我们在内存中分配一个对象. 我们将其足够大以容纳所有BigInt的位，并将其分成一系列块，我们称之为"数字"，因为这在概念上非常类似于如何通过使用更多数字来写入比" 9"大的数字，例如" 10"; 除非小数系统使用0到9之间的数字，否则我们的BigInts使用0到4294967295之间的数字（即2**32-1 ）. 这是32位CPU寄存器[3]的值范围，不带符号位； 我们将符号位分开存储. 在伪代码中，具有3*32 = 96位的BigInt对象如下所示：</span></span><br><span class="line"><span class="string">&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>{<br> type: ‘BigInt’,<br> sign: 0,<br> num_digits: 3,<br> digits: [0x12…, 0x34…, 0x56…],<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">                     </span><br><span class="line">没有找到其他的说明，我理解的是，BigInt在实际的存储时，是很多个整数值的叠加，有一个整数的仓库去存放所有的整数，通过已有的整数进行数据的拼接。</span><br><span class="line">这样比用string进行运算更高效一些。</span><br><span class="line">#### Nullish</span><br><span class="line">回顾之前，当我们使用 ||，其实我们想做的是为变量赋一个初始值</span><br><span class="line">```js</span><br><span class="line">data = res.data || []</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但是在Boolean的判断中除了null和undefined之外「0」、「‘’」、「false」也会被看作是false,就会出现当变量的值是「‘’」也会被直接忽略而取后面设置的默认值。<br>因此，在ES2020将「??」纳入了标准。只有当变量的值是null/undefined才看作是「假」。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = num ?? -1   //if num=0，data=0</span><br></pre></td></tr></table></figure>
+
+<h4 id="Optional-chain"><a href="#Optional-chain" class="headerlink" title="Optional chain"></a>Optional chain</h4><p>在前后端交互过程中，当想要获取对象深层的属性的时候要首先判断对象（同样适用于数组和函数）是否存在</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 如果不进行判断在生产环境就会抛出异常或是白屏</span><br><span class="line">// VM24869:1 Uncaught TypeError: Cannot read property &apos;data&apos; of undefined</span><br><span class="line">num = res.data.num </span><br><span class="line">num = res.data &amp;&amp; res.data.num </span><br><span class="line">default = arr &amp;&amp; arr[0]</span><br></pre></td></tr></table></figure>
+
+<p>当对象的深度比较浅的时候可以通过每一层级的对象存在与否进行判断，如果层级较为复杂就会增加代码阅读的负担。因此，ES2020将Optional chain纳入了标准，通过「?.」的操作符号，先进行变量存在与否的判断再进行属性/方法的取值。</p>
+<blockquote>
+<p>当需要指定默认值时，Optinal Chaining 操作符还可以与nullish操作符（「??」）组合使用。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nameLength;</span><br><span class="line"><span class="keyword">if</span> (db &amp;&amp; db.user &amp;&amp; db.user.name)</span><br><span class="line">  nameLength = db.user.name.length;</span><br><span class="line">=&gt; nameLength = db?.user?.name?.length??<span class="number">0</span>  <span class="comment">//提高代码的可读性</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Promise-allSettled"><a href="#Promise-allSettled" class="headerlink" title="Promise.allSettled"></a>Promise.allSettled</h4><p>当页面与多个请求结果有关时，为了避免因为一个reject而导致所有的请求都失败，新标准里纳入了「Promise.allSettled」。Promise.allSettled返回一个promise，包含promise的结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> promises = [</span><br><span class="line">  fetch(<span class="string">'/api-call-1'</span>),</span><br><span class="line">  fetch(<span class="string">'/api-call-2'</span>),</span><br><span class="line">  fetch(<span class="string">'/api-call-3'</span>),</span><br><span class="line">];</span><br><span class="line"><span class="built_in">Promise</span>.allSettled(promises);</span><br><span class="line"><span class="comment">// Promise &#123;&lt;resolved&gt;: Array(3)&#125;</span></span><br><span class="line"><span class="comment">// All API calls have finished (either failed or succeeded).</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，现在处于<a href="https://github.com/tc39/proposals）" target="_blank" rel="noopener">stage-3</a>阶段的还有一个promise方法，promise.any。promise.any不管是成功还是失败都会得到一个最先执行完的promise，存在first里，但只有当所有的都失败了才会被当作reject. 对比promise.race,第一个执行完成后续的不管了.</p>
+<h4 id="For-in"><a href="#For-in" class="headerlink" title="For-in"></a>For-in</h4><p>新标准中规范了for-in的遍历顺序。首先将所有属性进行praseInt的操作，然后属性为整数的key按照key的大小进行排列，剩下的属性按照创建顺序遍历。</p>
+<blockquote>
+<p>纳入标准的原因应该是之前不同的浏览器在for-in上的遍历顺序不一样，但是还没对这个猜测进行验证</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> codes = &#123;</span><br><span class="line">  <span class="string">"49"</span>: <span class="string">"Germany"</span>,</span><br><span class="line">  <span class="string">"41"</span>: <span class="string">"Switzerland"</span>,</span><br><span class="line">  <span class="string">"44"</span>: <span class="string">"Great Britain"</span>,</span><br><span class="line">  <span class="string">"1"</span>: <span class="string">"USA"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> code <span class="keyword">in</span> codes) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(code); <span class="comment">// 1, 41, 44, 49</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此外，需要注意的是使用for in会遍历数组所有的可枚举属性，除了Symbol类型之外，包括原型链。<br>如果只想遍历对象本身的属性可以用hasOwnproperty进行过滤。</p>
+<h5 id="常见的遍历的方式有"><a href="#常见的遍历的方式有" class="headerlink" title="常见的遍历的方式有"></a>常见的遍历的方式有</h5><p>for in    (得到key，还要处理原型链)<br><br>for of          (得到value，对象不可用，针对数组之类的iterable元素)<br><br>Object.keys   (得到自身的所有属性,需要注意的是Object.keys得到的key的顺序和for in的顺序相同)<br><br>Object.getOwnPropertyNames （含不可枚举的属性）<br><br>Object.entries  （和for-in一样的顺序一样，得到的是含key和value的元组）<br></p>
+<blockquote>
+<p>所以如果想要按照创建顺序调用避免使用可以Number或是可以转化为Number的key值</p>
+</blockquote>
+<h4 id="matchAll"><a href="#matchAll" class="headerlink" title="matchAll"></a>matchAll</h4><p>matchAll是为了返回字符串中所有匹配的信息，返回的是一个迭代器。对比之前的string.match和regExp.exec()方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"test ya test"</span></span><br><span class="line">result = string.matchAll(<span class="regexp">/test/g</span>) </span><br><span class="line">result.next()</span><br><span class="line"></span><br><span class="line"><span class="comment">//对比 match</span></span><br><span class="line">string.match(<span class="regexp">/test/</span>)  <span class="comment">//仅返回第一个匹配值对应的数组</span></span><br><span class="line">=&gt; [<span class="string">"test"</span>, <span class="attr">index</span>: <span class="number">0</span>, <span class="attr">input</span>: <span class="string">"test ya test"</span>, <span class="attr">groups</span>: <span class="literal">undefined</span>]</span><br><span class="line">string.match(<span class="regexp">/test/g</span>)  <span class="comment">//返回所有匹配值组成的数组，但是没有index元素</span></span><br><span class="line">=&gt; [<span class="string">"test"</span>, <span class="string">"test"</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对比 resExp.exec</span></span><br><span class="line">regExp = <span class="regexp">/test/g</span></span><br><span class="line">regExp.exec(string)  <span class="comment">// 返回一个数组，但是会记录index的位置，再次执行就会按序匹配</span></span><br><span class="line">=&gt; [<span class="string">"test"</span>, <span class="attr">index</span>: <span class="number">0</span>, <span class="attr">input</span>: <span class="string">"test ya test"</span>, <span class="attr">groups</span>: <span class="literal">undefined</span>]</span><br><span class="line">regExp.exec(string) </span><br><span class="line">=&gt; [<span class="string">"test"</span>, <span class="attr">index</span>: <span class="number">8</span>, <span class="attr">input</span>: <span class="string">"test ya test"</span>, <span class="attr">groups</span>: <span class="literal">undefined</span>]</span><br></pre></td></tr></table></figure>
+
+<p>在一些博客里看到这样的说法，「如果没有/g标志，matchAll返回第一个匹配」，通过验证发现并不是。</p>
+<pre><code class="js">string = <span class="string">"test ya test"</span>
+result = string.matchAll(<span class="regexp">/test/</span>) 
+
+=&gt; VM1955:<span class="number">2</span> Uncaught <span class="built_in">TypeError</span>: undefineds called <span class="keyword">with</span> a non-global <span class="built_in">RegExp</span> argument
+    at <span class="built_in">String</span>.matchAll (&lt;anonymous&gt;)
+    at &lt;anonymous&gt;:2:17</code></pre>
+<blockquote>
+<p>查看标准有这么一个说法：<br>If ? ToString(flags) does not contain “g”, throw a TypeError exception.<br>因此可以看出，只要不含g，就会抛出异常，而regExp.exec()里的正则如果不含「/g」则会一直在第一个匹配上循环。</p>
+</blockquote>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><ul>
+<li>match(/xxx/) 返回一个数组，含有匹配值、index、input、groups</li>
+<li>match(/xxx/g) 返回一个数组，仅有匹配值</li>
+<li>matchAll(/xxx/g) 返回一个迭代器，迭代器里的value与match的内容相同，done判断是否匹配完成</li>
+<li>regExp.exec(str); // 返回一个数组与match相同，但是会记录index的位置，再次执行就会按序匹配</li>
+</ul>
+<h4 id="import"><a href="#import" class="headerlink" title="import()"></a>import()</h4><p>本质是返回一个promise。</p>
+<p>按需 import 提案几年前就已提出，如今终于能进入ES正式规范。现代前端打包资源越来越大，打包成几M的JS资源已成常态，但是前端应用初始化时往往不需要全量加载逻辑资源，为了首屏渲染速度更快，很多时候都是按需加载，比如懒加载图片等。<br>因为import命令被JS引擎静态分析，先于模块内的其他语句执行，无法取代require()的动态加载功能，提案建议引入import()来代替require()</p>
+<blockquote>
+<p>可以参考<a href="https://juejin.im/entry/58ba3308a22b9d005ede7565" target="_blank" rel="noopener">翻译 | 原生 ECMAScript 模块：动态 import（）</a></p>
+</blockquote>
+<h4 id="globalThis"><a href="#globalThis" class="headerlink" title="globalThis"></a>globalThis</h4><p>每个环境都有其自己的对象模型，并提供了不同的语法来访问全局对象。 例如，在 Web 浏览器中，可以通过window，self或frames(此只读属性通常用于获取当前窗口的子帧列表。例如，我们可以使用window.frames[0]或frames[0]来访问第一帧。)访问全局对象。 但是，在 Node.js 中，这些属性不存在，而必须使用global。 在Web Worker中，只有self可用。</p>
+<ul>
+<li>Browser：顶层对象是window</li>
+<li>Node：顶层对象是global</li>
+<li>WebWorker：顶层对象是self<br>这些不同的全局对象引用方法让 JS 实现跨平台变得非常困难。因此globalThis出现了。<h4 id="export-as-xx-from-xxx"><a href="#export-as-xx-from-xxx" class="headerlink" title="export * as xx from xxx"></a>export * as xx from xxx</h4>与 import * as xxx相对应<h4 id="import-meta"><a href="#import-meta" class="headerlink" title="import.meta"></a>import.meta</h4>返回module的一些基本信息</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    里卡卡多
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://MeaKaka.github.io/2020/04/12/【技术点】从ES2020说开/" title="【技术点】从ES2020说开去">https://MeaKaka.github.io/2020/04/12/【技术点】从ES2020说开/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/了解前端，爱上前端/" rel="tag"># 了解前端，爱上前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/11/【React】从setState到页面渲染/" rel="next" title="【React】从setState到页面渲染">
+                <i class="fa fa-chevron-left"></i> 【React】从setState到页面渲染
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="里卡卡多">
+            
+              <p class="site-author-name" itemprop="name">里卡卡多</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Meakaka" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meakaka0708@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ES是什么"><span class="nav-number">1.</span> <span class="nav-text">ES是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ECMAScript"><span class="nav-number">1.1.</span> <span class="nav-text">ECMAScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TC39"><span class="nav-number">1.2.</span> <span class="nav-text">TC39</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提案"><span class="nav-number">1.3.</span> <span class="nav-text">提案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES发展史"><span class="nav-number">2.</span> <span class="nav-text">ES发展史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES2020的新特性"><span class="nav-number">3.</span> <span class="nav-text">ES2020的新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BigInt"><span class="nav-number">3.1.</span> <span class="nav-text">BigInt</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#当调用BigInt函数后发生了什么？"><span class="nav-number">3.1.1.</span> <span class="nav-text">当调用BigInt函数后发生了什么？</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Optional-chain"><span class="nav-number">3.2.</span> <span class="nav-text">Optional chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-allSettled"><span class="nav-number">3.3.</span> <span class="nav-text">Promise.allSettled</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#For-in"><span class="nav-number">3.4.</span> <span class="nav-text">For-in</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见的遍历的方式有"><span class="nav-number">3.4.1.</span> <span class="nav-text">常见的遍历的方式有</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#matchAll"><span class="nav-number">3.5.</span> <span class="nav-text">matchAll</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">3.5.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#import"><span class="nav-number">3.6.</span> <span class="nav-text">import()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#globalThis"><span class="nav-number">3.7.</span> <span class="nav-text">globalThis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#export-as-xx-from-xxx"><span class="nav-number">3.8.</span> <span class="nav-text">export * as xx from xxx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#import-meta"><span class="nav-number">3.9.</span> <span class="nav-text">import.meta</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">里卡卡多</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>
