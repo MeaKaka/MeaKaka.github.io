@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="基础学习,">
+  <meta name="keywords" content="了解前端，爱上前端,">
 
 
 
@@ -134,18 +134,21 @@
 
 
 
-<meta name="description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
-<meta name="keywords" content="基础学习">
+<meta name="description" content="传统网页登陆最简单的登陆方式，是在每一次使用系统的时候进行身份的鉴定，一旦认证信息过期了，便跳出登陆界面，让用户输入用户名和密码。 将用户名和密码通过加密处理后，发到后端进行登陆认证。后端会依据此次会话的时间、用户的信息创建一个session id，将session id看作是此次会话的唯一标识。并将session id写到cookie中，在每一次的请求中都携带过去，以认证用户的身份。 但是这样有">
+<meta name="keywords" content="了解前端，爱上前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【基础学习】NPM版本相关">
-<meta property="og:url" content="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/index.html">
+<meta property="og:title" content="【技术点】登陆方式">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/05/03/【技术点】登陆方式对比/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
+<meta property="og:description" content="传统网页登陆最简单的登陆方式，是在每一次使用系统的时候进行身份的鉴定，一旦认证信息过期了，便跳出登陆界面，让用户输入用户名和密码。 将用户名和密码通过加密处理后，发到后端进行登陆认证。后端会依据此次会话的时间、用户的信息创建一个session id，将session id看作是此次会话的唯一标识。并将session id写到cookie中，在每一次的请求中都携带过去，以认证用户的身份。 但是这样有">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-15T08:39:12.105Z">
+<meta property="og:image" content="https://meakaka.github.io/images/SSO.png">
+<meta property="og:image" content="https://meakaka.github.io/2020/05/03/【技术点】登陆方式对比/JWT.jpg">
+<meta property="og:updated_time" content="2020-05-05T11:00:33.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【基础学习】NPM版本相关">
-<meta name="twitter:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
+<meta name="twitter:title" content="【技术点】登陆方式">
+<meta name="twitter:description" content="传统网页登陆最简单的登陆方式，是在每一次使用系统的时候进行身份的鉴定，一旦认证信息过期了，便跳出登陆界面，让用户输入用户名和密码。 将用户名和密码通过加密处理后，发到后端进行登陆认证。后端会依据此次会话的时间、用户的信息创建一个session id，将session id看作是此次会话的唯一标识。并将session id写到cookie中，在每一次的请求中都携带过去，以认证用户的身份。 但是这样有">
+<meta name="twitter:image" content="https://meakaka.github.io/images/SSO.png">
 
 
 
@@ -175,13 +178,13 @@
 
 
 
-  <link rel="canonical" href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/">
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/05/03/【技术点】登陆方式对比/">
 
 
 
 
 
-  <title>【基础学习】NPM版本相关 | Ricky's Blog</title>
+  <title>【技术点】登陆方式 | Ricky's Blog</title>
   
 
 
@@ -317,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/05/03/【技术点】登陆方式对比/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="里卡卡多">
@@ -334,7 +337,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【基础学习】NPM版本相关</h2>
+          <h2 class="post-title" itemprop="name headline">【技术点】登陆方式</h2>
         
 
         <div class="post-meta">
@@ -346,8 +349,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-14T21:32:44+08:00">
-                2019-10-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-03T17:51:24+08:00">
+                2020-05-03
               </time>
             
 
@@ -362,8 +365,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-15T16:39:12+08:00">
-                2020-04-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-05T19:00:33+08:00">
+                2020-05-05
               </time>
             
           </span>
@@ -427,82 +430,80 @@
       
 
       
-        <h4 id="npm-version"><a href="#npm-version" class="headerlink" title="npm version"></a>npm version</h4><p>npm 依赖管理的一个重要特性是采用了<a href="https://link.juejin.im/?target=https%3A%2F%2Fsemver.org%2Flang%2Fzh-CN%2F" target="_blank" rel="noopener">语义化版本 (semver)</a> 规范，作为依赖<strong>版本</strong>管理方案。</p>
-<p>semver 约定一个包的版本号必须包含3个数字，格式必须为 <code>MAJOR.MINOR.PATCH</code>, 意为 <code>主版本号.小版本号.修订版本号</code>.</p>
+        <h2 id="传统网页登陆"><a href="#传统网页登陆" class="headerlink" title="传统网页登陆"></a>传统网页登陆</h2><p>最简单的登陆方式，是在每一次使用系统的时候进行身份的鉴定，一旦认证信息过期了，便跳出登陆界面，让用户输入用户名和密码。</p>
+<p>将用户名和密码通过加密处理后，发到后端进行登陆认证。后端会依据此次会话的时间、用户的信息创建一个session id，将session id看作是此次会话的唯一标识。并将session id写到cookie中，在每一次的请求中都携带过去，以认证用户的身份。</p>
+<p>但是这样有三个问题，</p>
 <ul>
-<li><strong>MAJOR</strong> 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号</li>
-<li><strong>MINOR</strong> 对应小版本迭代，发生兼容旧版API的修改或功能更新时，更新MINOR版本号</li>
-<li><strong>PATCH</strong> 对应修订版本号，一般针对修复 BUG 的版本号</li>
-<li><strong>premajor</strong>  （x.x.x-x.xx.xx ）</li>
-<li><strong>preminor</strong></li>
-<li><strong>prepatch</strong></li>
+<li>一是，如果是公司内部的服务，每个系统都有一个登陆模块，使用者就要在每一次使用系统的时候都进行登陆操作，记住每一个系统的账号和密码，这样实在没有必要。</li>
+<li>二是，如果后端的服务器不止一个怎么办，登陆时创建的session id存储在登陆的服务器上，但是某一次请求如果被打到其他服务器上，其他服务器并不知道上下文，如何判断用户信息呢？</li>
+<li>三是，将身份认证存储在cookie中会不会带来一些隐藏的问题</li>
 </ul>
-<p>对于包作者（发布者），npm 要求在 publish 之前，必须更新版本号。npm 提供了 <code>npm version</code>工具，执行 <code>npm version major|minor|patch</code> 可以简单地将版本号中相应的数字加1.</p>
-<p>发布组件要遵循commit -&gt; npm version patch/minor -&gt; npm publish -&gt; push的顺序，因为npm version之前一定要有commit的操作，而push前最好先发布一下，这样能将修改后的版本号同时发布出去，以免其他分支进行修改时出现冲突。</p>
-<h5 id="测试版"><a href="#测试版" class="headerlink" title="测试版"></a>测试版</h5><p>除了正式上线版之外，还有一些常见的先行版本号名称：</p>
+<p>正是因为有了这些问题，才有了后续针对问题解决办法。</p>
+<h2 id="单点登陆"><a href="#单点登陆" class="headerlink" title="单点登陆"></a>单点登陆</h2><p>考虑到第一个问题，公司内部服务多采用单点登陆，即一次登陆便可访问所有的互相信任的系统。</p>
+<p>这种只需要登陆一次的解决方法，叫做单点登陆（single sign on）。</p>
+<p>SSO的核心是通过共享cookie中的session id做到的。<br>假设A系统使用的是SSO系统提供的登陆认证。</p>
+<ol>
+<li>当访问A系统的后端数据时，判断请求的cookie中是否含有session id</li>
+<li>如果有，则携带session id去请求后端的接口，后端通过请求中的session id认证用户信息。</li>
+<li>如果没有，则通过302重定向到SSO页面，进行用户的登陆。<ol>
+<li>如果用户没有在SSO系统上登陆过，则跳转到SSO系统的login界面进行用户的登陆。</li>
+<li>如果用户在SSO系统中登陆过，则将用户对应的ticket granting ticket拼接到重定向到login的url（也就是1中访问A系统的后端接口）上再次访问。</li>
+<li>这时A系统的后端就接收到了一个含有ticket的请求，A后端访问SSO后端提供的校验接口进行ticket的认证，判断请求的真伪。</li>
+<li>如果用户信息校验为真，则由A后端根据用户信息、时间等构造session-id并set-cookie。</li>
+<li>如果用户信息校验为假，则进行相应的报错，或是再重定向到SSO进行再次登陆。</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>具体CAS流程图如下：<br><img src="/images/SSO.png" alt="SSO示意图"> </p>
+</blockquote>
+<blockquote>
+<p>更详细的SSO流程解释可参考阿里云上的<a href="https://yq.aliyun.com/articles/636281" target="_blank" rel="noopener">文章</a></p>
+</blockquote>
+<h2 id="JWT登陆"><a href="#JWT登陆" class="headerlink" title="JWT登陆"></a>JWT登陆</h2><p>不管是否使用了SSO，针对用户的信息的鉴定和存储都是通过session id去实现的。<br>这样会存在上面说到的后两个问题，展开来说应该有三个：</p>
+<ol>
+<li>通过session id进行鉴权，需要在服务器上额外存储信息，进行session id和用户表的关联，增加数据库负担</li>
+<li>如果后端对应多个服务器，通过负载均衡等方式，进行请求的分配，如果在每一个服务器上都存储session id和用户信息的对应关系，不但会增加数据库的负担也增加了服务器之间不必要的通信，无疑是不合适的；但是如果不进行信息的存储，则服务器无法进行鉴权。</li>
+<li>session id存储在cookie中<ol>
+<li>一来，会导致安全问题，cookie是可见的，可以被其他用户冒用，如CSRF攻击</li>
+<li>二来，会收到针对cookie的一些跨域策略的限制，如sameSite等</li>
+</ol>
+</li>
+</ol>
+<p>因此，综合考量，可以使用JWT方式进行鉴权，以避免上述问题。</p>
+<h3 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h3><p>JWT，即json web token，首先能明确的一点是这个token本质上是一个json格式的数据。<br><img src="JWT.jpg" alt="JWT"><br>JWT分为三个部分:</p>
 <ul>
-<li>alpha</li>
-<li>beta</li>
-<li>rc</li>
+<li>头部 header<ul>
+<li>说明加密的应用在signature中的加密算法</li>
 </ul>
-<p>在发布的时候「publish」包后加上tag</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --tag targetName@alpha</span><br></pre></td></tr></table></figure>
-
-<p>调用是用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install targetName@alpha</span><br></pre></td></tr></table></figure>
-
-<h4 id="包的引用规则"><a href="#包的引用规则" class="headerlink" title="包的引用规则"></a>包的引用规则</h4><table>
-<thead>
-<tr>
-<th>range</th>
-<th>含义</th>
-<th>例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>^2.2.1</code></td>
-<td>指定的 MAJOR 版本号下, 所有更新的版本</td>
-<td>匹配 <code>2.2.3</code>, <code>2.3.0</code>; 不匹配 <code>1.0.3</code>, <code>3.0.1</code></td>
-</tr>
-<tr>
-<td><code>~2.2.1</code></td>
-<td>指定 MAJOR.MINOR 版本号下，所有更新的版本</td>
-<td>匹配 <code>2.2.3</code>, <code>2.2.9</code>; 不匹配 <code>2.3.0</code>, <code>2.4.5</code></td>
-</tr>
-<tr>
-<td><code>&gt;=2.1</code></td>
-<td>版本号大于或等于 <code>2.1.0</code></td>
-<td>匹配 <code>2.1.2</code>, <code>3.1</code></td>
-</tr>
-<tr>
-<td><code>&lt;=2.2</code></td>
-<td>版本号小于或等于 <code>2.2</code></td>
-<td>匹配 <code>1.0.0</code>, <code>2.2.1</code>, <code>2.2.11</code></td>
-</tr>
-<tr>
-<td><code>1.0.0 - 2.0.0</code></td>
-<td>版本号从 1.0.0 (含) 到 2.0.0 (含)</td>
-<td>匹配 <code>1.0.0</code>, <code>1.3.4</code>, <code>2.0.0</code></td>
-</tr>
-</tbody></table>
-<p>PS: 除了这几种，还有如下更直观的表示版本号范围的写法:</p>
-<ul>
-<li><code>*</code> 或 <code>x</code> 匹配所有主版本</li>
-<li><code>1</code> 或 <code>1.x</code> 匹配 主版本号为 1 的所有版本</li>
-<li><code>1.2</code> 或 <code>1.2.x</code> 匹配 版本号为 1.2 开头的所有版本</li>
+</li>
+<li>有效载荷 payload<ul>
+<li>用户信息等</li>
 </ul>
-<p>npm5与 npm 3 相比，在安装和更新依赖版本上主要的区别为：</p>
-<ul>
-<li>无论何时执行 install, npm 都会优先按照 package-lock 中指定的版本来安装 webpack; 避免了 npm 3 表中情形 b) 的状况;</li>
-<li>无论何时完成安装/更新, package-lock 文件总会跟着 node_modules 更新 —— (因此可以视 package-lock 文件为 node_modules 的 JSON 表述)</li>
-<li>已安装 node_modules 后若执行 npm update，package.json 中的版本号也会随之更改为 <code>^1.15.0</code></li>
+</li>
+<li>认证信息 signature<ul>
+<li>前两个信息的加密</li>
 </ul>
-<h4 id="实际遇到的问题"><a href="#实际遇到的问题" class="headerlink" title="实际遇到的问题"></a>实际遇到的问题</h4><h5 id="指定确定的版本"><a href="#指定确定的版本" class="headerlink" title="指定确定的版本"></a>指定确定的版本</h5><p>利用-E/-save-exact指定确定的版本，以免出现小版本等不匹配的问题</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @byted/inf-schema-form@<span class="number">1.4</span><span class="number">.2</span> -E/-save-exact</span><br></pre></td></tr></table></figure>
-
-<h5 id="指定版本的范围"><a href="#指定版本的范围" class="headerlink" title="指定版本的范围"></a>指定版本的范围</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install sax@<span class="string">"&gt;=0.1.0 &lt;0.2.0"</span></span><br></pre></td></tr></table></figure>
-
-<p>但是通过这种方式安装的包在package.json里仍是^0.1.5,「^」开头，在没有package-lock的情况下再次安装，安装的是版本还以0开头的最新包。</p>
+</li>
+</ul>
+<p>对应的使用JWT有以下几个好处</p>
+<ol>
+<li>当服务器有多个，通过负载均衡进行请求的分配时，不需要考虑session id与用户信息的对应关系，拿到token进行鉴权和解析即可。 <ol>
+<li>一来，不需要考虑session id的存储问题，减少了存储负担和每次解析请求的查询负担。</li>
+<li>二来，由于没有session id的对应关系了，所以在分布式机器的情况下更适用。根据对应字段直接鉴权，解析即可。</li>
+</ol>
+</li>
+<li>当使用单点登陆，后端在做鉴权的时候，不需要拿到ticket之后再去与SSO的后端进行交互，可以直接通过SSO系统中提供的公钥进行信息的鉴权，减少了后端与SSO系统交互的过程。</li>
+<li>通过JWT构成的token可以放在cookie里也可以放在http头中，放在header里可以避免因为cookie限制导致的隐形问题。</li>
+</ol>
+<p>JWT只是一种方法，可以用于单点登陆，也可以用于单一系统，差别仅是JWT的token是SSO系统生成还是该单一系统后端生成而已。</p>
+<blockquote>
+<p>更多详细的JWT内容可见<a href="https://jwt.io/" target="_blank" rel="noopener">JWT官网</a></p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>随着场景的变化，登陆的情况越来越复杂。</p>
+<p>由于希望同个公司的多个系统不需要多次重复登陆所以出现了「单点登陆」的方式。</p>
+<p>由于考虑到session id存储带来的额外负担，因此出现了JWT的登陆方式。</p>
+<p>随着Chrome对cookie限制的提高（<a href="https://zhuanlan.zhihu.com/p/138303920" target="_blank" rel="noopener">网络安全</a>中开发案例的描述），将session id登陆方式改为JWT已经变成了一种趋势。</p>
 
       
     </div>
@@ -523,7 +524,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/" title="【基础学习】NPM版本相关">https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/</a>
+    <a href="https://MeaKaka.github.io/2020/05/03/【技术点】登陆方式对比/" title="【技术点】登陆方式">https://MeaKaka.github.io/2020/05/03/【技术点】登陆方式对比/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -538,7 +539,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础学习/" rel="tag"># 基础学习</a>
+            <a href="/tags/了解前端，爱上前端/" rel="tag"># 了解前端，爱上前端</a>
           
         </div>
       
@@ -551,8 +552,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/14/【技术点】视觉格式化/" rel="next" title="【了解前端，爱上前端】视觉格式化">
-                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】视觉格式化
+              <a href="/2020/04/22/【技术点】JS的类型判断/" rel="next" title="【技术点】JS的类型判断">
+                <i class="fa fa-chevron-left"></i> 【技术点】JS的类型判断
               </a>
             
           </div>
@@ -560,10 +561,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/14/【技术点】git指令/" rel="prev" title="【基础学习】Git指令">
-                【基础学习】Git指令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -721,7 +718,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-version"><span class="nav-number">1.</span> <span class="nav-text">npm version</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试版"><span class="nav-number">1.1.</span> <span class="nav-text">测试版</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#包的引用规则"><span class="nav-number">2.</span> <span class="nav-text">包的引用规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实际遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">实际遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指定确定的版本"><span class="nav-number">3.1.</span> <span class="nav-text">指定确定的版本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指定版本的范围"><span class="nav-number">3.2.</span> <span class="nav-text">指定版本的范围</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#传统网页登陆"><span class="nav-number">1.</span> <span class="nav-text">传统网页登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单点登陆"><span class="nav-number">2.</span> <span class="nav-text">单点登陆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JWT登陆"><span class="nav-number">3.</span> <span class="nav-text">JWT登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT"><span class="nav-number">3.1.</span> <span class="nav-text">JWT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

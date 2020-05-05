@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="setStateReact本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？ setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。 1set">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-12T02:59:02.018Z">
+<meta property="og:updated_time" content="2020-04-15T08:39:12.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【React】从setState到页面渲染">
 <meta name="twitter:description" content="setStateReact本质上是一个UI库通过state去管理组件内部的状态，通过props进行组件数据的交互。state发生变化便会触发页面的更新，react的内部又是如何实现这个过程的呢？为什么有些state被set后并不能取到更新后的值？为什么多次setState只会以最后一次为准呢？ setState接受两个参数，一个是待更新的state的值，一个是state更新后的回调函数。 1set">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-12T10:59:02+08:00">
-                2020-04-12
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-15T16:39:12+08:00">
+                2020-04-15
               </time>
             
           </span>
@@ -443,6 +443,7 @@
 <p>当state对象更改后会通过componentShouldUpdate判断是否需要更新，如果确定需要更新就通过fiber和diff确定需要更新的组件执行更新。</p>
 <h3 id="Virtual-Dom、diff与fiber"><a href="#Virtual-Dom、diff与fiber" class="headerlink" title="Virtual Dom、diff与fiber"></a>Virtual Dom、diff与fiber</h3><h4 id="Virtual-Dom"><a href="#Virtual-Dom" class="headerlink" title="Virtual Dom"></a>Virtual Dom</h4><p>DOM引擎和JS引擎相互独立但是又作用在用于线程，所以操作DOM的时候就需要挂起JS引擎，而针对DOM的操作又很费时间，所以衍生出Virtual DOM的方法，避免多次操作DOM，减少重绘。</p>
 <p>通过JS对象表示DOM结构，在需要更新的时候首先更新利用JS表示的虚拟DOM，比对两次虚拟DOM的差别，确定实际DOM中需要更新的部分，实现有针对性的更新。</p>
+<p>同时可以根据virtual DOM兼容不同应用DOM的不同，提供了一致性的开发工具。</p>
 <h4 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h4><p>Diff算法就是用来对比两次虚拟DOM的不同的，主要分为三个层次</p>
 <ul>
 <li>tree</li>
@@ -640,7 +641,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

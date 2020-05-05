@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="基础学习,">
+  <meta name="keywords" content="了解前端，爱上前端,">
 
 
 
@@ -134,18 +134,18 @@
 
 
 
-<meta name="description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
-<meta name="keywords" content="基础学习">
+<meta name="description" content="JS有哪些类型JS中的类型主要分为两类基本类型和引用类型。基本类型有以下7种：  Number Boolean String Symbol Null Undefined BigInt  而Object属于引用类型  Array本质上是Object  typeoftypeof主要是判断操作数的基本类型,除此之外还支持function类型的判断。 12345678910typeof Undefined">
+<meta name="keywords" content="了解前端，爱上前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【基础学习】NPM版本相关">
-<meta property="og:url" content="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/index.html">
+<meta property="og:title" content="【技术点】JS的类型判断">
+<meta property="og:url" content="https://MeaKaka.github.io/2020/04/22/【技术点】JS的类型判断/index.html">
 <meta property="og:site_name" content="Ricky&#39;s Blog">
-<meta property="og:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
+<meta property="og:description" content="JS有哪些类型JS中的类型主要分为两类基本类型和引用类型。基本类型有以下7种：  Number Boolean String Symbol Null Undefined BigInt  而Object属于引用类型  Array本质上是Object  typeoftypeof主要是判断操作数的基本类型,除此之外还支持function类型的判断。 12345678910typeof Undefined">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-15T08:39:12.105Z">
+<meta property="og:updated_time" content="2020-05-03T06:09:52.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【基础学习】NPM版本相关">
-<meta name="twitter:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
+<meta name="twitter:title" content="【技术点】JS的类型判断">
+<meta name="twitter:description" content="JS有哪些类型JS中的类型主要分为两类基本类型和引用类型。基本类型有以下7种：  Number Boolean String Symbol Null Undefined BigInt  而Object属于引用类型  Array本质上是Object  typeoftypeof主要是判断操作数的基本类型,除此之外还支持function类型的判断。 12345678910typeof Undefined">
 
 
 
@@ -175,13 +175,13 @@
 
 
 
-  <link rel="canonical" href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/">
+  <link rel="canonical" href="https://MeaKaka.github.io/2020/04/22/【技术点】JS的类型判断/">
 
 
 
 
 
-  <title>【基础学习】NPM版本相关 | Ricky's Blog</title>
+  <title>【技术点】JS的类型判断 | Ricky's Blog</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/">
+    <link itemprop="mainEntityOfPage" href="https://MeaKaka.github.io/2020/04/22/【技术点】JS的类型判断/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="里卡卡多">
@@ -334,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【基础学习】NPM版本相关</h2>
+          <h2 class="post-title" itemprop="name headline">【技术点】JS的类型判断</h2>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-14T21:32:44+08:00">
-                2019-10-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-22T11:07:24+08:00">
+                2020-04-22
               </time>
             
 
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-15T16:39:12+08:00">
-                2020-04-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-03T14:09:52+08:00">
+                2020-05-03
               </time>
             
           </span>
@@ -427,82 +427,92 @@
       
 
       
-        <h4 id="npm-version"><a href="#npm-version" class="headerlink" title="npm version"></a>npm version</h4><p>npm 依赖管理的一个重要特性是采用了<a href="https://link.juejin.im/?target=https%3A%2F%2Fsemver.org%2Flang%2Fzh-CN%2F" target="_blank" rel="noopener">语义化版本 (semver)</a> 规范，作为依赖<strong>版本</strong>管理方案。</p>
-<p>semver 约定一个包的版本号必须包含3个数字，格式必须为 <code>MAJOR.MINOR.PATCH</code>, 意为 <code>主版本号.小版本号.修订版本号</code>.</p>
+        <h3 id="JS有哪些类型"><a href="#JS有哪些类型" class="headerlink" title="JS有哪些类型"></a>JS有哪些类型</h3><p>JS中的类型主要分为两类基本类型和引用类型。<br>基本类型有以下7种：</p>
 <ul>
-<li><strong>MAJOR</strong> 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号</li>
-<li><strong>MINOR</strong> 对应小版本迭代，发生兼容旧版API的修改或功能更新时，更新MINOR版本号</li>
-<li><strong>PATCH</strong> 对应修订版本号，一般针对修复 BUG 的版本号</li>
-<li><strong>premajor</strong>  （x.x.x-x.xx.xx ）</li>
-<li><strong>preminor</strong></li>
-<li><strong>prepatch</strong></li>
+<li>Number</li>
+<li>Boolean</li>
+<li>String</li>
+<li>Symbol</li>
+<li>Null</li>
+<li>Undefined</li>
+<li>BigInt</li>
 </ul>
-<p>对于包作者（发布者），npm 要求在 publish 之前，必须更新版本号。npm 提供了 <code>npm version</code>工具，执行 <code>npm version major|minor|patch</code> 可以简单地将版本号中相应的数字加1.</p>
-<p>发布组件要遵循commit -&gt; npm version patch/minor -&gt; npm publish -&gt; push的顺序，因为npm version之前一定要有commit的操作，而push前最好先发布一下，这样能将修改后的版本号同时发布出去，以免其他分支进行修改时出现冲突。</p>
-<h5 id="测试版"><a href="#测试版" class="headerlink" title="测试版"></a>测试版</h5><p>除了正式上线版之外，还有一些常见的先行版本号名称：</p>
+<p>而Object属于引用类型</p>
+<blockquote>
+<p>Array本质上是Object</p>
+</blockquote>
+<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>typeof主要是判断操作数的基本类型,除此之外还支持function类型的判断。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> Undefined	<span class="string">"undefined"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>/<span class="literal">false</span>	<span class="string">"boolean"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>	<span class="string">"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span> <span class="string">"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>n	<span class="string">"bigint"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="string">'1'</span>	<span class="string">"string"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span> <span class="string">"symbol"</span></span><br><span class="line"><span class="keyword">typeof</span> (<span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;) <span class="string">"function"</span>  <span class="comment">// Math.sin</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>	<span class="string">"object"</span> <span class="comment">// 这是一个需要注意的地方，null会被当作object去解析，但是typeof当作一个小彩蛋延续了下来</span></span><br><span class="line"><span class="keyword">typeof</span> 其他任何对象	<span class="string">"object"</span> <span class="comment">// 如Array, new Date(), 正则表达式</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>new Boolean() 是JS封装的构造函数，得到是Boolean对象与基本的Boolean类型不同。</p>
+<p>typeof new Boolean(false) “object”</p>
+<p>由此引申出一个问题对于一个false的数值(任意数值)要连续2次进行new Boolean的转换会得到true。因为new Boolean()会返回一个对象，而new Boolean中的参数为任意对象时都会返回true</p>
+<p>同理，new String、new Number也是同样的情况</p>
+</blockquote>
+<h3 id="instance-of"><a href="#instance-of" class="headerlink" title="instance of"></a>instance of</h3><p>instance of的原理是基于原型链的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object <span class="keyword">instanceof</span> <span class="keyword">constructor</span> // 检测 <span class="keyword">constructor</span>.prototype 是否存在在参数 object 的原型链上。</span><br></pre></td></tr></table></figure>
+
+<p>只要在原型链上就会返回true。<br>正是由于是通过原型链进行判断的，所以对于一些基本类型，instanceof就无能为力了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 instanceof Number   //false</span><br><span class="line">true instanceof Boolean  // false</span><br><span class="line"></span><br><span class="line">a = &#123;&#125;</span><br><span class="line">a instanceof Object // true</span><br><span class="line"></span><br><span class="line">b = new Boolean(false)</span><br><span class="line">b instanceof Object  // true,证明了new Boolean()得到的是一个对象而不是基本类型</span><br><span class="line">b instanceof Boolean // true，由于正是由构造函数Boolean生成的，因此Boolean.prototype肯定在其原型链上。</span><br></pre></td></tr></table></figure>
+
+<p>instanceof主要是针对引用类型的判断，只要是引用对象原型链上肯定会有Object，除此之外还可以用来判断是否继承了另一对象。</p>
+<h3 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h3><p>toString() 方法返回一个表示该对象的字符串。<br>其他对象可以通过call/apply的方式去调用Object的toString方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>) <span class="comment">// [object Date]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">String</span>); <span class="comment">// [object String]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Object-prototype-toString的执行规范"><a href="#Object-prototype-toString的执行规范" class="headerlink" title="Object.prototype.toString的执行规范"></a>Object.prototype.toString的执行规范</h4><p>When the toString method is called, the following steps are taken:</p>
+<ol>
+<li>If the this value is undefined, return “[object Undefined]”.</li>
+<li>If the this value is null, return “[object Null]”. </li>
+<li>Let O be ! ToObject(this value).</li>
+<li>Let isArray be ? IsArray(O).<ol>
+<li>If isArray is true, let builtinTag be “Array”.</li>
+</ol>
+</li>
+<li>Else if O has a [[ParameterMap]] internal slot, let builtinTag be “Arguments”.</li>
+<li>Else if O has a [[Call]] internal method, let builtinTag be “Function”.</li>
+<li>Else if O has an [[ErrorData]] internal slot, let builtinTag be “Error”.</li>
+<li>Else if O has a [[BooleanData]] internal slot, let builtinTag be “Boolean”.</li>
+<li>Else if O has a [[NumberData]] internal slot, let builtinTag be “Number”.</li>
+<li>Else if O has a [[StringData]] internal slot, let builtinTag be “String”.</li>
+<li>Else if O has a [[DateValue]] internal slot, let builtinTag be “Date”.</li>
+<li>Else if O has a [[RegExpMatcher]] internal slot, let builtinTag be “RegExp”.</li>
+<li>Else, let builtinTag be “Object”.</li>
+<li>Let tag be ? Get(O, @@toStringTag). </li>
+<li>If Type(tag) is not String, set tag to builtinTag.<br>Return the string-concatenation of “[object “, tag, and “]”.</li>
+</ol>
+<p>This function is the %ObjProto_toString% intrinsic object.</p>
+<p>可以看出在调用toString之后，首先要判断value是否是undefined/null，然后再判断是否是Array、Arguments、Function…等。</p>
+<p>可以看出toString能够识别出如下的数据类型。</p>
 <ul>
-<li>alpha</li>
-<li>beta</li>
-<li>rc</li>
+<li>Arguments</li>
+<li>Array</li>
+<li>Boolean</li>
+<li>Date</li>
+<li>Error</li>
+<li>Function</li>
+<li>JSON</li>
+<li>Math</li>
+<li>Number</li>
+<li>Object</li>
+<li>RegExp</li>
+<li>String  <h3 id="总结-对比-差别"><a href="#总结-对比-差别" class="headerlink" title="总结 [对比/差别]"></a>总结 [对比/差别]</h3></li>
 </ul>
-<p>在发布的时候「publish」包后加上tag</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --tag targetName@alpha</span><br></pre></td></tr></table></figure>
-
-<p>调用是用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install targetName@alpha</span><br></pre></td></tr></table></figure>
-
-<h4 id="包的引用规则"><a href="#包的引用规则" class="headerlink" title="包的引用规则"></a>包的引用规则</h4><table>
-<thead>
-<tr>
-<th>range</th>
-<th>含义</th>
-<th>例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>^2.2.1</code></td>
-<td>指定的 MAJOR 版本号下, 所有更新的版本</td>
-<td>匹配 <code>2.2.3</code>, <code>2.3.0</code>; 不匹配 <code>1.0.3</code>, <code>3.0.1</code></td>
-</tr>
-<tr>
-<td><code>~2.2.1</code></td>
-<td>指定 MAJOR.MINOR 版本号下，所有更新的版本</td>
-<td>匹配 <code>2.2.3</code>, <code>2.2.9</code>; 不匹配 <code>2.3.0</code>, <code>2.4.5</code></td>
-</tr>
-<tr>
-<td><code>&gt;=2.1</code></td>
-<td>版本号大于或等于 <code>2.1.0</code></td>
-<td>匹配 <code>2.1.2</code>, <code>3.1</code></td>
-</tr>
-<tr>
-<td><code>&lt;=2.2</code></td>
-<td>版本号小于或等于 <code>2.2</code></td>
-<td>匹配 <code>1.0.0</code>, <code>2.2.1</code>, <code>2.2.11</code></td>
-</tr>
-<tr>
-<td><code>1.0.0 - 2.0.0</code></td>
-<td>版本号从 1.0.0 (含) 到 2.0.0 (含)</td>
-<td>匹配 <code>1.0.0</code>, <code>1.3.4</code>, <code>2.0.0</code></td>
-</tr>
-</tbody></table>
-<p>PS: 除了这几种，还有如下更直观的表示版本号范围的写法:</p>
-<ul>
-<li><code>*</code> 或 <code>x</code> 匹配所有主版本</li>
-<li><code>1</code> 或 <code>1.x</code> 匹配 主版本号为 1 的所有版本</li>
-<li><code>1.2</code> 或 <code>1.2.x</code> 匹配 版本号为 1.2 开头的所有版本</li>
-</ul>
-<p>npm5与 npm 3 相比，在安装和更新依赖版本上主要的区别为：</p>
-<ul>
-<li>无论何时执行 install, npm 都会优先按照 package-lock 中指定的版本来安装 webpack; 避免了 npm 3 表中情形 b) 的状况;</li>
-<li>无论何时完成安装/更新, package-lock 文件总会跟着 node_modules 更新 —— (因此可以视 package-lock 文件为 node_modules 的 JSON 表述)</li>
-<li>已安装 node_modules 后若执行 npm update，package.json 中的版本号也会随之更改为 <code>^1.15.0</code></li>
-</ul>
-<h4 id="实际遇到的问题"><a href="#实际遇到的问题" class="headerlink" title="实际遇到的问题"></a>实际遇到的问题</h4><h5 id="指定确定的版本"><a href="#指定确定的版本" class="headerlink" title="指定确定的版本"></a>指定确定的版本</h5><p>利用-E/-save-exact指定确定的版本，以免出现小版本等不匹配的问题</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @byted/inf-schema-form@<span class="number">1.4</span><span class="number">.2</span> -E/-save-exact</span><br></pre></td></tr></table></figure>
-
-<h5 id="指定版本的范围"><a href="#指定版本的范围" class="headerlink" title="指定版本的范围"></a>指定版本的范围</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install sax@<span class="string">"&gt;=0.1.0 &lt;0.2.0"</span></span><br></pre></td></tr></table></figure>
-
-<p>但是通过这种方式安装的包在package.json里仍是^0.1.5,「^」开头，在没有package-lock的情况下再次安装，安装的是版本还以0开头的最新包。</p>
+<ol>
+<li>利用typeof不能区分null和object，也不能区分array和object，不能细分所有引用对象</li>
+<li>使用instanceof的前提是明确对象和要比较的构造函数，由于instanceof是基于原型链的所以针对的数据是引用类型</li>
+<li>Object.prototype.toString可以说是全能型选手，可识别的种类较多</li>
+<li>Array除了可以使用instanceof、Object.prototype.toString外还可以使用Array.isArray()进行判断。<blockquote>
+<p>isArray()首先要判断参数是否是Object，如果不是就直接返回false，否则判断参数是否是「Array Exotic Objects」/proxy（递归）</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>关于「Array Exotic Objects」的定义：<br>是一个特殊的对象，有一个不可编辑的属性length。</p>
+</blockquote>
+<blockquote>
+<p>An Array object is an exotic object that gives special treatment to array index property keys (see 6.1.7). A property whose property name is an array index is also called an element. Every Array object has a non-configurable “length” property whose value is always a nonnegative integer less than 232. The value of the “length” property is numerically greater than the name of every own property whose name is an array index; whenever an own property of an Array object is created or changed, other properties are adjusted as necessary to maintain this invariant. Specifically, whenever an own property is added whose name is an array index, the value of the “length” property is changed, if necessary, to be one more than the numeric value of that array index; and whenever the value of the “length” property is changed, every own property whose name is an array index whose value is not smaller than the new length is deleted. This constraint applies only to own properties of an Array object and is unaffected by “length” or array index properties that may be inherited from its prototypes.</p>
+</blockquote>
 
       
     </div>
@@ -523,7 +533,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/" title="【基础学习】NPM版本相关">https://MeaKaka.github.io/2019/10/14/【技术点】npm版本相关/</a>
+    <a href="https://MeaKaka.github.io/2020/04/22/【技术点】JS的类型判断/" title="【技术点】JS的类型判断">https://MeaKaka.github.io/2020/04/22/【技术点】JS的类型判断/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -538,7 +548,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础学习/" rel="tag"># 基础学习</a>
+            <a href="/tags/了解前端，爱上前端/" rel="tag"># 了解前端，爱上前端</a>
           
         </div>
       
@@ -551,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/14/【技术点】视觉格式化/" rel="next" title="【了解前端，爱上前端】视觉格式化">
-                <i class="fa fa-chevron-left"></i> 【了解前端，爱上前端】视觉格式化
+              <a href="/2020/04/14/【技术点】网络安全/" rel="next" title="【技术点】网络安全">
+                <i class="fa fa-chevron-left"></i> 【技术点】网络安全
               </a>
             
           </div>
@@ -561,8 +571,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/14/【技术点】git指令/" rel="prev" title="【基础学习】Git指令">
-                【基础学习】Git指令 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/03/【技术点】登陆方式对比/" rel="prev" title="【技术点】登陆方式">
+                【技术点】登陆方式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -721,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-version"><span class="nav-number">1.</span> <span class="nav-text">npm version</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试版"><span class="nav-number">1.1.</span> <span class="nav-text">测试版</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#包的引用规则"><span class="nav-number">2.</span> <span class="nav-text">包的引用规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实际遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">实际遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指定确定的版本"><span class="nav-number">3.1.</span> <span class="nav-text">指定确定的版本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指定版本的范围"><span class="nav-number">3.2.</span> <span class="nav-text">指定版本的范围</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS有哪些类型"><span class="nav-number">1.</span> <span class="nav-text">JS有哪些类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof"><span class="nav-number">2.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#instance-of"><span class="nav-number">3.</span> <span class="nav-text">instance of</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-prototype-toString"><span class="nav-number">4.</span> <span class="nav-text">Object.prototype.toString</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-prototype-toString的执行规范"><span class="nav-number">4.1.</span> <span class="nav-text">Object.prototype.toString的执行规范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结-对比-差别"><span class="nav-number">5.</span> <span class="nav-text">总结 [对比/差别]</span></a></li></ol></div>
             
 
           </div>
