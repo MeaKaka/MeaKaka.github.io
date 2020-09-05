@@ -561,7 +561,7 @@
 result = string.matchAll(<span class="regexp">/test/</span>) 
 
 =&gt; VM1955:<span class="number">2</span> Uncaught <span class="built_in">TypeError</span>: undefineds called <span class="keyword">with</span> a non-global <span class="built_in">RegExp</span> argument
-    at <span class="built_in">String</span>.matchAll (&lt;anonymous&gt;)
+    at <span class="built_in">String</span>.matchAll (<span class="xml"><span class="tag">&lt;<span class="name">anonymous</span>&gt;</span>)</span>
     at &lt;anonymous&gt;:2:17</code></pre>
 <blockquote>
 <p>查看标准有这么一个说法：<br>If ? ToString(flags) does not contain “g”, throw a TypeError exception.<br>因此可以看出，只要不含g，就会抛出异常，而regExp.exec()里的正则如果不含「/g」则会一直在第一个匹配上循环。</p>

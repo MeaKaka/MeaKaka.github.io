@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="开发案例——从sameSite属性说出去在开发过程中遇到这样问题，A系统是一个入口系统，B系统通过iframe的方式嵌入到A系统中。在A系统中访问B系统的时候出现了多次重定向失败的问题，需要注意的系统的登陆是统一通过sso去做的，由后端通过302进行重定向。  关于系统的不同登陆方式对比可以看这儿  通过警告信息的查看和相关问题的搜索，确定了是由于chrome将sameSite默认从None变成L">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-05-03T09:49:29.431Z">
+<meta property="og:updated_time" content="2020-08-03T09:03:01.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【技术点】网络安全">
 <meta name="twitter:description" content="开发案例——从sameSite属性说出去在开发过程中遇到这样问题，A系统是一个入口系统，B系统通过iframe的方式嵌入到A系统中。在A系统中访问B系统的时候出现了多次重定向失败的问题，需要注意的系统的登陆是统一通过sso去做的，由后端通过302进行重定向。  关于系统的不同登陆方式对比可以看这儿  通过警告信息的查看和相关问题的搜索，确定了是由于chrome将sameSite默认从None变成L">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-05-03T17:49:29+08:00">
-                2020-05-03
+              <time title="Post modified" itemprop="dateModified" datetime="2020-08-03T17:03:01+08:00">
+                2020-08-03
               </time>
             
           </span>
@@ -429,7 +429,7 @@
       
         <h3 id="开发案例——从sameSite属性说出去"><a href="#开发案例——从sameSite属性说出去" class="headerlink" title="开发案例——从sameSite属性说出去"></a>开发案例——从sameSite属性说出去</h3><p>在开发过程中遇到这样问题，A系统是一个入口系统，B系统通过iframe的方式嵌入到A系统中。在A系统中访问B系统的时候出现了多次重定向失败的问题，需要注意的系统的登陆是统一通过sso去做的，由后端通过302进行重定向。</p>
 <blockquote>
-<p>关于系统的不同登陆方式对比可以看<a href="Todo">这儿</a></p>
+<p>关于系统的不同登陆方式对比可以看<a href="https://zhuanlan.zhihu.com/p/138298483" target="_blank" rel="noopener">这儿</a></p>
 </blockquote>
 <p>通过警告信息的查看和相关问题的搜索，确定了是由于chrome将sameSite默认从None变成Lax的问题。简短描述一下cookie的sameSite属性，sameSite属性用于控制是否将cookie携带到请求中。通过字段的语义也能够明确，这个属性与「同站点」有关。sameSite的属性值又三个，分别是「strict」、「Lax」、「None」。</p>
 <ul>
@@ -453,7 +453,7 @@
 <p>什么是同一个域呢？<br>只有「协议」「域名」「端口号」都相同才能被看作是同一个域。用一个域的请求是可以随便发送的，但是不同域的请求是会被「同源策略」限制的。</p>
 <p>比如我们在开发过程中，localhost域名要是访问后端开发机「xxx.xx.xx.xx:5000」会在在console部分提示「这是一个跨域请求」，同时不会接收后端的返回数据。所以需要在本地起一个服务，作为「伪服务器」负责与后端数据的交互。前端与「伪服务器」的数据交互是同源的，「伪服务器」和后端的数据交互没有「同源策略」的限制。通过这种方式正常的交互数据，但是如果将前端部署到线上，没有中间的「伪服务器」做转发就需要考虑跨域的问题。</p>
 <blockquote>
-<p>关于跨域还有一点要说的，「跨域导致不进行数据交互」这样的说法是不准确的。实际上有可能后端是接收到了请求的同时也对请求进行了响应，由于返回的数据和当前域名不相同所以浏览器进行了数据的丢弃。</p>
+<p>关于跨域还有一点要说的，「跨域导致不进行数据交互」这样的说法是不准确的。实际上后端是接收到了请求的，同时也对请求进行了响应，由于返回的数据和当前域名不相同所以浏览器进行了数据的丢弃。</p>
 </blockquote>
 <p>「同源策略」和「sameSite」属性对cookie的使用限制都是为了保护数据的安全。但是他们的实质上是有所不同的，「同源策略」主要是用来限制请求，「sameSite」主要是避免冒用cookie导致的身份的冒认。</p>
 <p>跨域资源共享「CORS」是针对「跨域」问题的一种处理机制，通过客户端和服务端同时增加一些http头达到获取跨域资源的目的。</p>
@@ -482,7 +482,22 @@
 <blockquote>
 <p>详细了解XXS可参考美团技术团队文章<a href="https://tech.meituan.com/2018/09/27/fe-security.html" target="_blank" rel="noopener">前端安全系列：如何防止XSS攻击</a></p>
 </blockquote>
-<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p>Cross Site Request Forgery，借助受害者的cookie，冒充受害者的身份伪造请求发送给服务器。通过构造一些请求，在不获取到cookie的情况下，向服务器发送请求。<br>解决方法：</p>
+<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p>Cross Site Request Forgery，借助受害者的cookie，冒充受害者的身份伪造请求发送给服务器。通过构造一些请求，在不获取到cookie的情况下，向服务器发送请求。（可以在网页中添加链接，但是链接对应的是一些请求操作）（第三方网站不能获取到cookie信息只能使用cookie）</p>
+<p>一个典型的CSRF攻击有着如下的流程：</p>
+<ul>
+<li>受害者登录a.com，并保留了登录凭证（Cookie）。</li>
+<li>攻击者引诱受害者访问了b.com。</li>
+<li>b.com 向 a.com 发送了一个请求：a.com/act=xx。浏览器会…</li>
+<li>a.com接收到请求后，对请求进行验证，并确认是受害者的凭证，误以为是受害者自己发送的请求。</li>
+<li>a.com以受害者的名义执行了act=xx。</li>
+<li>攻击完成，攻击者在受害者不知情的情况下，冒充受害者，让a.com执行了自己定义的操作。</li>
+</ul>
+<ol>
+<li>get类型的CSRF是很容易获得到用户信息的，所以敏感信息还是不要明文交互</li>
+<li>post类型多是一个自动提交的表单</li>
+<li>链接类型的多是图片/文字中包含恶意链接</li>
+</ol>
+<p>解决方法：</p>
 <ul>
 <li>通过验证码<ul>
 <li>有些请求是在用户不知情的情况下发生的，因此可以通过验证码机制对用户的请求进行提醒</li>
@@ -490,7 +505,7 @@
 </ul>
 </li>
 <li>Referer<ul>
-<li>在http头上添加referer字段可以清楚链接的来源，在请求过程中，如果遇到非法referer可以对用户进行提醒，或是直接拒绝请求。</li>
+<li>在http头的referer字段可以清楚链接的来源，在请求过程中，如果遇到非法referer可以对用户进行提醒，或是直接拒绝请求。</li>
 </ul>
 </li>
 <li>Token<ul>

@@ -143,7 +143,7 @@
 <meta property="og:description" content="概括来说主要有以下5个部分：  DNS解析 TCP连接 HTTP请求 服务端响应 浏览器解析请求资源  每个部分又可以展开说去，以上也是影响首屏加载速度的因素。 DNS解析目的是通过输入的url中的域名获取对应的IP地址，因为IP地址比较复杂且没有一定的规律性，所以使用中多是通过域名进行IP地址的映射。DNS使用TCP和UDP端口53。 已知域名查找IP地址的过程叫做DNS解析，负责解析工作的服务">
 <meta property="og:locale" content="Hans">
 <meta property="og:image" content="https://meakaka.github.io/images/location_url.png">
-<meta property="og:updated_time" content="2020-04-04T13:09:07.479Z">
+<meta property="og:updated_time" content="2020-08-03T09:37:15.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【技术点】从地址栏输入URL说起">
 <meta name="twitter:description" content="概括来说主要有以下5个部分：  DNS解析 TCP连接 HTTP请求 服务端响应 浏览器解析请求资源  每个部分又可以展开说去，以上也是影响首屏加载速度的因素。 DNS解析目的是通过输入的url中的域名获取对应的IP地址，因为IP地址比较复杂且没有一定的规律性，所以使用中多是通过域名进行IP地址的映射。DNS使用TCP和UDP端口53。 已知域名查找IP地址的过程叫做DNS解析，负责解析工作的服务">
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-04T21:09:07+08:00">
-                2020-04-04
+              <time title="Post modified" itemprop="dateModified" datetime="2020-08-03T17:37:15+08:00">
+                2020-08-03
               </time>
             
           </span>
@@ -447,7 +447,7 @@
 <li>主机名服务器</li>
 </ul>
 <h4 id="递归还是迭代"><a href="#递归还是迭代" class="headerlink" title="递归还是迭代"></a>递归还是迭代</h4><ul>
-<li>递归的意思是当找不到这个域名的时候依次按级转发到上层DNS服务器，上级又消息再返回含有该映射关系的域名服务器给请求者。（自下而上）</li>
+<li>递归的意思是当找不到这个域名的时候依次按级转发到上层DNS服务器，上级有消息再返回含有该映射关系的域名服务器给请求者。（自下而上）</li>
 <li>迭代的意思是当找不到这个域名时直接发到根DNS服务器，由负责该域名的顶级服务器进行请求返回含有该映射关系的域名服务器。（自上而下）</li>
 </ul>
 <h4 id="请求过程"><a href="#请求过程" class="headerlink" title="请求过程"></a>请求过程</h4><ol>
@@ -578,7 +578,7 @@
 </li>
 <li>第三阶段 HTTP/2<ol>
 <li>SPDY在chrome上实验的效果很好，因此被当作了HTTP/2的基础</li>
-<li>其实HTTP/2对于http协议是有兼容的，但是想chrome、firefox等都支持https版的HTTP/2</li>
+<li>其实HTTP/2对于http协议是有兼容的，但是像chrome、firefox等都支持https版的HTTP/2</li>
 <li>优化了报文头压缩算法，SPDY使用的是赫夫曼编码(即根据出现频率进行字母的替换)和LZ77编码(即根据相同内容的位置和大小进行压缩)；HTTP/2使用的是HPACK算法（静态字典+动态字典+赫夫曼编码[都匹配不上的Huffman编码一下]）</li>
 <li></li>
 </ol>

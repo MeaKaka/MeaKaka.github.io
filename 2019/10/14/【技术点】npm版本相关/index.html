@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Ricky&#39;s Blog">
 <meta property="og:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
 <meta property="og:locale" content="Hans">
-<meta property="og:updated_time" content="2020-04-15T08:39:12.105Z">
+<meta property="og:updated_time" content="2020-05-06T06:29:36.012Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【基础学习】NPM版本相关">
 <meta name="twitter:description" content="npm versionnpm 依赖管理的一个重要特性是采用了语义化版本 (semver) 规范，作为依赖版本管理方案。 semver 约定一个包的版本号必须包含3个数字，格式必须为 MAJOR.MINOR.PATCH, 意为 主版本号.小版本号.修订版本号.  MAJOR 对应大的版本号迭代，做了不兼容旧版的修改时要更新 MAJOR 版本号 MINOR 对应小版本迭代，发生兼容旧版API的修改或功">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-04-15T16:39:12+08:00">
-                2020-04-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-06T14:29:36+08:00">
+                2020-05-06
               </time>
             
           </span>
@@ -450,6 +450,9 @@
 
 <p>调用是用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install targetName@alpha</span><br></pre></td></tr></table></figure>
+
+<p>还可以通过prerelease进行版本的指定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm version prerelease --preid=alpha</span><br></pre></td></tr></table></figure>
 
 <h4 id="包的引用规则"><a href="#包的引用规则" class="headerlink" title="包的引用规则"></a>包的引用规则</h4><table>
 <thead>
